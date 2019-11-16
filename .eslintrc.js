@@ -5,11 +5,14 @@
  */
 
 module.exports = {
-    env: {
-        browser: true,
-        es2020: true,
-        jest: true
-    },
-    // Extend some core rules that are recommended for JS and React
-    extends: ['eslint:recommended', 'plugin:react/recommended']
+  env: {
+    browser: true,
+    es2020: true,
+    jest: true
+  },
+  extends: [
+    'airbnb',
+    'plugin:react/recommended'
+  ],
+  parser: "babel-eslint"
 };
