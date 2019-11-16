@@ -1,0 +1,23 @@
+{
+  "name": "jarombek-react-components",
+  "version": "0.1.0",
+  "description": "Andrew Jarombek's Reusable React Component Library",
+  "main": "index.js",
+  "repository": "git+https://github.com/AJarombek/jarombek-react-components.git",
+  "keywords": ["React"],
+  "author": "Andrew Jarombek",
+  "bugs": {
+    "url": "https://github.com/AJarombek/jarombek-react-components/issues"
+  },
+  "homepage": "https://github.com/AJarombek/jarombek-react-components#readme",
+  "dependencies": {
+    "react": "^16.12.0",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "enzyme": "^3.10.0",
+    "eslint": "^6.6.0",
+    "jest": "^24.9.0"
+  }
+}
