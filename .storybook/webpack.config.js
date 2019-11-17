@@ -4,9 +4,17 @@
  * @since 11/16/2019
  */
 
+const path = require('path');
+
 module.exports = {
   plugins: [],
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.resolve(__dirname, '../')
+      }
+    ],
   },
 };

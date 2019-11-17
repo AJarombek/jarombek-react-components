@@ -1,3 +1,3 @@
-import AJCard from 'AJCard';
+import AJCard from './AJCard';
 
 export default AJCard;

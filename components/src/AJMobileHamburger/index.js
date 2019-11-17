@@ -1,3 +1,3 @@
-import AJMobileHamburger from 'AJMobileHamburger';
+import AJMobileHamburger from './AJMobileHamburger';
 
 export default AJMobileHamburger;

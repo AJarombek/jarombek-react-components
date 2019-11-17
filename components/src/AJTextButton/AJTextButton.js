@@ -5,11 +5,22 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const AJTextButton = () => {
+const AJTextButton = ({content, onClick=() => {}, disabled=false}) => {
   return (
-    <div>Text Button</div>
+    <div className="aj-text-button">
+      <button disabled={disabled} onClick={onClick}>
+        {content}
+      </button>
+    </div>
   );
+};
+
+AJTextButton.propTypes = {
+  content: PropTypes.node.required,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool
 };
 
 export default AJTextButton;
