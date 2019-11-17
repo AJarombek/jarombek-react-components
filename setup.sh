@@ -7,3 +7,7 @@
 npx create-react-app jarombek-react-components
 
 yarn
+
+# Install and start storybook to view the component library.
+npx -p @storybook/cli sb init
+yarn storybook
