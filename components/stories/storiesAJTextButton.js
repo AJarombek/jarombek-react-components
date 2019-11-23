@@ -9,4 +9,5 @@ import {storiesOf} from '@storybook/react';
 import {AJTextButton} from '../src';
 
 storiesOf('AJTextButton', module)
-  .add('default', () => <AJTextButton />);
+  .add('default', () => <AJTextButton />)
+  .add('with text', () => <AJTextButton children="Text Button" />);

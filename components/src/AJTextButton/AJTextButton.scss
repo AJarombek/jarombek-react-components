@@ -1,6 +1,18 @@
+/**
+ * Stylesheet for the AJTextButton component.
+ * Author: Andrew Jarombek
+ * Date: 11/23/2019
+ */
+
 .aj-text-button {
   margin: 10px;
-  button {
+  display: inline-block;
 
+  :focus {
+    outline: none;
+  }
+
+  button {
+    border: none;
   }
 }

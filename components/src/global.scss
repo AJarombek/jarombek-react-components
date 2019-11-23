@@ -1,0 +1,42 @@
+/**
+ * Global styles for the components, such as fonts.
+ * Author: Andrew Jarombek
+ * Date: 11/23/2019
+ */
+
+// Font Face Styles
+
+@font-face {
+  font-family: Roboto-Bold;
+  font-weight: bold;
+  src: url("http://global.jarombek.io/fonts/Roboto-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Roboto-Regular;
+  font-weight: bold;
+  src: url("http://global.jarombek.io/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Roboto-Thin;
+  font-weight: bold;
+  src: url("http://global.jarombek.io/fonts/Roboto-Thin.ttf") format("truetype");
+}
+
+// Font Mixins
+
+@mixin RobotoBold {
+  font-family: 'Roboto-Bold', Helvetica, sans-serif;
+  font-style: normal;
+}
+
+@mixin RobotoRegular {
+  font-family: 'Roboto-Regular', Helvetica, sans-serif;
+  font-style: normal;
+}
+
+@mixin RobotoThin {
+  font-family: 'Roboto-Thin', Helvetica, sans-serif;
+  font-style: normal;
+}
