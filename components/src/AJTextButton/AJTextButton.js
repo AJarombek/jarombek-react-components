@@ -13,7 +13,7 @@ const AJTextButton = ({children, onClick=() => {}, disabled=false}) => {
 
   return (
     <div className={`${className}${disabledClassName}`} onClick={onClick}>
-      <button disabled={disabled}>
+      <button type="button" disabled={disabled}>
         {children}
       </button>
     </div>

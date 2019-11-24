@@ -1,0 +1,58 @@
+/**
+ * Stylesheet for the AJMobileHamburger component.
+ * Author: Andrew Jarombek
+ * Date: 11/24/2019
+ */
+
+.aj-mobile-hamburger {
+  display: inline-block;
+  cursor: pointer;
+  height: 3px;
+  width: 25px;
+  padding: 10px 2px;
+
+  button {
+    display: block;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    span, span:before, span:after {
+      height: 3px;
+      width: 25px;
+      border-radius: 1px;
+      display: block;
+      cursor: pointer;
+      background-color: black;
+      position: absolute;
+      content: "";
+      transition: all 50ms ease;
+    }
+
+    .aj-mobile-hamburger-active {
+      background-color: transparent;
+    }
+
+    span:before {
+      top: -8px;
+    }
+
+    span.aj-mobile-hamburger-active:before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    span:after {
+      top: 8px;
+    }
+
+    span.aj-mobile-hamburger-active:after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+}

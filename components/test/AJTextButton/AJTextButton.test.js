@@ -34,6 +34,13 @@ describe('unit tests', () => {
     expect(wrapper.find('div').hasClass('aj-text-button-disabled')).toBe(true);
     expect(wrapper.find('.aj-text-button-disabled')).toHaveLength(1);
   });
+
+  it('default onClick function has no impact', () => {
+    const wrapper = shallow(<AJTextButton>Text Button</AJTextButton>);
+    expect(wrapper.find('button').text()).toEqual("Text Button");
+    expect(wrapper.find('button').simulate('click'));
+    expect(wrapper.find('button').text()).toEqual("Text Button");
+  });
 });
 
 describe('integration tests', () => {

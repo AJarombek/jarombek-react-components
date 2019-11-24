@@ -5,9 +5,10 @@
  */
 
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 const AJMobileHamburger = (onClick=() => {}) => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
 
   const onClickAction = () => {
     setActive(!active);
@@ -16,7 +17,7 @@ const AJMobileHamburger = (onClick=() => {}) => {
 
   return (
     <div className="aj-mobile-hamburger" onClick={onClickAction}>
-      <button>
+      <button type="button">
         <span className={active ? "aj-mobile-hamburger-active": "aj-mobile-hamburger-inactive"} />
       </button>
     </div>
