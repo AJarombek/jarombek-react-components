@@ -12,8 +12,8 @@ const AJTextButton = ({children, onClick=() => {}, disabled=false}) => {
   const disabledClassName = disabled ? " aj-text-button-disabled" : " aj-text-button-enabled";
 
   return (
-    <div className={`${className}${disabledClassName}`}>
-      <button disabled={disabled} onClick={onClick}>
+    <div className={`${className}${disabledClassName}`} onClick={onClick}>
+      <button disabled={disabled}>
         {children}
       </button>
     </div>
@@ -21,7 +21,7 @@ const AJTextButton = ({children, onClick=() => {}, disabled=false}) => {
 };
 
 AJTextButton.propTypes = {
-  children: PropTypes.node.required,
+  children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool
 };

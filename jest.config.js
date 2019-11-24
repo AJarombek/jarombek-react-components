@@ -7,7 +7,7 @@
 module.exports = {
   displayName: "components",
   testEnvironment: "jsdom",
-  testMatch: ["components/test/**/*.test.js"],
+  testMatch: ["**/test/**/*.test.js"],
   setupFilesAfterEnv: ["<rootDir>/components/test/setupTests.js"],
   maxConcurrency: 5,
   transform: {

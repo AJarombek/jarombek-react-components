@@ -4,12 +4,27 @@
  * @since 11/16/2019
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 
-const AJMobileHamburger = () => {
+const AJMobileHamburger = (onClick=() => {}) => {
+  const [active, setActive] = useState(true);
+
+  const onClickAction = () => {
+    setActive(!active);
+    onClick();
+  };
+
   return (
-    <div>Mobile Hamburger</div>
+    <div className="aj-mobile-hamburger" onClick={onClickAction}>
+      <button>
+        <span className={active ? "aj-mobile-hamburger-active": "aj-mobile-hamburger-inactive"} />
+      </button>
+    </div>
   );
+};
+
+AJMobileHamburger.propTypes = {
+  onClick: PropTypes.func
 };
 
 export default AJMobileHamburger;
