@@ -8,8 +8,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const AJTextButton = ({children, onClick=() => {}, disabled=false}) => {
+  const className = "aj-text-button";
+  const disabledClassName = disabled ? " aj-text-button-disabled" : " aj-text-button-enabled";
+
   return (
-    <div className="aj-text-button">
+    <div className={`${className}${disabledClassName}`}>
       <button disabled={disabled} onClick={onClick}>
         {children}
       </button>
