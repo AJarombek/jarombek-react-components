@@ -7,12 +7,14 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
-const AJMobileHamburger = (onClick=() => {}) => {
+const AJMobileHamburger = ({onClick}) => {
   const [active, setActive] = useState(false);
 
   const onClickAction = () => {
     setActive(!active);
-    onClick();
+    if (onClick) {
+      onClick();
+    }
   };
 
   return (

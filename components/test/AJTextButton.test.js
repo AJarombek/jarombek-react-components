@@ -6,7 +6,7 @@
 
 import React, {useState} from 'react';
 import {shallow, mount} from 'enzyme';
-import AJTextButton from '../../src/AJTextButton/AJTextButton';
+import AJTextButton from '../src/AJTextButton/AJTextButton';
 
 describe('unit tests', () => {
 
