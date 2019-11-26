@@ -21,4 +21,5 @@ websites, along with any prototypes I create.
 
 ### Resources
 
-[1] [Webpack MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/)
+1) [React Component Library Seed Project](https://github.com/NGimhana/sample_react_component_library_boilerplate)
+2) [Webpack MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/)

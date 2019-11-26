@@ -7,6 +7,12 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
+/**
+ * Component representing a hamburger icon which animates to an 'X' icon when clicked.  Commonly
+ * used with mobile menu dropdowns.
+ * @param onClick Additional behavior that occurs when the component is clicked.
+ * @return {*} React elements that represent a hamburger icon.
+ */
 const AJMobileHamburger = ({onClick}) => {
   const [active, setActive] = useState(false);
 

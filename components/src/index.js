@@ -4,8 +4,8 @@
  * @since 11/16/2019
  */
 
-import AJCard from './AJCard';
+import AJTextCard from './AJTextCard';
 import AJMobileHamburger from './AJMobileHamburger';
 import AJTextButton from './AJTextButton';
 
-export {AJCard, AJMobileHamburger, AJTextButton};
+export {AJTextCard, AJMobileHamburger, AJTextButton};
