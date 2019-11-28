@@ -36,7 +36,7 @@ const AJTextCard = ({title, subtitle, content, action, actionText, actionDisable
   );
 };
 
-AJTextCard.PropTypes = {
+AJTextCard.propTypes = {
   title: PropTypes.node.isRequired,
   subtitle: PropTypes.node,
   content: PropTypes.node.isRequired,
