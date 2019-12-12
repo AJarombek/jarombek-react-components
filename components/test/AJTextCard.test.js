@@ -50,5 +50,74 @@ describe('unit tests', () => {
 });
 
 describe('integration tests', () => {
-  
+
+  const createTextCardWrapper = (disabled=false) => {
+    const Parent = ({ children, ...props }) => {
+      const [state, setState] = useState(0);
+      return (
+        <div>
+          <p>Times Clicked: {state}</p>
+          {children(state, setState)}
+        </div>
+      );
+    };
+
+    return mount(
+      <Parent>
+        {(state, setState) => (
+          <AJTextCard
+            title="Test"
+            subtitle={`Times Clicked: ${state}`}
+            content="Testing..."
+            action={() => setState(state += 1)}
+            actionText="Action"
+            actionDisabled={disabled}
+          />
+        )}
+      </Parent>
+    );
+  };
+
+  it('action occurs when the footer button is clicked', () => {
+    const wrapper = createTextCardWrapper();
+
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+
+    // onClick works if you click the button...
+    expect(wrapper.find('button').simulate('click'));
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 1");
+
+    // ... or the div surrounding the button
+    expect(wrapper.find('.aj-text-button').simulate('click'));
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 2");
+  });
+
+  it('action does not occur when the footer button is clicked but actionDisabled is true', () => {
+    const wrapper = createTextCardWrapper(true);
+
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+
+    // onClick works if you click the button...
+    expect(wrapper.find('button').simulate('click'));
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+
+    // ... or the div surrounding the button
+    expect(wrapper.find('.aj-text-button').simulate('click'));
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+  });
+
+  it('action disabled by default', () => {
+    const noActionDisabledTextCard =
+      <AJTextCard
+        title="Test"
+        subtitle="Written: 12/11/2019"
+        content="Testing..."
+        action={f=>f}
+        actionText="Action"
+      />;
+
+    const wrapper = mount(noActionDisabledTextCard);
+    expect(wrapper.props().actionDisabled).toBeUndefined();
+    //expect(wrapper.find('[disabled="false"]')).toHaveLength(1);
+  })
 });
