@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="aj-mobile-hamburger"
+  onClick={[Function]}
+>
+  <button
+    type="button"
+  >
+    <span
+      className="aj-mobile-hamburger-inactive"
+    />
+  </button>
+</div>
+`;

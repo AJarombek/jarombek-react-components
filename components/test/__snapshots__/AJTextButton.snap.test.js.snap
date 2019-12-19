@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="aj-text-button aj-text-button-enabled"
+>
+  <button
+    disabled={false}
+    type="button"
+  >
+    <div>
+      Snapshot Test
+    </div>
+  </button>
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="aj-text-button aj-text-button-disabled"
+  onClick={null}
+>
+  <button
+    disabled={true}
+    type="button"
+  >
+    <div>
+      Snapshot Test
+    </div>
+  </button>
+</div>
+`;

@@ -106,7 +106,7 @@ describe('integration tests', () => {
     expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
   });
 
-  it('action disabled by default', () => {
+  it('action enabled by default', () => {
     const noActionDisabledTextCard =
       <AJTextCard
         title="Test"
@@ -118,6 +118,10 @@ describe('integration tests', () => {
 
     const wrapper = mount(noActionDisabledTextCard);
     expect(wrapper.props().actionDisabled).toBeUndefined();
-    //expect(wrapper.find('[disabled="false"]')).toHaveLength(1);
+    console.info(wrapper.find('button').debug());
+    expect(wrapper.find('button').getDOMNode().attributes.getNamedItem('type').value)
+      .toEqual('button');
+
+    expect(wrapper.find('button').prop('disabled')).toEqual(false);
   })
 });

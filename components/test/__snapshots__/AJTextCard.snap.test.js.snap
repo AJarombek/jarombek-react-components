@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="aj-text-card"
+>
+  <div
+    className="aj-text-card-header"
+  >
+    <h2
+      className="aj-text-card-title"
+    >
+      Snapshot Test
+    </h2>
+    <p
+      className="aj-text-card-subtitle"
+    />
+  </div>
+  <div
+    className="aj-text-card-body"
+  >
+    <p
+      className="aj-text-card-content"
+    >
+      <div>
+        Hello from snapshot test
+      </div>
+    </p>
+  </div>
+  <div
+    className="aj-text-card-footer"
+  >
+    <div
+      className="aj-text-button aj-text-button-enabled"
+      onClick={[Function]}
+    >
+      <button
+        disabled={false}
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="aj-text-card"
+>
+  <div
+    className="aj-text-card-header"
+  >
+    <h2
+      className="aj-text-card-title"
+    >
+      Snapshot Test 2
+    </h2>
+    <p
+      className="aj-text-card-subtitle"
+    >
+      Test with all props
+    </p>
+  </div>
+  <div
+    className="aj-text-card-body"
+  >
+    <p
+      className="aj-text-card-content"
+    >
+      <div>
+        Hello from the second snapshot test
+      </div>
+    </p>
+  </div>
+  <div
+    className="aj-text-card-footer"
+  >
+    <div
+      className="aj-text-button aj-text-button-disabled"
+      onClick={null}
+    >
+      <button
+        disabled={true}
+        type="button"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>
+`;
