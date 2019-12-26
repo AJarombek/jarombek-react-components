@@ -6,6 +6,7 @@
 
 import AJTextCard from './AJTextCard';
 import AJMobileHamburger from './AJMobileHamburger';
+import AJResponsiveGrid from './AJResponsiveGrid';
 import AJTextButton from './AJTextButton';
 
-export {AJTextCard, AJMobileHamburger, AJTextButton};
+export {AJTextCard, AJMobileHamburger, AJResponsiveGrid, AJTextButton};

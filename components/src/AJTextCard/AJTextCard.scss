@@ -3,7 +3,8 @@
 .aj-text-card {
   @include RobotoThin;
   display: inline-block;
-  width: 300px;
+  min-width: 300px;
+  height: 500px;
   padding: 5px 10px;
   border-radius: 3px;
   box-shadow: 0 1px 3px rgba(170, 170, 170, 0.5);

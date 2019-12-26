@@ -1,3 +1,9 @@
+/**
+ * Setup Webpack for bundling JavaScript and Sass files.
+ * @author Andrew Jarombek
+ * @since 11/16/2019
+ */
+
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
