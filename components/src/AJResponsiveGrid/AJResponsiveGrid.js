@@ -8,22 +8,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import AJTextCard from '../AJTextCard/AJTextCard';
 import {createUseStyles} from 'react-jss';
+import styles from './styles';
 
-const useStyles = createUseStyles({
-  ajResponsiveGrid: {
+const useStyles = createUseStyles(styles);
 
-  },
-  desc: {
+const AJResponsiveGrid = ({items, smallBreakpoint='900px', mediumBreakpoint='1200px',
+                            largeBreakpoint='2000px'}) => {
+  const breakpoints = {
+    small: smallBreakpoint,
+    medium: mediumBreakpoint,
+    large: largeBreakpoint
+  };
 
-  }
-});
+  const classes = useStyles(breakpoints);
 
-const AJResponsiveGrid = ({items, asc=true}) => {
-  const classes = useStyles();
-  const gridClass = classes.ajResponsiveGrid;
-  const orderClass = asc ? '' : ' desc';
   return (
-    <div className={gridClass + orderClass}>
+    <div className={classes.ajResponsiveGrid}>
       {items}
     </div>
   );
@@ -35,7 +35,9 @@ AJResponsiveGrid.propTypes = {
       PropTypes.instanceOf(AJTextCard)
     ])
   ).isRequired,
-  asc: PropTypes.bool
+  smallBreakpoint: PropTypes.string,
+  mediumBreakpoint: PropTypes.string,
+  largeBreakpoint: PropTypes.string
 };
 
 export default AJResponsiveGrid;
