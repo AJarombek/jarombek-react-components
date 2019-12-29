@@ -118,7 +118,6 @@ describe('integration tests', () => {
 
     const wrapper = mount(noActionDisabledTextCard);
     expect(wrapper.props().actionDisabled).toBeUndefined();
-    console.info(wrapper.find('button').debug());
     expect(wrapper.find('button').getDOMNode().attributes.getNamedItem('type').value)
       .toEqual('button');
 

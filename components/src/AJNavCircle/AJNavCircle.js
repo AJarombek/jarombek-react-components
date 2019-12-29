@@ -14,6 +14,15 @@ import arrow from '../assets/arrow.png';
 
 const useStyles = createUseStyles(styles);
 
+/**
+ * Component representing a navigational arrow.
+ * @param direction The direction that the arrow points.  Options are 'up', 'down', 'left', 'right'.
+ * @param height The height of the circle.
+ * @param active Whether the circle is active and can be clicked.
+ * @param onClick An action which occurs when the circle is clicked.
+ * @return {*} React elements representing a navigational arrow and circle.
+ * @constructor
+ */
 const AJNavCircle = ({direction, height="25px", active=true, onClick}) => {
   const classes = useStyles({height});
 
