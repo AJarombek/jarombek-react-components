@@ -40,3 +40,29 @@ storiesOf('AJResponsiveGrid', module)
         />
       ]} />
   );
+
+storiesOf('AJResponsiveGrid', module)
+  .add('custom breakpoints', () =>
+    <AJResponsiveGrid
+      smallBreakpoint="300px"
+      mediumBreakpoint="500px"
+      largeBreakpoint="700px"
+      items={[
+        <AJTextCard
+          title="Friday, December 27th"
+          subtitle={<>Elasticsearch Research</>}
+          content={<>Created the Elasticsearch queries featured in my upcoming article.  Also ran a
+            hill workout at Rockefeller park in Sleepy Hollow.</>}
+          action={f=>f}
+          actionText="More Info"
+        />,
+        <AJTextCard
+          title="Saturday, December 28th"
+          subtitle={<>Elasticsearch Writing</>}
+          content={<>Wrote a rough draft for the Elasticsearch article.  Will begin my React 16.3
+            article/source code work tomorrow.  Ran a track workout at my old high school track.</>}
+          action={f=>f}
+          actionText="More Info"
+        />
+      ]} />
+  );

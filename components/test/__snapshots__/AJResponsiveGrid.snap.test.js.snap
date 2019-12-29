@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajResponsiveGrid-0-2-1 ajResponsiveGrid-0-0-2-2"
+>
+  <div
+    className="aj-text-card"
+  >
+    <div
+      className="aj-text-card-header"
+    >
+      <h2
+        className="aj-text-card-title"
+      >
+        Snapshot Test 1
+      </h2>
+      <p
+        className="aj-text-card-subtitle"
+      >
+        subtitle
+      </p>
+    </div>
+    <div
+      className="aj-text-card-body"
+    >
+      <p
+        className="aj-text-card-content"
+      >
+        content
+      </p>
+    </div>
+    <div
+      className="aj-text-card-footer"
+    >
+      <div
+        className="aj-text-button aj-text-button-enabled"
+        onClick={[Function]}
+      >
+        <button
+          disabled={false}
+          type="button"
+        >
+          More Info
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="aj-text-card"
+  >
+    <div
+      className="aj-text-card-header"
+    >
+      <h2
+        className="aj-text-card-title"
+      >
+        Snapshot Test 2
+      </h2>
+      <p
+        className="aj-text-card-subtitle"
+      >
+        subtitle
+      </p>
+    </div>
+    <div
+      className="aj-text-card-body"
+    >
+      <p
+        className="aj-text-card-content"
+      >
+        content
+      </p>
+    </div>
+    <div
+      className="aj-text-card-footer"
+    >
+      <div
+        className="aj-text-button aj-text-button-enabled"
+        onClick={[Function]}
+      >
+        <button
+          disabled={false}
+          type="button"
+        >
+          More Info
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

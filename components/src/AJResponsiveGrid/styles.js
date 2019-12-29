@@ -6,10 +6,7 @@
 
 export default {
   ajResponsiveGrid: ({small, medium, large}) => ({
-    display: [
-      'grid',
-      '-ms-grid'
-    ],
+    display: 'grid; display:-ms-grid',
     gridTemplateColumns: '1fr 1fr 1fr',
     gridGap: '20px',
     '-ms-grid-columns': '1fr 1fr 1fr',

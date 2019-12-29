@@ -12,8 +12,8 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJResponsiveGrid = ({items, smallBreakpoint='900px', mediumBreakpoint='1200px',
-                            largeBreakpoint='2000px'}) => {
+const AJResponsiveGrid = ({items, smallBreakpoint='600px', mediumBreakpoint='900px',
+                            largeBreakpoint='1200px'}) => {
   const breakpoints = {
     small: smallBreakpoint,
     medium: mediumBreakpoint,
