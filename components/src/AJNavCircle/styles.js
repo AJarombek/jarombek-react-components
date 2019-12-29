@@ -9,10 +9,6 @@ export default {
     height: ({height}) => `calc(${height} * 1.2)`,
     width: ({height}) => `calc(${height} * 1.2)`,
     borderRadius: '50%',
-    backgroundColor: '#ccc',
-    '&:hover': {
-      backgroundColor: '#d9d9d9'
-    },
     '& > figure': {
       display: 'flex',
       height: '100%',
@@ -20,6 +16,19 @@ export default {
       margin: 0,
       alignItems: 'center',
       justifyContent: 'center'
+    }
+  },
+  active: {
+    backgroundColor: '#ccc',
+    '&:hover': {
+      backgroundColor: '#d9d9d9'
+    },
+    cursor: 'pointer'
+  },
+  inactive: {
+    backgroundColor: '#eee',
+    '& image': {
+      filter: 'opacity(0.5)'
     }
   },
   img: {

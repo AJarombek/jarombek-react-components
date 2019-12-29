@@ -10,6 +10,9 @@ module.exports = {
   testMatch: ["**/test/**/*.test.js"],
   setupFilesAfterEnv: ["<rootDir>/components/test/setupTests.js"],
   maxConcurrency: 5,
+  moduleNameMapper: {
+    "\\.(png)$": "../../test/mocks/fileMock.js"
+  },
   transform: {
     "^.+\\.js$": "babel-jest"
   },

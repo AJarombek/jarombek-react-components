@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajNavCircle-0-2-1 ajNavCircle-0-0-2-9 active-0-2-2"
+  onClick={[Function]}
+>
+  <figure>
+    <img
+      className="right-0-2-8 img-0-2-4 img-1-0-2-10"
+      src="test-file-stub"
+    />
+  </figure>
+</div>
+`;
