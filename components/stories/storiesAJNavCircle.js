@@ -1,7 +1,7 @@
 /**
  * Storyboard stories for the AJNavCircle component.
  * @author Andrew Jarombek
- * @since 11/24/2019
+ * @since 12/29/2019
  */
 
 import React, {useState} from 'react';
