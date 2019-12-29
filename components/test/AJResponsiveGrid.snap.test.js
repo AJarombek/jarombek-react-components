@@ -17,6 +17,7 @@ it('renders correctly', () => {
       largeBreakpoint="700px"
       items={[
         <AJTextCard
+          key="1"
           title="Snapshot Test 1"
           subtitle={<>subtitle</>}
           content={<>content</>}
@@ -24,6 +25,7 @@ it('renders correctly', () => {
           actionText="More Info"
         />,
         <AJTextCard
+          key="2"
           title="Snapshot Test 2"
           subtitle={<>subtitle</>}
           content={<>content</>}
