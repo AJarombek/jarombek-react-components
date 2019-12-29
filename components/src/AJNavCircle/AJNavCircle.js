@@ -7,30 +7,54 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
+import classnames from 'classnames';
+
 import styles from './styles';
+import arrow from '../assets/arrow.png';
 
 const useStyles = createUseStyles(styles);
 
-const AJNavCircle = ({direction, height="15px"}) => {
+const AJNavCircle = ({direction, height="25px", active=true, onClick}) => {
   const classes = useStyles({height});
 
-  let pictureClass = '';
-  /*switch (direction) {
-    case 'up':
+  let circleClass;
+  if (active) {
+    circleClass = classnames(classes.ajNavCircle, classes.active);
+  } else {
+    circleClass = classnames(classes.ajNavCircle, classes.inactive);
+    onClick = null;
+  }
 
-  }*/
+  let pictureClass = classes.img;
+  switch (direction) {
+    case 'up':
+      pictureClass = classnames(classes.up, classes.img);
+      break;
+    case 'down':
+      pictureClass = classnames(classes.down, classes.img);
+      break;
+    case 'left':
+      pictureClass = classnames(classes.left, classes.img);
+      break;
+    case 'right':
+      pictureClass = classnames(classes.right, classes.img);
+      break;
+  }
 
   return (
-    <div className={classes.ajNavCircle}>
+    <div className={circleClass} onClick={onClick}>
       <figure>
-        <img className={pictureClass} src="../assets/arrow.png"/>
+        <img className={pictureClass} src={arrow} />
       </figure>
     </div>
   );
 };
 
 AJNavCircle.propTypes = {
-  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired
+  direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired,
+  height: PropTypes.string,
+  active: PropTypes.bool,
+  onClick: PropTypes.func.isRequired
 };
 
 export default AJNavCircle;

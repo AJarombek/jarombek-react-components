@@ -41,8 +41,7 @@ module.exports = {
           loader: 'url-loader',
           options: {
             limit: 15000,
-            name: '[name].[ext]',
-            publicPath: 'components/src/assets/'
+            name: '[name].[ext]'
           }
         }
       }
