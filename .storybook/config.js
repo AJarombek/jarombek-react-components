@@ -5,7 +5,6 @@
  */
 
 import { configure } from '@storybook/react';
-import '!style-loader!css-loader!sass-loader!../components/src/index.scss';
 
 const loadStories = () => {
   require('../components/stories');

@@ -6,6 +6,11 @@
 
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import {createUseStyles} from 'react-jss';
+
+import styles from './styles';
+
+const useStyles = createUseStyles(styles);
 
 /**
  * Component representing a hamburger icon which animates to an 'X' icon when clicked.  Commonly
@@ -14,7 +19,10 @@ import PropTypes from 'prop-types';
  * @return {*} React elements that represent a hamburger icon.
  */
 const AJMobileHamburger = ({onClick}) => {
+  const classes = useStyles();
   const [active, setActive] = useState(false);
+
+  const spanClassName = active ? classes.ajMobileHamburgerActive: classes.ajMobileHamburgerInactive;
 
   const onClickAction = () => {
     setActive(!active);
@@ -24,9 +32,9 @@ const AJMobileHamburger = ({onClick}) => {
   };
 
   return (
-    <div className="aj-mobile-hamburger" onClick={onClickAction}>
+    <div className={classes.ajMobileHamburger} onClick={onClickAction}>
       <button type="button">
-        <span className={active ? "aj-mobile-hamburger-active": "aj-mobile-hamburger-inactive"} />
+        <span className={spanClassName} />
       </button>
     </div>
   );

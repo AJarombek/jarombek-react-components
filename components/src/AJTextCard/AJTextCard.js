@@ -6,7 +6,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import {createUseStyles} from 'react-jss';
+
 import AJTextButton from '../AJTextButton/AJTextButton';
+import styles from './styles';
+
+const useStyles = createUseStyles(styles);
 
 /**
  * Component representing a card that displays text and has an action button.
@@ -20,8 +25,10 @@ import AJTextButton from '../AJTextButton/AJTextButton';
  * @return {*} React elements that make up a text card.
  */
 const AJTextCard = ({title, subtitle, content, action, actionText, actionDisabled=false}) => {
+  const classes = useStyles();
+
   return (
-    <div className="aj-text-card">
+    <div className={classes.ajTextCard}>
       <div className="aj-text-card-header">
         <h2 className="aj-text-card-title">{title}</h2>
         <p className="aj-text-card-subtitle">{subtitle}</p>

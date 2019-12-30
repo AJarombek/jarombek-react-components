@@ -6,6 +6,12 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
+import {createUseStyles} from 'react-jss';
+import classnames from 'classnames';
+
+import styles from './styles';
+
+const useStyles = createUseStyles(styles);
 
 /**
  * Component for a button that displays text.
@@ -15,12 +21,16 @@ import PropTypes from 'prop-types';
  * @return {*} React elements representing a text button.
  */
 const AJTextButton = ({children, onClick, disabled=false}) => {
-  const className = "aj-text-button";
-  const disabledClassName = disabled ? " aj-text-button-disabled" : " aj-text-button-enabled";
+  const classes = useStyles();
+
+  const className = disabled ?
+    classnames(classes.ajTextButton, classes.ajTextButtonDisabled) :
+    classnames(classes.ajTextButton, classes.ajTextButtonEnabled);
+
   const onClickAction = disabled ? null : onClick;
 
   return (
-    <div className={`${className}${disabledClassName}`} onClick={onClickAction}>
+    <div className={className} onClick={onClickAction}>
       <button type="button" disabled={disabled}>
         {children}
       </button>

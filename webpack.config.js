@@ -5,12 +5,10 @@
  */
 
 const path = require("path");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    components: path.join(__dirname, "components/index.js"),
-    styles: path.join(__dirname, "components/src/index.scss")
+    components: path.join(__dirname, "components/index.js")
   },
   module: {
     rules: [
@@ -20,20 +18,6 @@ module.exports = {
         use: {
           loader: 'babel-loader'
         }
-      },
-      {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: MiniCssExtractPlugin.loader
-          },
-          {
-            loader: 'css-loader'
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
       },
       {
         test: /\.(png|jpg|svg|gif)$/,
@@ -47,11 +31,9 @@ module.exports = {
       }
     ]
   },
-  plugins: [
-    new MiniCssExtractPlugin({
-      filename: "[name].css"
-    })
-  ],
+  externals: {
+    react: 'react'
+  },
   output: {
     path: path.join(__dirname, "dist/"),
     filename: '[name].js',
