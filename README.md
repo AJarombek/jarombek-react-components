@@ -7,17 +7,18 @@ websites, along with any prototypes I create.
 
 ### Files
 
-| Filename                 | Description                                                                    |
-|--------------------------|--------------------------------------------------------------------------------|
-| `.storybook`             | Configuration for Storybook, which displays my reusable components in a UI.    |
-| `components`             | Source code for the reusable React components.                                 |
-| `.babelrc`               | Configuration for the Babel transpiler.                                        |
-| `.eslintrc.js`           | Configuration for the ESLint JavaScript/React linter.                          |
-| `jest.config.js`         | Configuration for Jest unit testing.                                           |
-| `package.json`           | Entry point for the npm application.  Contains dependency definitions.         |
-| `setup.sh`               | Bash commands to setup and run the reusable component project.                 |
-| `webpack.config.js`      | Configuration for the Webpack bundler.                                         |
-| `yarn.lock`              | Versions of each Yarn/npm dependency.                                          |
+| Filename                 | Description                                                                                |
+|--------------------------|--------------------------------------------------------------------------------------------|
+| `.storybook`             | Configuration for Storybook, which displays my reusable components in a UI.                |
+| `components`             | Source code for the reusable React components.                                             |
+| `dist`                   | Bundled and minified JavaScript code used when importing this repository as a dependency.  |
+| `.babelrc`               | Configuration for the Babel transpiler.                                                    |
+| `.eslintrc.js`           | Configuration for the ESLint JavaScript/React linter.                                      |
+| `jest.config.js`         | Configuration for Jest unit testing.                                                       |
+| `package.json`           | Entry point for the npm application.  Contains dependency definitions.                     |
+| `setup.sh`               | Bash commands to setup and run the reusable component project.                             |
+| `webpack.config.js`      | Configuration for the Webpack bundler.                                                     |
+| `yarn.lock`              | Versions of each Yarn/npm dependency.                                                      |
 
 ### Resources
 

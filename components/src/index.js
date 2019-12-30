@@ -4,18 +4,9 @@
  * @since 11/16/2019
  */
 
-import AJTextCard from './AJTextCard';
-import AJMobileHamburger from './AJMobileHamburger';
-import AJNavCircle from './AJNavCircle';
-import AJNavTextCircle from './AJNavTextCircle';
-import AJResponsiveGrid from './AJResponsiveGrid';
-import AJTextButton from './AJTextButton';
-
-export {
-  AJTextCard,
-  AJMobileHamburger,
-  AJNavCircle,
-  AJNavTextCircle,
-  AJResponsiveGrid,
-  AJTextButton
-};
+export {default as AJTextCard} from './AJTextCard';
+export {default as AJMobileHamburger} from './AJMobileHamburger';
+export {default as AJNavCircle} from './AJNavCircle';
+export {default as AJNavTextCircle} from './AJNavTextCircle';
+export {default as AJResponsiveGrid} from './AJResponsiveGrid';
+export {default as AJTextButton} from './AJTextButton';

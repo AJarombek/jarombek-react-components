@@ -9,7 +9,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    components: path.join(__dirname, "components/src/index.js"),
+    components: path.join(__dirname, "components/index.js"),
     styles: path.join(__dirname, "components/src/index.scss")
   },
   module: {
@@ -54,6 +54,8 @@ module.exports = {
   ],
   output: {
     path: path.join(__dirname, "dist/"),
-    filename: '[name].js'
+    filename: '[name].js',
+    publicPath: '',
+    libraryTarget: 'umd'
   }
 };
