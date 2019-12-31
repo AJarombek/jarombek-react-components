@@ -8,9 +8,7 @@ import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 import hljs from 'highlight.js';
-
-import javascript from 'highlight.js/lib/languages/javascript';
-import java from 'highlight.js/lib/languages/java';
+import classnames from 'classnames';
 
 import styles from './styles';
 
@@ -23,25 +21,27 @@ const AJCodeSnippet = ({children, language}) => {
     javascript: {
       title: "JavaScript",
       name: "javascript",
-      language: javascript
+      className: "javascript"
     },
     java: {
       title: "Java",
       name: "java",
-      language: java
+      className: "java"
     }
   };
 
   const lang = languages[language] || languages.javascript;
+  let highlightedCode;
 
   useEffect(() => {
-    hljs.registerLanguage(lang.name, lang.language);
     hljs.initHighlightingOnLoad();
+    hljs.highlightBlock(highlightedCode);
   });
 
   return (
     <div>
-      <code title={lang.title}>
+      <code title={lang.title} className={classnames(lang.className, classes.hljs)}
+            ref={element => highlightedCode = element}>
         {children}
       </code>
     </div>
