@@ -17,12 +17,12 @@ export default {
     },
     [`@media screen and (max-width: ${medium}) and (min-width: ${small})`]: {
       gridTemplateColumns: '1fr',
-      gridGap: '10px',
+      gridGap: '15px',
       '-ms-grid-columns': '1fr'
     },
     [`@media screen and (max-width: ${small})`]: {
       gridTemplateColumns: '1fr',
-      gridGap: '5px',
+      gridGap: '10px',
       '-ms-grid-columns': '1fr'
     }
   })

@@ -10,7 +10,7 @@ export default {
   ajTextCard: {
     ...globalStyles.robotoThin,
     display: 'inline-block',
-    width: '100%',
+    width: 'auto',
     height: '500px',
     padding: '5px 10px',
     borderRadius: '3px',

@@ -4,6 +4,7 @@
  * @since 11/16/2019
  */
 
+export {default as AJCodeSnippet} from './AJCodeSnippet';
 export {default as AJTextCard} from './AJTextCard';
 export {default as AJMobileHamburger} from './AJMobileHamburger';
 export {default as AJNavCircle} from './AJNavCircle';
