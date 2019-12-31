@@ -27,18 +27,18 @@ describe('unit tests', () => {
 
   it('renders proper react elements', () => {
     const wrapper = shallow(basicTextCard);
-    expect(wrapper.find('.aj-text-card')).toHaveLength(1);
+    expect(wrapper.find('div').at(0)).toHaveLength(1);
 
-    const cardHeader = wrapper.find('.aj-text-card').childAt(0);
+    const cardHeader = wrapper.find('div').at(0).childAt(0);
     expect(cardHeader.hasClass('aj-text-card-header')).toBe(true);
     expect(cardHeader.childAt(0).hasClass('aj-text-card-title')).toBe(true);
     expect(cardHeader.childAt(1).hasClass('aj-text-card-subtitle')).toBe(true);
 
-    const cardBody = wrapper.find('.aj-text-card').childAt(1);
+    const cardBody = wrapper.find('div').at(0).childAt(1);
     expect(cardBody.hasClass('aj-text-card-body')).toBe(true);
     expect(cardBody.childAt(0).hasClass('aj-text-card-content')).toBe(true);
 
-    expect(wrapper.find('.aj-text-card').childAt(2).hasClass('aj-text-card-footer')).toBe(true);
+    expect(wrapper.find('div').at(0).childAt(2).hasClass('aj-text-card-footer')).toBe(true);
   });
 
   it('renders proper content within react elements', () => {
@@ -88,7 +88,7 @@ describe('integration tests', () => {
     expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 1");
 
     // ... or the div surrounding the button
-    expect(wrapper.find('.aj-text-button').simulate('click'));
+    expect(wrapper.find('.aj-text-card-footer').childAt(0).simulate('click'));
     expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 2");
   });
 
@@ -102,7 +102,7 @@ describe('integration tests', () => {
     expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
 
     // ... or the div surrounding the button
-    expect(wrapper.find('.aj-text-button').simulate('click'));
+    expect(wrapper.find('.aj-text-card-footer').childAt(0).simulate('click'));
     expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
   });
 

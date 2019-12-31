@@ -25,25 +25,25 @@ describe('unit tests', () => {
 
   it('initially renders inactive', () => {
     const wrapper = shallow(<AJMobileHamburger />);
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-inactive')).toBe(true);
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(false);
-    expect(wrapper.find('.aj-mobile-hamburger-inactive')).toHaveLength(1);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerInactive)(-\d+)/)).toBe(true);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
+    expect(wrapper.find('span')).toHaveLength(1);
   });
 
   it('default onClick function makes component active', () => {
     const wrapper = shallow(<AJMobileHamburger />);
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(false);
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-inactive')).toBe(true);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerInactive)(-\d+)/)).toBe(true);
 
     // Clicking the component transforms it into an active state.  The animation is done is CSS.
-    expect(wrapper.find('.aj-mobile-hamburger').simulate('click'));
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(true);
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-inactive')).toBe(false);
+    expect(wrapper.find('div').simulate('click'));
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(true);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerInactive)(-\d+)/)).toBe(false);
 
     // Clicking the component a second time reverts it into an inactive state.
-    expect(wrapper.find('.aj-mobile-hamburger').simulate('click'));
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(false);
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-inactive')).toBe(true);
+    expect(wrapper.find('div').simulate('click'));
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerInactive)(-\d+)/)).toBe(true);
   });
 });
 
@@ -69,15 +69,15 @@ describe('integration tests', () => {
       </Parent>
     );
 
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(false);
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
     expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: No");
 
-    expect(wrapper.find('.aj-mobile-hamburger').simulate('click'));
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(true);
+    expect(wrapper.find('div').at(1).simulate('click'));
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(true);
     expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: Yes");
 
-    expect(wrapper.find('.aj-mobile-hamburger').simulate('click'));
-    expect(wrapper.find('span').hasClass('aj-mobile-hamburger-active')).toBe(false);
+    expect(wrapper.find('div').at(1).simulate('click'));
+    expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
     expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: No");
   });
 });

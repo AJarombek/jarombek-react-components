@@ -23,16 +23,16 @@ describe('unit tests', () => {
 
   it('renders an enabled button', () => {
     const wrapper = shallow(<AJTextButton>Text Button</AJTextButton>);
-    expect(wrapper.find('div').hasClass(/(aj-text-button)(-\d+)/)).toBe(true);
-    expect(wrapper.find('div').hasClass(/(aj-text-button-enabled)(-\d+)/)).toBe(true);
-    expect(wrapper.find('.aj-text-button-enabled')).toHaveLength(1);
+    expect(wrapper.find('div').hasClass(/(ajTextButton)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div').hasClass(/(ajTextButtonEnabled)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div')).toHaveLength(1);
   });
 
   it('renders a disabled button when the disabled prop is true', () => {
     const wrapper = shallow(<AJTextButton disabled={true}>Text Button</AJTextButton>);
-    expect(wrapper.find('div').hasClass(/(aj-text-button)(-\d+)/)).toBe(true);
-    expect(wrapper.find('div').hasClass(/(aj-text-button-disabled)(-\d+)/)).toBe(true);
-    expect(wrapper.find('.aj-text-button-disabled')).toHaveLength(1);
+    expect(wrapper.find('div').hasClass(/(ajTextButton)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div').hasClass(/(ajTextButtonDisabled)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div')).toHaveLength(1);
   });
 
   it('default onClick function has no impact', () => {
@@ -59,7 +59,7 @@ describe('integration tests', () => {
       </Parent>
     );
 
-    expect(wrapper.find('.aj-text-button-enabled')).toHaveLength(1);
+    expect(wrapper.find('div').at(1)).toHaveLength(1);
     expect(wrapper.find('button').text()).toEqual("Clicked: 0");
 
     // onClick works if you click the button...
@@ -67,7 +67,7 @@ describe('integration tests', () => {
     expect(wrapper.find('button').text()).toEqual("Clicked: 1");
 
     // ... or the div surrounding the button
-    expect(wrapper.find('.aj-text-button').simulate('click'));
+    expect(wrapper.find('div').at(1).simulate('click'));
     expect(wrapper.find('button').text()).toEqual("Clicked: 2");
   });
 });

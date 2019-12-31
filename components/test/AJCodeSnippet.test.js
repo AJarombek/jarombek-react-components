@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import AJCodeSnippet from '../src/AJCodeSnippet/AJCodeSnippet';
 
 describe('unit tests', () => {
@@ -22,6 +22,28 @@ describe('unit tests', () => {
         `}
       </AJCodeSnippet>
     );
+    expect(wrapper.exists()).toBe(true);
+  });
+
+  it('renders javascript by default', () => {
+    const wrapper = shallow(<AJCodeSnippet language="invalid">const str = 'test';</AJCodeSnippet>);
+    const codeSnippet = wrapper.find('code');
+    expect(codeSnippet.hasClass('javascript')).toBe(true);
+    expect(codeSnippet.hasClass(/(hljs)(-\d+)/)).toBe(true);
+  });
+
+  it('renders java when specified', () => {
+    const wrapper = shallow(<AJCodeSnippet language="java">public class Test {}</AJCodeSnippet>);
+    const codeSnippet = wrapper.find('code');
+    expect(codeSnippet.hasClass('java')).toBe(true);
+    expect(codeSnippet.hasClass(/(hljs)(-\d+)/)).toBe(true);
+  });
+});
+
+describe('integration tests', () => {
+
+  it('renders', () => {
+    const wrapper = mount(<AJCodeSnippet language="java">public class Test {}</AJCodeSnippet>);
     expect(wrapper.exists()).toBe(true);
   });
 });
