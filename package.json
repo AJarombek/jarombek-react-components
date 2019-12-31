@@ -50,6 +50,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "test": "jest",
+    "update-test": "jest --update-snapshot",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   }

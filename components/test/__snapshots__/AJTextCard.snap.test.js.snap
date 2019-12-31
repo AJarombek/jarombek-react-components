@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="aj-text-card"
+  className="ajTextCard-0-2-1"
 >
   <div
     className="aj-text-card-header"
@@ -31,7 +31,7 @@ exports[`renders correctly 1`] = `
     className="aj-text-card-footer"
   >
     <div
-      className="aj-text-button aj-text-button-enabled"
+      className="ajTextButton-0-2-2 ajTextButtonEnabled-0-2-3"
       onClick={[Function]}
     >
       <button
@@ -47,7 +47,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly with all props 1`] = `
 <div
-  className="aj-text-card"
+  className="ajTextCard-0-2-1"
 >
   <div
     className="aj-text-card-header"
@@ -78,7 +78,7 @@ exports[`renders correctly with all props 1`] = `
     className="aj-text-card-footer"
   >
     <div
-      className="aj-text-button aj-text-button-disabled"
+      className="ajTextButton-0-2-2 ajTextButtonDisabled-0-2-4"
       onClick={null}
     >
       <button

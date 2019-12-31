@@ -2,14 +2,14 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="aj-mobile-hamburger"
+  className="ajMobileHamburger-0-2-1"
   onClick={[Function]}
 >
   <button
     type="button"
   >
     <span
-      className="aj-mobile-hamburger-inactive"
+      className="ajMobileHamburgerInactive-0-2-3"
     />
   </button>
 </div>

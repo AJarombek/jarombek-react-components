@@ -13,4 +13,13 @@ storiesOf('AJCodeSnippet', module)
     <AJCodeSnippet language="javascript">
       const j = 25;
     </AJCodeSnippet>
+  )
+  .add('multi-line', () =>
+    <AJCodeSnippet language="java">
+      {`public class Test {
+  public static void main(String... args) {
+    System.out.println("Multiple Line Code Snippet...");
+  }
+}`}
+    </AJCodeSnippet>
   );

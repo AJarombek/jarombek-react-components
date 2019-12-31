@@ -14,6 +14,15 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
+/**
+ * Component representing a snippet of code from one of multiple different languages.  The code is
+ * syntax highlighted with the help of highlight.js.
+ * @param children The code the is displayed in the code snippet.
+ * @param language The language that the code is written in.  The language determines how the code
+ * is syntax highlighted.
+ * @return {*} React elements that represent a snippet of code.
+ * @constructor
+ */
 const AJCodeSnippet = ({children, language}) => {
   const classes = useStyles();
 
@@ -50,7 +59,7 @@ const AJCodeSnippet = ({children, language}) => {
 
 AJCodeSnippet.propTypes = {
   children: PropTypes.node.isRequired,
-  language: PropTypes.oneOf(['javascript']).isRequired
+  language: PropTypes.oneOf(['java', 'javascript']).isRequired
 };
 
 export default AJCodeSnippet;

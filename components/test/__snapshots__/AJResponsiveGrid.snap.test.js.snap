@@ -5,7 +5,7 @@ exports[`renders correctly 1`] = `
   className="ajResponsiveGrid-0-2-1 ajResponsiveGrid-0-0-2-2"
 >
   <div
-    className="aj-text-card"
+    className="ajTextCard-0-2-3"
   >
     <div
       className="aj-text-card-header"
@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
       className="aj-text-card-footer"
     >
       <div
-        className="aj-text-button aj-text-button-enabled"
+        className="ajTextButton-0-2-4 ajTextButtonEnabled-0-2-5"
         onClick={[Function]}
       >
         <button
@@ -47,7 +47,7 @@ exports[`renders correctly 1`] = `
     </div>
   </div>
   <div
-    className="aj-text-card"
+    className="ajTextCard-0-2-3"
   >
     <div
       className="aj-text-card-header"
@@ -76,7 +76,7 @@ exports[`renders correctly 1`] = `
       className="aj-text-card-footer"
     >
       <div
-        className="aj-text-button aj-text-button-enabled"
+        className="ajTextButton-0-2-4 ajTextButtonEnabled-0-2-5"
         onClick={[Function]}
       >
         <button

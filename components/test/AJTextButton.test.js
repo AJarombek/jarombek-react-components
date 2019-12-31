@@ -23,15 +23,15 @@ describe('unit tests', () => {
 
   it('renders an enabled button', () => {
     const wrapper = shallow(<AJTextButton>Text Button</AJTextButton>);
-    expect(wrapper.find('div').hasClass('aj-text-button')).toBe(true);
-    expect(wrapper.find('div').hasClass('aj-text-button-enabled')).toBe(true);
+    expect(wrapper.find('div').hasClass(/(aj-text-button)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div').hasClass(/(aj-text-button-enabled)(-\d+)/)).toBe(true);
     expect(wrapper.find('.aj-text-button-enabled')).toHaveLength(1);
   });
 
   it('renders a disabled button when the disabled prop is true', () => {
     const wrapper = shallow(<AJTextButton disabled={true}>Text Button</AJTextButton>);
-    expect(wrapper.find('div').hasClass('aj-text-button')).toBe(true);
-    expect(wrapper.find('div').hasClass('aj-text-button-disabled')).toBe(true);
+    expect(wrapper.find('div').hasClass(/(aj-text-button)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div').hasClass(/(aj-text-button-disabled)(-\d+)/)).toBe(true);
     expect(wrapper.find('.aj-text-button-disabled')).toHaveLength(1);
   });
 
