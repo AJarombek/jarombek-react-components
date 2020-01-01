@@ -14,4 +14,11 @@ storiesOf('AJSwitch', module)
       onChange={state => console.info(`AJSwitch state: ${state}`)}
       disabled={false}
     />
+  )
+  .add('disabled', () =>
+    <AJSwitch
+      onChange={state => console.info(`Disabled AJSwitch state: ${state}`)}
+      initialState={true}
+      disabled={true}
+    />
   );

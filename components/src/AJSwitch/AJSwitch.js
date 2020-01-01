@@ -36,8 +36,13 @@ const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
   };
 
   const mainClass = state ?
-    classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch') :
-    classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch');
+    disabled ?
+      classnames(classes.ajSwitch, classes.ajSwitchActive, classes.ajSwitchDisabled, 'aj-switch'):
+      classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch')
+    :
+    disabled ?
+      classnames(classes.ajSwitch, classes.ajSwitchInactive, classes.ajSwitchDisabled, 'aj-switch'):
+      classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch');
 
   const headClass = state ?
     classnames(classes.ajSwitchHead, classes.ajSwitchHeadActive, 'aj-switch-head') :
@@ -56,7 +61,8 @@ const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
 };
 
 AJSwitch.propTypes = {
-  onChange: PropTypes.func,
+  onChange: PropTypes.func.isRequired,
+  initialState: PropTypes.bool,
   disabled: PropTypes.bool
 };
 

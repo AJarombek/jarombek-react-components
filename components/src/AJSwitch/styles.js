@@ -8,7 +8,11 @@ export default {
   ajSwitch: {
     display: 'flex',
     height: '20px',
-    width: '36px'
+    width: '36px',
+    cursor: 'pointer'
+  },
+  ajSwitchDisabled: {
+    cursor: 'default'
   },
   ajSwitchActive: {
     flexDirection: 'row-reverse'

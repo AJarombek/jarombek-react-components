@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajSwitch-0-2-1 ajSwitchInactive-0-2-4 aj-switch"
+  onClick={[Function]}
+>
+  <div
+    className="ajSwitchHead-0-2-5 ajSwitchHeadInactive-0-2-7 aj-switch-head"
+  >
+     
+  </div>
+  <div
+    className="ajSwitchTail-0-2-8 ajSwitchTailInactive-0-2-10 aj-switch-tail"
+  >
+     
+  </div>
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="ajSwitch-0-2-1 ajSwitchActive-0-2-3 ajSwitchDisabled-0-2-2 aj-switch"
+  onClick={[Function]}
+>
+  <div
+    className="ajSwitchHead-0-2-5 ajSwitchHeadActive-0-2-6 aj-switch-head"
+  >
+     
+  </div>
+  <div
+    className="ajSwitchTail-0-2-8 ajSwitchTailActive-0-2-9 aj-switch-tail"
+  >
+     
+  </div>
+</div>
+`;
