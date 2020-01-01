@@ -9,5 +9,6 @@ import './storiesAJMobileHamburger';
 import './storiesAJNavCircle';
 import './storiesAJNavTextCircle';
 import './storiesAJResponsiveGrid';
+import './storiesAJSwitch';
 import './storiesAJTextButton';
 import './storiesAJTextCard';

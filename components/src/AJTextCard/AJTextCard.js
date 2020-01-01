@@ -7,6 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
+import classnames from 'classnames';
 
 import AJTextButton from '../AJTextButton/AJTextButton';
 import styles from './styles';
@@ -28,7 +29,7 @@ const AJTextCard = ({title, subtitle, content, action, actionText, actionDisable
   const classes = useStyles();
 
   return (
-    <div className={classes.ajTextCard}>
+    <div className={classnames(classes.ajTextCard, 'aj-text-card')}>
       <div className="aj-text-card-header">
         <h2 className="aj-text-card-title">{title}</h2>
         <p className="aj-text-card-subtitle">{subtitle}</p>
