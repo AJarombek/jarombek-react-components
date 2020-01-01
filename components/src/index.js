@@ -9,6 +9,7 @@ export {default as AJMobileHamburger} from './AJMobileHamburger';
 export {default as AJNavCircle} from './AJNavCircle';
 export {default as AJNavTextCircle} from './AJNavTextCircle';
 export {default as AJResponsiveGrid} from './AJResponsiveGrid';
+export {default as AJSwitchIcon} from './AJSwitchIcon';
 export {default as AJSwitch} from './AJSwitch';
 export {default as AJTextButton} from './AJTextButton';
 export {default as AJTextCard} from './AJTextCard';

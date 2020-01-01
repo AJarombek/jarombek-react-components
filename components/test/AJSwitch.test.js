@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import {shallow} from 'enzyme';
 import AJSwitch from '../src/AJSwitch/AJSwitch';
 
 describe('unit tests', () => {
@@ -28,5 +28,34 @@ describe('unit tests', () => {
     expect(onChange).toHaveBeenCalled();
     expect(onChange).toHaveBeenCalledTimes(2);
     expect(onChange).toHaveBeenLastCalledWith(false);
+
+    expect(wrapper.find('div').at(0).simulate('click'));
+    expect(onChange).toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalledTimes(3);
+    expect(onChange).toHaveBeenLastCalledWith(true);
+  });
+
+  it('has a functional onChange method when initialState is true', () => {
+    const onChange = jest.fn();
+    const wrapper = shallow(<AJSwitch onChange={onChange} initialState={true} />);
+
+    expect(wrapper.find('div').at(0).simulate('click'));
+    expect(onChange).toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalledTimes(1);
+    expect(onChange).toHaveBeenCalledWith(false);
+
+    expect(wrapper.find('div').at(0).simulate('click'));
+    expect(onChange).toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalledTimes(2);
+    expect(onChange).toHaveBeenLastCalledWith(true);
+  });
+
+  it('onChange is not called when disabled', () => {
+    const onChange = jest.fn();
+    const wrapper = shallow(<AJSwitch onChange={onChange} disabled={true} />);
+
+    expect(wrapper.find('div').at(0).simulate('click'));
+    expect(onChange).not.toHaveBeenCalled();
+    expect(onChange).toHaveBeenCalledTimes(0);
   });
 });
