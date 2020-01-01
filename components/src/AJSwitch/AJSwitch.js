@@ -4,7 +4,7 @@
  * @since 12/31/2019
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 import classnames from 'classnames';
@@ -13,18 +13,50 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJSwitch = ({disabled=false}) => {
+/**
+ * Component representing an off and on switch.  The user can plug in custom logic which will occur
+ * when the off/on state changes.
+ * @param onChange Function that is called when the switch is toggled.  The function takes a single
+ * boolean argument, whose value is {@code true} if the switch is on and {@code false} if the
+ * switch is off.
+ * @param initialState The initial on/off state of the switch.
+ * @param disabled Whether clicking on the switch changes its state.
+ * @return {*} React elements representing a toggleable switch.
+ */
+const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
   const classes = useStyles();
+  const [state, setState] = useState(initialState);
+
+  const onClick = () => {
+    if (!disabled) {
+      const newState = !state;
+      setState(newState);
+      onChange(newState);
+    }
+  };
+
+  const mainClass = state ?
+    classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch') :
+    classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch');
+
+  const headClass = state ?
+    classnames(classes.ajSwitchHead, classes.ajSwitchHeadActive, 'aj-switch-head') :
+    classnames(classes.ajSwitchHead, classes.ajSwitchHeadInactive, 'aj-switch-head');
+
+  const tailClass = state ?
+    classnames(classes.ajSwitchTail, classes.ajSwitchTailActive, 'aj-switch-tail') :
+    classnames(classes.ajSwitchTail, classes.ajSwitchTailInactive, 'aj-switch-tail');
 
   return (
-    <div className={classnames(classes.ajSwitch, 'aj-switch')}>
-      <div className={classnames(classes.ajSwitchHead, 'aj-switch-head')}> </div>
-      <div className={classnames(classes.ajSwitchTail, 'aj-switch-tail')}> </div>
+    <div className={mainClass} onClick={onClick}>
+      <div className={headClass}> </div>
+      <div className={tailClass}> </div>
     </div>
   );
 };
 
 AJSwitch.propTypes = {
+  onChange: PropTypes.func,
   disabled: PropTypes.bool
 };
 

@@ -9,4 +9,9 @@ import {storiesOf} from '@storybook/react';
 import {AJSwitch} from '../src';
 
 storiesOf('AJSwitch', module)
-  .add('default', () => <AJSwitch disabled={false} />);
+  .add('default', () =>
+    <AJSwitch
+      onChange={state => console.info(`AJSwitch state: ${state}`)}
+      disabled={false}
+    />
+  );
