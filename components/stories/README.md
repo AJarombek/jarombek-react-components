@@ -12,6 +12,8 @@ Storyboard "stories" for React components.  These stories are examples of the co
 | `storiesAJNavCircle.js`        | Stories for the `AJNavCircle` component.                                                                  |
 | `storiesAJNavTextCircle.js`    | Stories for the `AJNavTextCircle` component.                                                              |
 | `storiesAJResponsiveGrid.js`   | Stories for the `AJResponsiveGrid` component.                                                             |
+| `storiesAJSwitch.js`           | Stories for the `AJSwitch` component.                                                                     |
+| `storiesAJSwitchIcon.js`       | Stories for the `AJSwitchIcon` component.                                                                 |
 | `storiesAJTextButton.js`       | Stories for the `AJTextButton` component.                                                                 |
 | `storiesAJTextCard.js`         | Stories for the `AJTextCard` component.                                                                   |
 

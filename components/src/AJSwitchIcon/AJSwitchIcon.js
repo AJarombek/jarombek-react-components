@@ -28,21 +28,36 @@ const useStyles = createUseStyles(styles);
 const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, disabled=false}) => {
   const classes = useStyles();
 
+  /**
+   * Generate the 'off' icon classes based on whether the switch is on or off.
+   * @param state The state of the AJSwitch child component.
+   * @return {*} The classes attached to the 'off' icon.
+   */
   const getOffIconClasses = (state) => {
     return state ?
       classnames(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, 'aj-switch-icon-off') :
       classnames(classes.ajSwitchIcon, 'aj-switch-icon-off');
   };
 
+  /**
+   * Generate the 'on' icon classes based on whether the switch is on or off.
+   * @param state The state of the AJSwitch child component.
+   * @return {*} The classes attached to the 'on' icon.
+   */
   const getOnIconClasses = (state) => {
     return state ?
       classnames(classes.ajSwitchIcon, 'aj-switch-icon-on') :
       classnames(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, 'aj-switch-icon-on');
   };
 
+  // Hooks for the classes attached to the 'figure' elements.
   const [offIconClasses, setOffIconClasses] = useState(getOffIconClasses(initialState));
   const [onIconClasses, setOnIconClasses] = useState(getOnIconClasses(initialState));
 
+  /**
+   * Function called when the state of the AJSwitch child component changes.
+   * @param state Whether the AJSwitch child component is turned on or off.
+   */
   const onSwitchChange = (state) => {
     setOffIconClasses(getOffIconClasses(state));
     setOnIconClasses(getOnIconClasses(state));

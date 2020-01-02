@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajSwitchIconContainer-0-2-1 aj-switch-icon"
+>
+  <figure
+    className="ajSwitchIcon-0-2-2 aj-switch-icon-off"
+  >
+    <img
+      src="https://asset.jarombek.com/jarombek.png"
+    />
+  </figure>
+  <div
+    className="ajSwitch-0-2-4 ajSwitchInactive-0-2-7 aj-switch"
+    onClick={[Function]}
+  >
+    <div
+      className="ajSwitchHead-0-2-8 ajSwitchHeadInactive-0-2-10 aj-switch-head"
+    >
+       
+    </div>
+    <div
+      className="ajSwitchTail-0-2-11 ajSwitchTailInactive-0-2-13 aj-switch-tail"
+    >
+       
+    </div>
+  </div>
+  <figure
+    className="ajSwitchIcon-0-2-2 ajSwitchIconNotSelected-0-2-3 aj-switch-icon-on"
+  >
+    <img
+      src="https://asset.jarombek.com/jarombek.png"
+    />
+  </figure>
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="ajSwitchIconContainer-0-2-1 aj-switch-icon"
+>
+  <figure
+    className="ajSwitchIcon-0-2-2 ajSwitchIconNotSelected-0-2-3 aj-switch-icon-off"
+  >
+    <img
+      src="https://asset.jarombek.com/jarombek.png"
+    />
+  </figure>
+  <div
+    className="ajSwitch-0-2-4 ajSwitchActive-0-2-6 ajSwitchDisabled-0-2-5 aj-switch"
+    onClick={[Function]}
+  >
+    <div
+      className="ajSwitchHead-0-2-8 ajSwitchHeadActive-0-2-9 aj-switch-head"
+    >
+       
+    </div>
+    <div
+      className="ajSwitchTail-0-2-11 ajSwitchTailActive-0-2-12 aj-switch-tail"
+    >
+       
+    </div>
+  </div>
+  <figure
+    className="ajSwitchIcon-0-2-2 aj-switch-icon-on"
+  >
+    <img
+      src="https://asset.jarombek.com/jarombek.png"
+    />
+  </figure>
+</div>
+`;
