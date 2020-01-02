@@ -5,13 +5,22 @@
  */
 
 export default {
+  ajSwitchIconContainer: {
+    display: 'flex',
+    height: '30px',
+    alignItems: 'center'
+  },
   ajSwitchIcon: {
+    height: '25px',
+    width: '25px',
+    margin: '0 10px',
 
+    '& > img': {
+      height: '100%',
+      width: '100%'
+    }
   },
-  ajSwitchOffImage: {
-
-  },
-  ajSwitchOnImage: {
-
+  ajSwitchIconNotSelected: {
+    filter: 'opacity(0.75) grayscale(1)'
   }
 };

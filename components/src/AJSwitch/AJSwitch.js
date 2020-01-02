@@ -31,7 +31,10 @@ const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
     if (!disabled) {
       const newState = !state;
       setState(newState);
-      onChange(newState);
+
+      if (typeof onChange === 'function') {
+        onChange(newState);
+      }
     }
   };
 

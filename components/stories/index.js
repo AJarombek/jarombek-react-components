@@ -10,5 +10,6 @@ import './storiesAJNavCircle';
 import './storiesAJNavTextCircle';
 import './storiesAJResponsiveGrid';
 import './storiesAJSwitch';
+import './storiesAJSwitchIcon';
 import './storiesAJTextButton';
 import './storiesAJTextCard';
