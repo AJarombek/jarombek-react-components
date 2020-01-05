@@ -13,8 +13,18 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
+/**
+ * Component representing a modal with an optional background.
+ * @param children The contents of the modal.
+ * @param onClickBackground An action that occurs when the modal is clicked.
+ * @param backdrop Whether or not a background is shown behind the modal.
+ * @return {*} React elements representing a modal.
+ * @constructor
+ */
 const AJModal = ({children, onClickBackground, backdrop=true}) => {
   const classes = useStyles();
+
+  const eventDefault = { stopPropagation: f=>f };
 
   let backdropClass = backdrop ?
     classnames(classes.ajModalBackdrop, classes.ajModalColorBackdrop, 'aj-modal-backdrop') :
@@ -22,7 +32,7 @@ const AJModal = ({children, onClickBackground, backdrop=true}) => {
 
   return (
     <div className={backdropClass} onClick={onClickBackground}>
-      <div className={classes.ajModal}>
+      <div className={classes.ajModal} onClick={(e=eventDefault) => e.stopPropagation()}>
         {children}
       </div>
     </div>

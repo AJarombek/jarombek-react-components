@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajModalBackdrop-0-2-2 ajModalColorBackdrop-0-2-3 aj-modal-backdrop"
+>
+  <div
+    className="ajModal-0-2-1"
+    onClick={[Function]}
+  >
+    <div>
+      Modal Snapshot Test
+    </div>
+  </div>
+</div>
+`;
