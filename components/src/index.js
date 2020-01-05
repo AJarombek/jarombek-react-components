@@ -6,6 +6,7 @@
 
 export {default as AJCodeSnippet} from './AJCodeSnippet';
 export {default as AJMobileHamburger} from './AJMobileHamburger';
+export {default as AJModal} from './AJModal';
 export {default as AJNavCircle} from './AJNavCircle';
 export {default as AJNavTextCircle} from './AJNavTextCircle';
 export {default as AJResponsiveGrid} from './AJResponsiveGrid';

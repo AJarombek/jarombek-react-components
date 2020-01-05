@@ -6,6 +6,7 @@
 
 import './storiesAJCodeSnippet';
 import './storiesAJMobileHamburger';
+import './storiesAJModal';
 import './storiesAJNavCircle';
 import './storiesAJNavTextCircle';
 import './storiesAJResponsiveGrid';
