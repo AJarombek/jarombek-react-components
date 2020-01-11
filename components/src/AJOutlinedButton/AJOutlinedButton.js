@@ -1,7 +1,7 @@
 /**
- * Reusable text button component.
+ * Reusable outlined button component.
  * @author Andrew Jarombek
- * @since 11/16/2019
+ * @since 1/6/2020
  */
 
 import React from 'react';
@@ -20,19 +20,19 @@ const useStyles = createUseStyles(styles);
  * @param disabled Whether the button is clickable or not.
  * @return {*} React elements representing a text button.
  */
-const AJTextButton = ({children, onClick, disabled=false}) => {
+const AJOutlinedButton = ({children, onClick, disabled=false}) => {
   const classes = useStyles();
 
   const enabledClasses = [
-    'aj-text-button',
-    classes.ajTextButton,
-    classes.ajTextButtonEnabled
+    'aj-outlined-button',
+    classes.ajOutlinedButton,
+    classes.ajOutlinedButtonEnabled
   ];
 
   const disabledClasses = [
-    'aj-text-button',
-    classes.ajTextButton,
-    classes.ajTextButtonDisabled
+    'aj-outlined-button',
+    classes.ajOutlinedButton,
+    classes.ajOutlinedButtonDisabled
   ];
 
   return (
