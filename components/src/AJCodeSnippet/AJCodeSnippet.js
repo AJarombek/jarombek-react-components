@@ -40,6 +40,11 @@ const AJCodeSnippet = ({children, language}) => {
   };
 
   const lang = languages[language] || languages.javascript;
+
+  if (!language) {
+    lang.title = "";
+  }
+
   let highlightedCode;
 
   useEffect(() => {
@@ -48,7 +53,7 @@ const AJCodeSnippet = ({children, language}) => {
   });
 
   return (
-    <div>
+    <div className="aj-code-snippet">
       <code title={lang.title} className={classnames(lang.className, classes.hljs)}
             ref={element => highlightedCode = element}>
         {children}

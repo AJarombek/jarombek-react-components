@@ -4,7 +4,9 @@
  * @since 11/16/2019
  */
 
+export {default as AJButton} from './AJButton';
 export {default as AJCodeSnippet} from './AJCodeSnippet';
+export {default as AJContainedButton} from './AJContainedButton';
 export {default as AJMobileHamburger} from './AJMobileHamburger';
 export {default as AJModal} from './AJModal';
 export {default as AJNavCircle} from './AJNavCircle';

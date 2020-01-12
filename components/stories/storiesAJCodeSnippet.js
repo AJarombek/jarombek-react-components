@@ -14,6 +14,13 @@ storiesOf('AJCodeSnippet', module)
       const j = 25;
     </AJCodeSnippet>
   )
+  .add('no language prop', () =>
+    <AJCodeSnippet>
+      {`[1,2,3].forEach(item => {
+  console.info(item);
+})`}
+    </AJCodeSnippet>
+  )
   .add('multi-line', () =>
     <AJCodeSnippet language="java">
       {`public class Test {

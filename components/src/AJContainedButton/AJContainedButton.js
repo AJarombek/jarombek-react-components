@@ -1,7 +1,7 @@
 /**
- * Reusable outlined button component.
+ * Reusable contained button component.
  * @author Andrew Jarombek
- * @since 1/6/2020
+ * @since 1/12/2020
  */
 
 import React from 'react';
@@ -14,25 +14,25 @@ import AJBaseButton from '../AJBaseButton/AJBaseButton';
 const useStyles = createUseStyles(styles);
 
 /**
- * Component for a button that displays text and has an outline.
+ * Component for a button that displays text and is contained within a solid color.
  * @param children The contents of the button.
  * @param onClick An action that occurs when the button is clicked.
  * @param disabled Whether the button is clickable or not.
  * @return {*} React elements representing a contained button.
  */
-const AJOutlinedButton = ({children, onClick, disabled=false}) => {
+const AJContainedButton = ({children, onClick, disabled=false}) => {
   const classes = useStyles();
 
   const enabledClasses = [
-    'aj-outlined-button',
-    classes.ajOutlinedButton,
-    classes.ajOutlinedButtonEnabled
+    'aj-contained-button',
+    classes.ajContainedButton,
+    classes.ajContainedButtonEnabled
   ];
 
   const disabledClasses = [
-    'aj-outlined-button',
-    classes.ajOutlinedButton,
-    classes.ajOutlinedButtonDisabled
+    'aj-contained-button',
+    classes.ajContainedButton,
+    classes.ajContainedButtonDisabled
   ];
 
   return (
@@ -47,10 +47,10 @@ const AJOutlinedButton = ({children, onClick, disabled=false}) => {
   );
 };
 
-AJOutlinedButton.propTypes = {
+AJContainedButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool
 };
 
-export default AJOutlinedButton;
+export default AJContainedButton;
