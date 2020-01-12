@@ -31,7 +31,17 @@ export default {
       color: '#aaa',
       position: 'sticky',
       left: '90%',
-      float: 'right'
+      float: 'right',
+
+      [`@media screen and (max-width: 700px)`]: {
+        marginRight: '5px',
+        left: '88%'
+      },
+
+      [`@media screen and (max-width: 480px)`]: {
+        marginRight: '10px',
+        left: '85%'
+      }
     },
 
     '& .hljs-comment, & .hljs-quote': {

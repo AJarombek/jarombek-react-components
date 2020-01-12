@@ -9,6 +9,7 @@ import './storiesAJMobileHamburger';
 import './storiesAJModal';
 import './storiesAJNavCircle';
 import './storiesAJNavTextCircle';
+import './storiesAJOutlinedButton';
 import './storiesAJResponsiveGrid';
 import './storiesAJSwitch';
 import './storiesAJSwitchIcon';

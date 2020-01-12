@@ -6,6 +6,29 @@
 
 export default {
   ajBaseButton: {
+    display: 'inline-block',
+    cursor: 'pointer',
 
+    '& button': {
+      border: 'none'
+    },
+
+    '&:focus, & > button:focus': {
+      outline: 'none'
+    }
+  },
+  ajBaseButtonEnabled: {
+    cursor: 'pointer',
+
+    '& button': {
+      cursor: 'pointer'
+    }
+  },
+  ajBaseButtonDisabled: {
+    cursor: 'not-allowed',
+
+    '& button': {
+      cursor: 'not-allowed'
+    }
   }
 };

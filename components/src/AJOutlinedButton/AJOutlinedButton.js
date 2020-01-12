@@ -47,10 +47,10 @@ const AJOutlinedButton = ({children, onClick, disabled=false}) => {
   );
 };
 
-AJTextButton.propTypes = {
+AJOutlinedButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool
 };
 
-export default AJTextButton;
+export default AJOutlinedButton;

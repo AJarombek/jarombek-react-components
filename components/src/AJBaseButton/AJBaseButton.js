@@ -26,8 +26,8 @@ const AJBaseButton = ({children, onClick, disabledClasses, enabledClasses, disab
   const classes = useStyles();
 
   const className = disabled ?
-    classnames(classes.ajBaseButton, disabledClasses) :
-    classnames(classes.ajBaseButton, enabledClasses);
+    classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses) :
+    classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses);
 
   const onClickAction = disabled ? null : onClick;
 
