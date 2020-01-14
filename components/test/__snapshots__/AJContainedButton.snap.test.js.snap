@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="ajBaseButton-0-2-4 ajBaseButtonEnabled-0-2-5 aj-text-button ajTextButton-0-2-1 ajTextButtonEnabled-0-2-2"
+  className="ajBaseButton-0-2-4 ajBaseButtonEnabled-0-2-5 aj-contained-button ajContainedButton-0-2-1 ajContainedButtonEnabled-0-2-2"
 >
   <button
     disabled={false}
@@ -17,7 +17,7 @@ exports[`renders correctly 1`] = `
 
 exports[`renders correctly with all props 1`] = `
 <div
-  className="ajBaseButton-0-2-4 ajBaseButtonDisabled-0-2-6 aj-text-button ajTextButton-0-2-1 ajTextButtonDisabled-0-2-3"
+  className="ajBaseButton-0-2-4 ajBaseButtonDisabled-0-2-6 aj-contained-button ajContainedButton-0-2-1 ajContainedButtonDisabled-0-2-3"
   onClick={null}
 >
   <button

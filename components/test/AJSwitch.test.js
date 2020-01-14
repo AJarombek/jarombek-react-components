@@ -58,4 +58,12 @@ describe('unit tests', () => {
     expect(onChange).not.toHaveBeenCalled();
     expect(onChange).toHaveBeenCalledTimes(0);
   });
+
+  it('still toggles when onChange is not a function', () => {
+    const wrapper = shallow(<AJSwitch onChange="I should be a function" />);
+
+    expect(wrapper.find('div').at(0).hasClass(/(ajSwitchInactive)(-\d+)/)).toBe(true);
+    expect(wrapper.find('div').at(0).simulate('click'));
+    expect(wrapper.find('div').at(0).hasClass(/(ajSwitchActive)(-\d+)/)).toBe(true);
+  });
 });

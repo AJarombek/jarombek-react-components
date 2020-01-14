@@ -47,4 +47,26 @@ describe('integration tests', () => {
     expect(wrapper.find('.aj-switch-icon-off').hasClass(/(ajSwitchIconNotSelected)(-\d+)/))
       .toBe(false);
   });
+
+  it("still toggles when onChange isn't a function", () => {
+    const wrapper = mount(
+      <AJSwitchIcon
+        offImageUrl="https://asset.jarombek.com/jarombek.png"
+        onImageUrl="https://asset.jarombek.com/jarombek.png"
+        onChange={{isObject: true, isFunction: false}}
+      />
+    );
+
+    expect(wrapper.find('.aj-switch-icon-on').hasClass(/(ajSwitchIconNotSelected)(-\d+)/))
+      .toBe(true);
+    expect(wrapper.find('.aj-switch-icon-off').hasClass(/(ajSwitchIconNotSelected)(-\d+)/))
+      .toBe(false);
+
+    wrapper.find('.aj-switch').simulate('click');
+
+    expect(wrapper.find('.aj-switch-icon-on').hasClass(/(ajSwitchIconNotSelected)(-\d+)/))
+      .toBe(false);
+    expect(wrapper.find('.aj-switch-icon-off').hasClass(/(ajSwitchIconNotSelected)(-\d+)/))
+      .toBe(true);
+  });
 });

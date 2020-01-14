@@ -14,36 +14,37 @@ describe('unit tests', () => {
     const wrapper = shallow(<AJTextButton children="Text" />);
     expect(wrapper.exists()).toBe(true);
   });
+});
+
+describe('integration tests', () => {
 
   it('renders a div with a button child', () => {
-    const wrapper = shallow(<AJTextButton>Text Button</AJTextButton>);
+    const wrapper = mount(<AJTextButton>Text Button</AJTextButton>);
     expect(wrapper.find('div')).toHaveLength(1);
     expect(wrapper.find('div').childAt(0).type()).toEqual('button');
   });
 
   it('renders an enabled button', () => {
-    const wrapper = shallow(<AJTextButton>Text Button</AJTextButton>);
+    const wrapper = mount(<AJTextButton>Text Button</AJTextButton>);
     expect(wrapper.find('div').hasClass(/(ajTextButton)(-\d+)/)).toBe(true);
     expect(wrapper.find('div').hasClass(/(ajTextButtonEnabled)(-\d+)/)).toBe(true);
     expect(wrapper.find('div')).toHaveLength(1);
   });
 
   it('renders a disabled button when the disabled prop is true', () => {
-    const wrapper = shallow(<AJTextButton disabled={true}>Text Button</AJTextButton>);
+    const wrapper = mount(<AJTextButton disabled={true}>Text Button</AJTextButton>);
     expect(wrapper.find('div').hasClass(/(ajTextButton)(-\d+)/)).toBe(true);
     expect(wrapper.find('div').hasClass(/(ajTextButtonDisabled)(-\d+)/)).toBe(true);
     expect(wrapper.find('div')).toHaveLength(1);
   });
 
   it('default onClick function has no impact', () => {
-    const wrapper = shallow(<AJTextButton>Text Button</AJTextButton>);
+    const wrapper = mount(<AJTextButton>Text Button</AJTextButton>);
     expect(wrapper.find('button').text()).toEqual("Text Button");
     expect(wrapper.find('button').simulate('click'));
     expect(wrapper.find('button').text()).toEqual("Text Button");
   });
-});
 
-describe('integration tests', () => {
   it('changes content when clicked using onClick', () => {
     const Parent = ({ children, ...props }) => {
       const [state, setState] = useState(0);

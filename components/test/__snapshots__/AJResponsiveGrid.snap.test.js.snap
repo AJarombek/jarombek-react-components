@@ -34,7 +34,7 @@ exports[`renders correctly 1`] = `
       className="aj-text-card-footer"
     >
       <div
-        className="ajTextButton-0-2-4 ajTextButtonEnabled-0-2-5"
+        className="ajBaseButton-0-2-7 ajBaseButtonEnabled-0-2-8 aj-text-button ajTextButton-0-2-4 ajTextButtonEnabled-0-2-5"
         onClick={[Function]}
       >
         <button
@@ -76,7 +76,7 @@ exports[`renders correctly 1`] = `
       className="aj-text-card-footer"
     >
       <div
-        className="ajTextButton-0-2-4 ajTextButtonEnabled-0-2-5"
+        className="ajBaseButton-0-2-7 ajBaseButtonEnabled-0-2-8 aj-text-button ajTextButton-0-2-4 ajTextButtonEnabled-0-2-5"
         onClick={[Function]}
       >
         <button

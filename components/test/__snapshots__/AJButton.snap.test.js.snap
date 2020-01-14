@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajBaseButton-0-2-4 ajBaseButtonDisabled-0-2-6 aj-contained-button ajContainedButton-0-2-1 ajContainedButtonDisabled-0-2-3"
+  onClick={null}
+>
+  <button
+    disabled={true}
+    type="button"
+  >
+    <div>
+      Snapshot Test
+    </div>
+  </button>
+</div>
+`;
