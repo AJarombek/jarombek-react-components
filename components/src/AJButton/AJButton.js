@@ -38,7 +38,7 @@ const AJButton = ({type, children, onClick, disabled=false}) => {
           {children}
         </AJOutlinedButton>
       );
-    case 'type':
+    case 'text':
       return (
         <AJTextButton
           onClick={onClick}

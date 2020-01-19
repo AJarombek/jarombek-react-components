@@ -8,6 +8,6 @@ import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 import {AJContainedButton} from '../src';
 
-storiesOf('AJOutlinedButton', module)
-  .add('default', () => <AJContainedButton children="Outlined Button" />)
+storiesOf('AJContainedButton', module)
+  .add('default', () => <AJContainedButton children="Contained Button" />)
   .add('disabled', () => <AJContainedButton disabled={true}>Outlined Button</AJContainedButton>);
