@@ -6,9 +6,9 @@
 
 export default {
   ajOutlinedButton: {
-    padding: '5px',
+    padding: '8px',
     transition: 'background-color 0.25s ease',
-    border: '1.5px solid #ddd',
+    border: '2px solid #ddd',
     borderRadius: '4px',
 
     '& button': {

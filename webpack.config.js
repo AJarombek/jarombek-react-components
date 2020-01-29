@@ -32,7 +32,20 @@ module.exports = {
     ]
   },
   externals: {
-    react: 'react'
+    'react': 'react',
+    'highlight.js': 'highlight.js',
+    'react-jss': 'react-jss'
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+            name: 'vendor',
+            chunks: 'initial'
+        }
+      }
+    }
   },
   output: {
     path: path.join(__dirname, "dist/"),
