@@ -9,6 +9,7 @@ import PropTypes from 'prop-types';
 import AJTextCard from '../AJTextCard/AJTextCard';
 import {createUseStyles} from 'react-jss';
 import styles from './styles';
+import classnames from 'classnames';
 
 const useStyles = createUseStyles(styles);
 
@@ -34,7 +35,7 @@ const AJResponsiveGrid = ({items, smallBreakpoint='600px', mediumBreakpoint='900
   const classes = useStyles(breakpoints);
 
   return (
-    <div className={classes.ajResponsiveGrid}>
+    <div className={classnames('aj-responsive-grid', classes.ajResponsiveGrid)}>
       {items}
     </div>
   );

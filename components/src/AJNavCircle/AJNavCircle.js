@@ -28,25 +28,25 @@ const AJNavCircle = ({direction, height="25px", active=true, onClick}) => {
 
   let circleClass;
   if (active) {
-    circleClass = classnames(classes.ajNavCircle, classes.active);
+    circleClass = classnames('aj-nav-circle', classes.ajNavCircle, classes.active);
   } else {
-    circleClass = classnames(classes.ajNavCircle, classes.inactive);
+    circleClass = classnames('aj-nav-circle', classes.ajNavCircle, classes.inactive);
     onClick = null;
   }
 
   let pictureClass = classes.img;
   switch (direction) {
     case 'up':
-      pictureClass = classnames(classes.up, classes.img);
+      pictureClass = classnames('nav-up', classes.up, classes.img);
       break;
     case 'down':
-      pictureClass = classnames(classes.down, classes.img);
+      pictureClass = classnames('nav-down', classes.down, classes.img);
       break;
     case 'left':
-      pictureClass = classnames(classes.left, classes.img);
+      pictureClass = classnames('nav-left', classes.left, classes.img);
       break;
     case 'right':
-      pictureClass = classnames(classes.right, classes.img);
+      pictureClass = classnames('nav-right', classes.right, classes.img);
       break;
   }
 

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="ajResponsiveGrid-0-2-1 ajResponsiveGrid-0-0-2-2"
+  className="aj-responsive-grid ajResponsiveGrid-0-2-1 ajResponsiveGrid-0-0-2-2"
 >
   <div
     className="ajTextCard-0-2-3 aj-text-card"

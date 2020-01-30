@@ -42,8 +42,13 @@ describe('unit tests', () => {
 
 describe('integration tests', () => {
 
-  it('renders', () => {
+  it('title prop has value Java when language is java', () => {
     const wrapper = mount(<AJCodeSnippet language="java">public class Test {}</AJCodeSnippet>);
-    expect(wrapper.exists()).toBe(true);
+    expect(wrapper.find('code').prop('title')).toEqual('Java');
+  });
+
+  it('title prop has no value when language is undefined', () => {
+    const wrapper = mount(<AJCodeSnippet>public class Test {}</AJCodeSnippet>);
+    expect(wrapper.find('code').prop('title')).toEqual('');
   });
 });

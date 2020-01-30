@@ -19,3 +19,24 @@ describe('unit tests', () => {
     expect(wrapper.exists()).toBe(true);
   });
 });
+
+describe('integration tests', () => {
+
+  it("button is disabled when prop 'disabled' is 'true'", () => {
+    const wrapper = mount(
+      <AJBaseButton disabledClasses={[]} enabledClasses={[]} disabled={true}>
+        Test Disabled Base Button
+      </AJBaseButton>
+    );
+    expect(wrapper.find('button').prop('disabled')).toEqual(true);
+  });
+
+  it("button is disabled when prop 'disabled' is undefined", () => {
+    const wrapper = mount(
+      <AJBaseButton disabledClasses={[]} enabledClasses={[]}>
+        Test Enabled Base Button
+      </AJBaseButton>
+    );
+    expect(wrapper.find('button').prop('disabled')).toEqual(false);
+  });
+});

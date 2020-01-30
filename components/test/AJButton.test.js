@@ -38,3 +38,13 @@ describe('integration tests', () => {
     expect(wrapper.html()).toBeNull();
   });
 });
+
+describe('integration tests', () => {
+
+  it("button is disabled when prop 'disabled' is undefined", () => {
+    const wrapper = mount(
+      <AJButton type="text">Test Enabled Button</AJButton>
+    );
+    expect(wrapper.find('button').prop('disabled')).toEqual(false);
+  });
+});
