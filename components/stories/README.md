@@ -8,6 +8,7 @@ Storyboard "stories" for React components.  These stories are examples of the co
 |--------------------------------|-----------------------------------------------------------------------------------------------------------|
 | `index.js`                     | JavaScript file containing imports from all the `storiesX.js` files.  These stories are shown in the UI.  |
 | `storiesAJCodeSnippet.js`      | Stories for the `AJCodeSnippet` component.                                                                |
+| `storiesAJCodeSnippet.js`      | Stories for the `AJCodeSnippet` component.                                                                |
 | `storiesAJMobileHamburger.js`  | Stories for the `AJMobileHamburger` component.                                                            |
 | `storiesAJNavCircle.js`        | Stories for the `AJNavCircle` component.                                                                  |
 | `storiesAJNavTextCircle.js`    | Stories for the `AJNavTextCircle` component.                                                              |

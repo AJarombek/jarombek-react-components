@@ -1,5 +1,5 @@
 /**
- * Reusable modal content that can display custom content.
+ * Reusable modal component that can display custom content.
  * @author Andrew Jarombek
  * @since 1/5/2020
  */
