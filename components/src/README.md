@@ -18,3 +18,8 @@ Directory containing all the React components.  Each component has its own sub-d
 | `AJSwitchIcon`           | Component representing a toggleable switch with icons for its on and off states.          |
 | `AJTextButton`           | Component representing a button with text and no outline/background.                      |
 | `AJTextCard`             | Component representing a generic card of text.                                            |
+
+### Resources
+
+1) [JSS Demo](https://codesandbox.io/s/j3l06yyqpw)
+2) [JSS Syntax](https://cssinjs.org/jss-syntax/?v=v10.0.0)
