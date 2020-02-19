@@ -10,6 +10,7 @@ export {default as AJContainedButton} from './AJContainedButton';
 export {default as AJMobileHamburger} from './AJMobileHamburger';
 export {default as AJModal} from './AJModal';
 export {default as AJNavCircle} from './AJNavCircle';
+export {default as AJNavList} from './AJNavList';
 export {default as AJNavTextCircle} from './AJNavTextCircle';
 export {default as AJOutlinedButton} from './AJOutlinedButton';
 export {default as AJResponsiveGrid} from './AJResponsiveGrid';

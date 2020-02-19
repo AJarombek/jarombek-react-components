@@ -7,13 +7,16 @@
 import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
 import {AJNavList} from '../src';
+import {MemoryRouter} from 'react-router';
 
 storiesOf('AJNavList', module)
   .add('default', () =>
-    <AJNavList
-      items={[
-        {text: 'Home', link: '/'},
-        {text: 'Profile', link: '/profile'}
-      ]}
-    />
+    <MemoryRouter>
+      <AJNavList
+        items={[
+          {text: 'Home', link: '/'},
+          {text: 'Profile', link: '/profile'}
+        ]}
+      />
+    </MemoryRouter>
   );

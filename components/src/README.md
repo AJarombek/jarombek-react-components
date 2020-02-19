@@ -12,6 +12,7 @@ Directory containing all the React components.  Each component has its own sub-d
 | `AJCodeSnippet`          | Component representing a snippet of programming language code.                            |
 | `AJMobileHamburger`      | Component representing a mobile menu hamburger icon.                                      |
 | `AJNavCircle`            | Component representing a navigation circle.                                               |
+| `AJNavList`              | Component representing a mobile navigation list drop-down.                                |
 | `AJNavTextCircle`        | Component representing a navigation circle with text describing the action.               |
 | `AJResponsiveGrid`       | Component representing a responsive grid of cards.                                        |
 | `AJSwitch`               | Component representing a toggleable switch with two states - on and off.                  |
