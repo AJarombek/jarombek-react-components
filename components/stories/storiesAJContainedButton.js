@@ -10,4 +10,4 @@ import {AJContainedButton} from '../src';
 
 storiesOf('AJContainedButton', module)
   .add('default', () => <AJContainedButton children="Contained Button" />)
-  .add('disabled', () => <AJContainedButton disabled={true}>Outlined Button</AJContainedButton>);
+  .add('disabled', () => <AJContainedButton disabled={true}>Contained Button</AJContainedButton>);

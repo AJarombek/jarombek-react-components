@@ -34,9 +34,12 @@ module.exports = {
   externals: {
     'react': 'react',
     'highlight.js': 'highlight.js',
-    'react-jss': 'react-jss'
+    'react-jss': 'react-jss',
+    'react-router': 'react-router',
+    'react-dom-router': 'react-dom-router'
   },
   optimization: {
+    minimize: true,
     splitChunks: {
       cacheGroups: {
         commons: {

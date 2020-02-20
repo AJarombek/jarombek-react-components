@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajNavList-0-2-1 aj-nav-list"
+>
+  <div
+    className="ajNavListItem-0-2-2 aj-nav-list-item"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <div>
+        Home
+      </div>
+    </a>
+  </div>
+  <div
+    className="ajNavListItem-0-2-2 aj-nav-list-item ajNavListLastItem-0-2-3 aj-nav-list-last-item"
+  >
+    <a
+      href="/profile"
+      onClick={[Function]}
+    >
+      <div>
+        Profile
+      </div>
+    </a>
+  </div>
+</div>
+`;
