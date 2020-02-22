@@ -6,21 +6,18 @@
 
 import React from 'react';
 import {shallow} from 'enzyme';
-import {MemoryRouter} from 'react-router';
 import AJNavList from '../src/AJNavList/AJNavList';
 
 describe('unit tests', () => {
 
   it('renders', () => {
     const wrapper = shallow(
-      <MemoryRouter>
-        <AJNavList
-          items={[
-            {text: 'Home', link: '/'},
-            {text: 'Profile', link: '/profile'}
-          ]}
-        />
-      </MemoryRouter>
+      <AJNavList
+        items={[
+          {text: 'Home', onClick: () => {}},
+          {text: 'Profile', onClick: () => {}}
+        ]}
+      />
     );
     expect(wrapper.exists()).toBe(true);
   });

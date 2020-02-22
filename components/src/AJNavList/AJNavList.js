@@ -8,14 +8,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 import classnames from 'classnames';
-import {Link} from 'react-router-dom';
 
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJNavList = ({items}) => {
+const AJNavList = ({items, onClick}) => {
   const classes = useStyles();
+
+  if (!Array.isArray(items)) {
+    items = [];
+  }
 
   return (
     <div className={classnames(classes.ajNavList, 'aj-nav-list')}>
@@ -30,10 +33,10 @@ const AJNavList = ({items}) => {
         }
 
         return (
-          <div className={listItemClasses}>
-            <Link to={item.link}>
+          <div key={item.text} className={listItemClasses}>
+            <div onClick={() => onClick()}>
               <div>{item.text}</div>
-            </Link>
+            </div>
           </div>
         );
       })}
@@ -44,7 +47,7 @@ const AJNavList = ({items}) => {
 AJNavList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     text: PropTypes.string.isRequired,
-    link: PropTypes.string.isRequired
+    onClick: PropTypes.func.isRequired
   })).isRequired
 };
 

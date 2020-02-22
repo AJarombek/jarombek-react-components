@@ -6,6 +6,7 @@
 
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import {createUseStyles} from 'react-jss';
 
 import styles from './styles';
@@ -22,7 +23,11 @@ const AJMobileHamburger = ({onClick}) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 
-  const spanClassName = active ? classes.ajMobileHamburgerActive: classes.ajMobileHamburgerInactive;
+  const spanClassName = active ?
+    classnames('aj-mobile-hamburger-active', classes.ajMobileHamburgerActive):
+    classnames('aj-mobile-hamburger-inactive', classes.ajMobileHamburgerInactive);
+
+  const hamburgerClasses = classnames('aj-mobile-hamburger', classes.ajMobileHamburger);
 
   const onClickAction = () => {
     setActive(!active);
@@ -32,7 +37,7 @@ const AJMobileHamburger = ({onClick}) => {
   };
 
   return (
-    <div className={classes.ajMobileHamburger} onClick={onClickAction}>
+    <div className={hamburgerClasses} onClick={onClickAction}>
       <button type="button">
         <span className={spanClassName} />
       </button>

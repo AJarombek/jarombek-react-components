@@ -14,7 +14,7 @@ export default {
   ajNavListItem: {
     width: '100%',
 
-    '& > a': {
+    '& > div': {
       display: 'flex',
       width: '90%',
       height: '40px',
@@ -24,6 +24,7 @@ export default {
       textDecoration: 'none',
       color: '#777',
       transition: 'color 0.5s ease',
+      cursor: 'pointer',
 
       '&:hover': {
         textDecoration: 'underline'
@@ -36,7 +37,7 @@ export default {
     }
   },
   ajNavListLastItem: {
-    '& > a': {
+    '& > div': {
       borderBottom: 'none'
     }
   }

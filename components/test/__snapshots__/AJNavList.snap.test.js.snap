@@ -7,26 +7,24 @@ exports[`renders correctly 1`] = `
   <div
     className="ajNavListItem-0-2-2 aj-nav-list-item"
   >
-    <a
-      href="/"
+    <div
       onClick={[Function]}
     >
       <div>
         Home
       </div>
-    </a>
+    </div>
   </div>
   <div
     className="ajNavListItem-0-2-2 aj-nav-list-item ajNavListLastItem-0-2-3 aj-nav-list-last-item"
   >
-    <a
-      href="/profile"
+    <div
       onClick={[Function]}
     >
       <div>
         Profile
       </div>
-    </a>
+    </div>
   </div>
 </div>
 `;

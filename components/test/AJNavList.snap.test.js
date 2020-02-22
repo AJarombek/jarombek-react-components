@@ -1,6 +1,5 @@
 import React from 'react';
 import AJNavList from '../src/AJNavList/AJNavList';
-import {MemoryRouter} from 'react-router';
 import renderer from 'react-test-renderer';
 
 /**
@@ -11,14 +10,12 @@ import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
   const tree = renderer.create(
-    <MemoryRouter>
-      <AJNavList
-        items={[
-          {text: 'Home', link: '/'},
-          {text: 'Profile', link: '/profile'}
-        ]}
-      />
-    </MemoryRouter>
+    <AJNavList
+      items={[
+        {text: 'Home', onClick: () => {}},
+        {text: 'Profile', onClick: () => {}}
+      ]}
+    />
   ).toJSON();
   expect(tree).toMatchSnapshot();
 });
