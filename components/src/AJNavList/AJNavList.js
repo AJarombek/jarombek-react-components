@@ -13,7 +13,13 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJNavList = ({items, onClick}) => {
+/**
+ * Component representing a list commonly used by mobile dropdowns for the
+ * website navigation header.
+ * @param items Details about each item in the list.
+ * @return {*} React elements that make up a navigation list.
+ */
+const AJNavList = ({items}) => {
   const classes = useStyles();
 
   if (!Array.isArray(items)) {
@@ -33,9 +39,9 @@ const AJNavList = ({items, onClick}) => {
         }
 
         return (
-          <div key={item.text} className={listItemClasses}>
-            <div onClick={() => onClick()}>
-              <div>{item.text}</div>
+          <div key={item.content} className={listItemClasses}>
+            <div onClick={() => item.onClick()}>
+              <div>{item.content}</div>
             </div>
           </div>
         );
@@ -46,7 +52,7 @@ const AJNavList = ({items, onClick}) => {
 
 AJNavList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
-    text: PropTypes.string.isRequired,
+    content: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired
   })).isRequired
 };

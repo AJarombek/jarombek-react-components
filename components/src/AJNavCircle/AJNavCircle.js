@@ -21,7 +21,6 @@ const useStyles = createUseStyles(styles);
  * @param active Whether the circle is active and can be clicked.
  * @param onClick An action which occurs when the circle is clicked.
  * @return {*} React elements representing a navigational arrow and circle.
- * @constructor
  */
 const AJNavCircle = ({direction, height="25px", active=true, onClick}) => {
   const classes = useStyles({height});
