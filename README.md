@@ -24,3 +24,4 @@ websites, along with any prototypes I create.
 
 1) [React Component Library Seed Project](https://github.com/NGimhana/sample_react_component_library_boilerplate)
 2) [Webpack MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/)
+3) [Remove Comments without Minifying with Webpack](https://stackoverflow.com/a/48753870)

@@ -5,6 +5,7 @@
  */
 
 const path = require("path");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -37,6 +38,18 @@ module.exports = {
     'react-jss': 'react-jss'
   },
   optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          output: {
+            comments: false,
+            beautify: true
+          },
+          mangle: false,
+          compress: false
+        }
+      })
+    ],
     splitChunks: {
       cacheGroups: {
         commons: {
