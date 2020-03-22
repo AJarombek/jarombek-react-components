@@ -20,7 +20,7 @@ const useStyles = createUseStyles(styles);
  * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements that represent a hamburger icon.
  */
-const AJMobileHamburger = forwardRef(({onClick, ref}) => {
+const AJMobileHamburger = forwardRef(({onClick}, ref) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 

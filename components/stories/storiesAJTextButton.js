@@ -4,7 +4,7 @@
  * @since 11/16/2019
  */
 
-import React, {useState} from 'react';
+import React, {useState, createRef} from 'react';
 import {storiesOf} from '@storybook/react';
 import {AJTextButton} from '../src';
 
@@ -22,6 +22,38 @@ storiesOf('AJTextButton', module)
           <AJTextButton children={`Clicked: ${state}`}
                         onClick={() => setState(state += 1)} />
         )}
+      </Parent>
+    );
+  })
+  .add('with ref', () => {
+    const Parent = ({ children, ...props }) => {
+      const [colored, setColored] = useState(false);
+      return <div>{children(colored, setColored)}</div>
+    };
+
+    return (
+      <Parent>
+        {(colored, setColored) => {
+          const buttonRef = createRef();
+
+          const onClick = () => {
+            if (!colored) {
+              buttonRef.current.style.backgroundColor = 'aquamarine';
+            } else {
+              buttonRef.current.style.backgroundColor = 'transparent';
+            }
+
+            setColored(!colored);
+          };
+
+          return (
+            <AJTextButton
+              children={colored ? 'Remove Color' : 'Add Color'}
+              onClick={onClick}
+              ref={buttonRef}
+            />
+          )
+        }}
       </Parent>
     );
   })

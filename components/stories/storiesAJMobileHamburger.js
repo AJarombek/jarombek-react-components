@@ -4,9 +4,19 @@
  * @since 11/24/2019
  */
 
-import React from 'react';
+import React, {createRef} from 'react';
 import {storiesOf} from '@storybook/react';
-import {AJMobileHamburger} from '../src';
+import {AJMobileHamburger, AJTextButton} from '../src';
 
 storiesOf('AJMobileHamburger', module)
-  .add('default', () => <AJMobileHamburger />);
+  .add('default', () => <AJMobileHamburger />)
+  .add('with ref', () => {
+    const hamburgerRef = createRef();
+
+    return (
+      <>
+        <AJTextButton onClick={() => hamburgerRef.current.click()}>Toggle</AJTextButton>
+        <AJMobileHamburger ref={hamburgerRef} />
+      </>
+    );
+  });

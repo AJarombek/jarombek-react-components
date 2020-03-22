@@ -5,7 +5,7 @@
  * @since 1/12/2020
  */
 
-import React from 'react';
+import React, {forwardRef} from 'react';
 import PropTypes from 'prop-types';
 import {AJContainedButton, AJOutlinedButton, AJTextButton} from '../../src';
 
@@ -15,16 +15,18 @@ import {AJContainedButton, AJOutlinedButton, AJTextButton} from '../../src';
  * @param children The contents of the button.
  * @param onClick An action that occurs when the button is clicked.
  * @param disabled Whether the button is clickable or not.
+ * @param ref A ref forwarded through the component to the Button components.
  * @return {*} React elements representing a contained, outlined, or text button.
  */
-const AJButton = ({type, children, onClick, disabled=false}) => {
+const AJButton = forwardRef(({type, children, onClick, disabled=false}, ref) => {
 
   switch (type) {
     case 'contained':
       return (
         <AJContainedButton
           onClick={onClick}
-          disabled={disabled}>
+          disabled={disabled}
+          ref={ref}>
 
           {children}
         </AJContainedButton>
@@ -33,7 +35,8 @@ const AJButton = ({type, children, onClick, disabled=false}) => {
       return (
         <AJOutlinedButton
           onClick={onClick}
-          disabled={disabled}>
+          disabled={disabled}
+          ref={ref}>
 
           {children}
         </AJOutlinedButton>
@@ -42,7 +45,8 @@ const AJButton = ({type, children, onClick, disabled=false}) => {
       return (
         <AJTextButton
           onClick={onClick}
-          disabled={disabled}>
+          disabled={disabled}
+          ref={ref}>
 
           {children}
         </AJTextButton>
@@ -50,7 +54,7 @@ const AJButton = ({type, children, onClick, disabled=false}) => {
     default:
       return null;
   }
-};
+});
 
 AJButton.propTypes = {
   type: PropTypes.oneOf(['contained', 'outlined', 'text']).isRequired,

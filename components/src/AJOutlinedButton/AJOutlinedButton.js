@@ -4,7 +4,7 @@
  * @since 1/6/2020
  */
 
-import React from 'react';
+import React, {forwardRef} from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 
@@ -18,9 +18,10 @@ const useStyles = createUseStyles(styles);
  * @param children The contents of the button.
  * @param onClick An action that occurs when the button is clicked.
  * @param disabled Whether the button is clickable or not.
+ * @param ref A ref forwarded through the component to the AJBaseButton component.
  * @return {*} React elements representing a contained button.
  */
-const AJOutlinedButton = ({children, onClick, disabled=false}) => {
+const AJOutlinedButton = forwardRef(({children, onClick, disabled=false}, ref) => {
   const classes = useStyles();
 
   const enabledClasses = [
@@ -40,12 +41,13 @@ const AJOutlinedButton = ({children, onClick, disabled=false}) => {
       onClick={onClick}
       disabled={disabled}
       enabledClasses={enabledClasses}
-      disabledClasses={disabledClasses}>
+      disabledClasses={disabledClasses}
+      ref={ref}>
 
       {children}
     </AJBaseButton>
   );
-};
+});
 
 AJOutlinedButton.propTypes = {
   children: PropTypes.node.isRequired,

@@ -4,7 +4,7 @@
  * @since 1/10/2020
  */
 
-import React from 'react';
+import React, {forwardRef} from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 import classnames from 'classnames';
@@ -20,25 +20,28 @@ const useStyles = createUseStyles(styles);
  * @param disabled Whether the button is clickable or not.
  * @param enabledClasses Classes applied to the button when it is enabled.
  * @param disabledClasses Classes applied to the button when it is disabled.
+ * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements representing a text button.
  */
-const AJBaseButton = ({children, onClick, disabledClasses, enabledClasses, disabled=false}) => {
-  const classes = useStyles();
+const AJBaseButton = forwardRef(
+  ({children, onClick, disabledClasses, enabledClasses, disabled=false}, ref) => {
+    const classes = useStyles();
 
-  const className = disabled ?
-    classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses) :
-    classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses);
+    const className = disabled ?
+      classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses) :
+      classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses);
 
-  const onClickAction = disabled ? null : onClick;
+    const onClickAction = disabled ? null : onClick;
 
-  return (
-    <div className={className} onClick={onClickAction}>
-      <button type="button" disabled={disabled}>
-        {children}
-      </button>
-    </div>
-  );
-};
+    return (
+      <div className={className} onClick={onClickAction} ref={ref}>
+        <button type="button" disabled={disabled}>
+          {children}
+        </button>
+      </div>
+    );
+  }
+);
 
 AJBaseButton.propTypes = {
   children: PropTypes.node.isRequired,

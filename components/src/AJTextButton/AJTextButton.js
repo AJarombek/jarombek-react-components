@@ -4,7 +4,7 @@
  * @since 11/16/2019
  */
 
-import React from 'react';
+import React, {forwardRef} from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 
@@ -18,9 +18,10 @@ const useStyles = createUseStyles(styles);
  * @param children The contents of the text button.
  * @param onClick An action that occurs when the button is clicked.
  * @param disabled Whether the button is clickable or not.
+ * @param ref A ref forwarded through the component to the AJBaseButton component.
  * @return {*} React elements representing a text button.
  */
-const AJTextButton = ({children, onClick, disabled=false}) => {
+const AJTextButton = forwardRef(({children, onClick, disabled=false}, ref) => {
   const classes = useStyles();
 
   const enabledClasses = [
@@ -40,12 +41,13 @@ const AJTextButton = ({children, onClick, disabled=false}) => {
       onClick={onClick}
       disabled={disabled}
       enabledClasses={enabledClasses}
-      disabledClasses={disabledClasses}>
+      disabledClasses={disabledClasses}
+      ref={ref}>
 
       {children}
     </AJBaseButton>
   );
-};
+});
 
 AJTextButton.propTypes = {
   children: PropTypes.node.isRequired,
