@@ -172,39 +172,42 @@
         var external_react_default = __webpack_require__.n(external_react_);
         var prop_types = __webpack_require__(0);
         var prop_types_default = __webpack_require__.n(prop_types);
-        var AJButton_AJButton = function AJButton(_ref) {
+        var AJButton = Object(external_react_["forwardRef"])(function(_ref, ref) {
             var type = _ref.type, children = _ref.children, onClick = _ref.onClick, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled;
             switch (type) {
               case "contained":
                 return external_react_default.a.createElement(src_AJContainedButton, {
                     onClick: onClick,
-                    disabled: disabled
+                    disabled: disabled,
+                    ref: ref
                 }, children);
 
               case "outlined":
                 return external_react_default.a.createElement(src_AJOutlinedButton, {
                     onClick: onClick,
-                    disabled: disabled
+                    disabled: disabled,
+                    ref: ref
                 }, children);
 
               case "text":
                 return external_react_default.a.createElement(src_AJTextButton, {
                     onClick: onClick,
-                    disabled: disabled
+                    disabled: disabled,
+                    ref: ref
                 }, children);
 
               default:
                 return null;
             }
-        };
-        AJButton_AJButton.propTypes = {
+        });
+        AJButton.propTypes = {
             type: prop_types_default.a.oneOf([ "contained", "outlined", "text" ]).isRequired,
             children: prop_types_default.a.node.isRequired,
             onClick: prop_types_default.a.func,
             disabled: prop_types_default.a.bool
         };
-        var src_AJButton_AJButton = AJButton_AJButton;
-        var src_AJButton = src_AJButton_AJButton;
+        var AJButton_AJButton = AJButton;
+        var src_AJButton = AJButton_AJButton;
         var external_react_jss_ = __webpack_require__(3);
         var external_highlight_js_ = __webpack_require__(4);
         var external_highlight_js_default = __webpack_require__.n(external_highlight_js_);
@@ -394,47 +397,49 @@
             }
         };
         var AJBaseButton_useStyles = Object(external_react_jss_["createUseStyles"])(AJBaseButton_styles);
-        var AJBaseButton_AJBaseButton = function AJBaseButton(_ref) {
+        var AJBaseButton = Object(external_react_["forwardRef"])(function(_ref, ref) {
             var children = _ref.children, onClick = _ref.onClick, disabledClasses = _ref.disabledClasses, enabledClasses = _ref.enabledClasses, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled;
             var classes = AJBaseButton_useStyles();
             var className = disabled ? classnames_default()(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses) : classnames_default()(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses);
             var onClickAction = disabled ? null : onClick;
             return external_react_default.a.createElement("div", {
                 className: className,
-                onClick: onClickAction
+                onClick: onClickAction,
+                ref: ref
             }, external_react_default.a.createElement("button", {
                 type: "button",
                 disabled: disabled
             }, children));
-        };
-        AJBaseButton_AJBaseButton.propTypes = {
+        });
+        AJBaseButton.propTypes = {
             children: prop_types_default.a.node.isRequired,
             onClick: prop_types_default.a.func,
             disabled: prop_types_default.a.bool,
             enabledClasses: prop_types_default.a.array,
             disabledClasses: prop_types_default.a.array
         };
-        var src_AJBaseButton_AJBaseButton = AJBaseButton_AJBaseButton;
+        var AJBaseButton_AJBaseButton = AJBaseButton;
         var AJContainedButton_useStyles = Object(external_react_jss_["createUseStyles"])(AJContainedButton_styles);
-        var AJContainedButton_AJContainedButton = function AJContainedButton(_ref) {
+        var AJContainedButton = Object(external_react_["forwardRef"])(function(_ref, ref) {
             var children = _ref.children, onClick = _ref.onClick, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled;
             var classes = AJContainedButton_useStyles();
             var enabledClasses = [ "aj-contained-button", classes.ajContainedButton, classes.ajContainedButtonEnabled ];
             var disabledClasses = [ "aj-contained-button", classes.ajContainedButton, classes.ajContainedButtonDisabled ];
-            return external_react_default.a.createElement(src_AJBaseButton_AJBaseButton, {
+            return external_react_default.a.createElement(AJBaseButton_AJBaseButton, {
                 onClick: onClick,
                 disabled: disabled,
                 enabledClasses: enabledClasses,
-                disabledClasses: disabledClasses
+                disabledClasses: disabledClasses,
+                ref: ref
             }, children);
-        };
-        AJContainedButton_AJContainedButton.propTypes = {
+        });
+        AJContainedButton.propTypes = {
             children: prop_types_default.a.node.isRequired,
             onClick: prop_types_default.a.func,
             disabled: prop_types_default.a.bool
         };
-        var src_AJContainedButton_AJContainedButton = AJContainedButton_AJContainedButton;
-        var src_AJContainedButton = src_AJContainedButton_AJContainedButton;
+        var AJContainedButton_AJContainedButton = AJContainedButton;
+        var src_AJContainedButton = AJContainedButton_AJContainedButton;
         var AJMobileHamburger_styles = {
             ajMobileHamburger: {
                 display: "inline-block",
@@ -517,8 +522,8 @@
             if (Array.isArray(arr)) return arr;
         }
         var AJMobileHamburger_useStyles = Object(external_react_jss_["createUseStyles"])(AJMobileHamburger_styles);
-        var AJMobileHamburger = Object(external_react_["forwardRef"])(function(_ref) {
-            var onClick = _ref.onClick, ref = _ref.ref;
+        var AJMobileHamburger = Object(external_react_["forwardRef"])(function(_ref, ref) {
+            var onClick = _ref.onClick;
             var classes = AJMobileHamburger_useStyles();
             var _useState = Object(external_react_["useState"])(false), _useState2 = _slicedToArray(_useState, 2), active = _useState2[0], setActive = _useState2[1];
             var spanClassName = active ? classnames_default()("aj-mobile-hamburger-active", classes.ajMobileHamburgerActive) : classnames_default()("aj-mobile-hamburger-inactive", classes.ajMobileHamburgerInactive);
@@ -845,25 +850,26 @@
             }
         };
         var AJOutlinedButton_useStyles = Object(external_react_jss_["createUseStyles"])(AJOutlinedButton_styles);
-        var AJOutlinedButton_AJOutlinedButton = function AJOutlinedButton(_ref) {
+        var AJOutlinedButton = Object(external_react_["forwardRef"])(function(_ref, ref) {
             var children = _ref.children, onClick = _ref.onClick, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled;
             var classes = AJOutlinedButton_useStyles();
             var enabledClasses = [ "aj-outlined-button", classes.ajOutlinedButton, classes.ajOutlinedButtonEnabled ];
             var disabledClasses = [ "aj-outlined-button", classes.ajOutlinedButton, classes.ajOutlinedButtonDisabled ];
-            return external_react_default.a.createElement(src_AJBaseButton_AJBaseButton, {
+            return external_react_default.a.createElement(AJBaseButton_AJBaseButton, {
                 onClick: onClick,
                 disabled: disabled,
                 enabledClasses: enabledClasses,
-                disabledClasses: disabledClasses
+                disabledClasses: disabledClasses,
+                ref: ref
             }, children);
-        };
-        AJOutlinedButton_AJOutlinedButton.propTypes = {
+        });
+        AJOutlinedButton.propTypes = {
             children: prop_types_default.a.node.isRequired,
             onClick: prop_types_default.a.func,
             disabled: prop_types_default.a.bool
         };
-        var src_AJOutlinedButton_AJOutlinedButton = AJOutlinedButton_AJOutlinedButton;
-        var src_AJOutlinedButton = src_AJOutlinedButton_AJOutlinedButton;
+        var AJOutlinedButton_AJOutlinedButton = AJOutlinedButton;
+        var src_AJOutlinedButton = AJOutlinedButton_AJOutlinedButton;
         var globalStyles = {
             "@font-face": [ {
                 fontFamily: "Roboto-Bold",
@@ -960,24 +966,25 @@
             }
         };
         var AJTextButton_useStyles = Object(external_react_jss_["createUseStyles"])(AJTextButton_styles);
-        var AJTextButton_AJTextButton = function AJTextButton(_ref) {
+        var AJTextButton = Object(external_react_["forwardRef"])(function(_ref, ref) {
             var children = _ref.children, onClick = _ref.onClick, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled;
             var classes = AJTextButton_useStyles();
             var enabledClasses = [ "aj-text-button", classes.ajTextButton, classes.ajTextButtonEnabled ];
             var disabledClasses = [ "aj-text-button", classes.ajTextButton, classes.ajTextButtonDisabled ];
-            return external_react_default.a.createElement(src_AJBaseButton_AJBaseButton, {
+            return external_react_default.a.createElement(AJBaseButton_AJBaseButton, {
                 onClick: onClick,
                 disabled: disabled,
                 enabledClasses: enabledClasses,
-                disabledClasses: disabledClasses
+                disabledClasses: disabledClasses,
+                ref: ref
             }, children);
-        };
-        AJTextButton_AJTextButton.propTypes = {
+        });
+        AJTextButton.propTypes = {
             children: prop_types_default.a.node.isRequired,
             onClick: prop_types_default.a.func,
             disabled: prop_types_default.a.bool
         };
-        var src_AJTextButton_AJTextButton = AJTextButton_AJTextButton;
+        var AJTextButton_AJTextButton = AJTextButton;
         function styles_ownKeys(object, enumerableOnly) {
             var keys = Object.keys(object);
             if (Object.getOwnPropertySymbols) {
@@ -1050,7 +1057,7 @@
                 className: "aj-text-card-content"
             }, content)), external_react_default.a.createElement("div", {
                 className: "aj-text-card-footer"
-            }, external_react_default.a.createElement(src_AJTextButton_AJTextButton, {
+            }, external_react_default.a.createElement(AJTextButton_AJTextButton, {
                 onClick: action,
                 disabled: actionDisabled
             }, actionText)));
@@ -1327,7 +1334,7 @@
         var src_AJSwitchIcon_AJSwitchIcon = AJSwitchIcon_AJSwitchIcon;
         var src_AJSwitchIcon = src_AJSwitchIcon_AJSwitchIcon;
         var src_AJSwitch = src_AJSwitch_AJSwitch;
-        var src_AJTextButton = src_AJTextButton_AJTextButton;
+        var src_AJTextButton = AJTextButton_AJTextButton;
         var src_AJTextCard = src_AJTextCard_AJTextCard;
         __webpack_require__.d(__webpack_exports__, "AJButton", function() {
             return src_AJButton;
