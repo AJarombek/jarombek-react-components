@@ -72,11 +72,11 @@ describe('integration tests', () => {
     expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
     expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: No");
 
-    expect(wrapper.find('div').at(1).simulate('click'));
+    wrapper.find('div').at(1).simulate('click');
     expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(true);
     expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: Yes");
 
-    expect(wrapper.find('div').at(1).simulate('click'));
+    wrapper.find('div').at(1).simulate('click');
     expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
     expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: No");
   });
