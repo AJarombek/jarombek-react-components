@@ -517,8 +517,8 @@
             if (Array.isArray(arr)) return arr;
         }
         var AJMobileHamburger_useStyles = Object(external_react_jss_["createUseStyles"])(AJMobileHamburger_styles);
-        var AJMobileHamburger_AJMobileHamburger = function AJMobileHamburger(_ref) {
-            var onClick = _ref.onClick;
+        var AJMobileHamburger = Object(external_react_["forwardRef"])(function(_ref) {
+            var onClick = _ref.onClick, ref = _ref.ref;
             var classes = AJMobileHamburger_useStyles();
             var _useState = Object(external_react_["useState"])(false), _useState2 = _slicedToArray(_useState, 2), active = _useState2[0], setActive = _useState2[1];
             var spanClassName = active ? classnames_default()("aj-mobile-hamburger-active", classes.ajMobileHamburgerActive) : classnames_default()("aj-mobile-hamburger-inactive", classes.ajMobileHamburgerInactive);
@@ -531,18 +531,19 @@
             };
             return external_react_default.a.createElement("div", {
                 className: hamburgerClasses,
-                onClick: onClickAction
+                onClick: onClickAction,
+                ref: ref
             }, external_react_default.a.createElement("button", {
                 type: "button"
             }, external_react_default.a.createElement("span", {
                 className: spanClassName
             })));
-        };
-        AJMobileHamburger_AJMobileHamburger.propTypes = {
+        });
+        AJMobileHamburger.propTypes = {
             onClick: prop_types_default.a.func
         };
-        var src_AJMobileHamburger_AJMobileHamburger = AJMobileHamburger_AJMobileHamburger;
-        var src_AJMobileHamburger = src_AJMobileHamburger_AJMobileHamburger;
+        var AJMobileHamburger_AJMobileHamburger = AJMobileHamburger;
+        var src_AJMobileHamburger = AJMobileHamburger_AJMobileHamburger;
         var AJModal_styles = {
             ajModal: {
                 background: "white",
