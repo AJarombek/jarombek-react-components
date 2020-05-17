@@ -8,6 +8,7 @@ exports[`renders correctly 1`] = `
     className="ajSwitchIcon-0-2-2 aj-switch-icon-off"
   >
     <img
+      alt=""
       src="https://asset.jarombek.com/jarombek.png"
     />
   </figure>
@@ -30,6 +31,7 @@ exports[`renders correctly 1`] = `
     className="ajSwitchIcon-0-2-2 ajSwitchIconNotSelected-0-2-3 aj-switch-icon-on"
   >
     <img
+      alt=""
       src="https://asset.jarombek.com/jarombek.png"
     />
   </figure>
@@ -44,6 +46,7 @@ exports[`renders correctly with all props 1`] = `
     className="ajSwitchIcon-0-2-2 ajSwitchIconNotSelected-0-2-3 aj-switch-icon-off"
   >
     <img
+      alt=""
       src="https://asset.jarombek.com/jarombek.png"
     />
   </figure>
@@ -66,6 +69,7 @@ exports[`renders correctly with all props 1`] = `
     className="ajSwitchIcon-0-2-2 aj-switch-icon-on"
   >
     <img
+      alt=""
       src="https://asset.jarombek.com/jarombek.png"
     />
   </figure>

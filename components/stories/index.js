@@ -16,5 +16,7 @@ import './storiesAJOutlinedButton';
 import './storiesAJResponsiveGrid';
 import './storiesAJSwitch';
 import './storiesAJSwitchIcon';
+import './storiesAJTag';
+import './storiesAJTagImage';
 import './storiesAJTextButton';
 import './storiesAJTextCard';

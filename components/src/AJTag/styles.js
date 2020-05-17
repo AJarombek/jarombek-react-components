@@ -5,7 +5,17 @@
  */
 
 export default {
-  ajTag: ({color}) => ({
-    backgroundColor: color
+  ajTag: ({backgroundColor}) => ({
+    backgroundColor,
+    display: 'inline-block',
+    cursor: 'pointer',
+    padding: '0 10px',
+    borderRadius: '3px',
+    boxShadow: '0 1px 3px rgba(170, 170, 170, 0.1)',
+    transition: 'all .4s ease',
+
+    '&:hover': {
+      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.5)'
+    }
   })
 }

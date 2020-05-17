@@ -14,7 +14,8 @@ import styles from './styles';
 const useStyles = createUseStyles(styles);
 
 const AJTagImage = ({ content, picture, color }) => {
-  const classes = useStyles({ color });
+  const backgroundColor = color ?? 'rgba(204, 204, 204, 0.6)';
+  const classes = useStyles({ backgroundColor });
 
   return (
     <div className={classnames(classes.ajTagImage, 'aj-tag-image')}>

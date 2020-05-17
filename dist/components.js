@@ -168,6 +168,54 @@
     }, function(module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
+        __webpack_require__.d(__webpack_exports__, "AJButton", function() {
+            return src_AJButton;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJCodeSnippet", function() {
+            return src_AJCodeSnippet;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJContainedButton", function() {
+            return src_AJContainedButton;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJMobileHamburger", function() {
+            return src_AJMobileHamburger;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJModal", function() {
+            return src_AJModal;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJNavCircle", function() {
+            return src_AJNavCircle;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJNavList", function() {
+            return src_AJNavList;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJNavTextCircle", function() {
+            return src_AJNavTextCircle;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJOutlinedButton", function() {
+            return src_AJOutlinedButton;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJResponsiveGrid", function() {
+            return src_AJResponsiveGrid;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJSwitchIcon", function() {
+            return src_AJSwitchIcon;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJSwitch", function() {
+            return src_AJSwitch;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJTag", function() {
+            return src_AJTag;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJTagImage", function() {
+            return src_AJTagImage;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJTextButton", function() {
+            return src_AJTextButton;
+        });
+        __webpack_require__.d(__webpack_exports__, "AJTextCard", function() {
+            return src_AJTextCard;
+        });
         var external_react_ = __webpack_require__(1);
         var external_react_default = __webpack_require__.n(external_react_);
         var prop_types = __webpack_require__(0);
@@ -942,7 +990,7 @@
             ajTextButton: {
                 padding: "10px",
                 transition: "background-color 0.25s ease",
-                "& button": _objectSpread({}, globalStyles.robotoRegular, {
+                "& button": _objectSpread(_objectSpread({}, globalStyles.robotoRegular), {}, {
                     display: "block",
                     backgroundColor: "transparent"
                 })
@@ -1027,7 +1075,7 @@
             return obj;
         }
         var AJTextCard_styles = {
-            ajTextCard: styles_objectSpread({}, globalStyles.robotoThin, {
+            ajTextCard: styles_objectSpread(styles_objectSpread({}, globalStyles.robotoThin), {}, {
                 display: "inline-block",
                 width: "auto",
                 height: "500px",
@@ -1313,7 +1361,8 @@
             }, external_react_default.a.createElement("figure", {
                 className: offIconClasses
             }, external_react_default.a.createElement("img", {
-                src: offImageUrl
+                src: offImageUrl,
+                alt: ""
             })), external_react_default.a.createElement(src_AJSwitch_AJSwitch, {
                 onChange: onSwitchChange,
                 initialState: initialState,
@@ -1321,7 +1370,8 @@
             }), external_react_default.a.createElement("figure", {
                 className: onIconClasses
             }, external_react_default.a.createElement("img", {
-                src: onImageUrl
+                src: onImageUrl,
+                alt: ""
             })));
         };
         AJSwitchIcon_AJSwitchIcon.propTypes = {
@@ -1334,49 +1384,90 @@
         var src_AJSwitchIcon_AJSwitchIcon = AJSwitchIcon_AJSwitchIcon;
         var src_AJSwitchIcon = src_AJSwitchIcon_AJSwitchIcon;
         var src_AJSwitch = src_AJSwitch_AJSwitch;
+        var AJTag_styles = {
+            ajTag: function ajTag(_ref) {
+                var backgroundColor = _ref.backgroundColor;
+                return {
+                    backgroundColor: backgroundColor,
+                    display: "inline-block",
+                    cursor: "pointer",
+                    padding: "0 10px",
+                    borderRadius: "3px",
+                    boxShadow: "0 1px 3px rgba(170, 170, 170, 0.1)",
+                    transition: "all .4s ease",
+                    "&:hover": {
+                        boxShadow: "0 1px 3px rgba(170, 170, 170, 0.5)"
+                    }
+                };
+            }
+        };
+        var AJTag_useStyles = Object(external_react_jss_["createUseStyles"])(AJTag_styles);
+        var AJTag_AJTag = function AJTag(_ref) {
+            var content = _ref.content, color = _ref.color;
+            var backgroundColor = color !== null && color !== void 0 ? color : "rgba(204, 204, 204, 0.6)";
+            var classes = AJTag_useStyles({
+                backgroundColor: backgroundColor
+            });
+            return external_react_default.a.createElement("div", {
+                className: classnames_default()(classes.ajTag, "aj-tag")
+            }, content);
+        };
+        AJTag_AJTag.propTypes = {
+            content: prop_types_default.a.node.isRequired,
+            color: prop_types_default.a.string
+        };
+        var src_AJTag_AJTag = AJTag_AJTag;
+        var src_AJTag = src_AJTag_AJTag;
+        var AJTagImage_styles = {
+            ajTagImage: function ajTagImage(_ref) {
+                var backgroundColor = _ref.backgroundColor;
+                return {
+                    backgroundColor: backgroundColor,
+                    display: "flex",
+                    cursor: "pointer",
+                    padding: "0 10px",
+                    borderRadius: "3px",
+                    boxShadow: "0 1px 3px rgba(170, 170, 170, 0.1)",
+                    transition: "all .4s ease",
+                    "&:hover": {
+                        boxShadow: "0 1px 3px rgba(170, 170, 170, 0.5)"
+                    }
+                };
+            },
+            picture: {
+                height: "40px",
+                maxWidth: "45px",
+                margin: "5px"
+            },
+            content: {
+                marginLeft: "10px"
+            }
+        };
+        var AJTagImage_useStyles = Object(external_react_jss_["createUseStyles"])(AJTagImage_styles);
+        var AJTagImage_AJTagImage = function AJTagImage(_ref) {
+            var content = _ref.content, picture = _ref.picture, color = _ref.color;
+            var backgroundColor = color !== null && color !== void 0 ? color : "rgba(204, 204, 204, 0.6)";
+            var classes = AJTagImage_useStyles({
+                backgroundColor: backgroundColor
+            });
+            return external_react_default.a.createElement("div", {
+                className: classnames_default()(classes.ajTagImage, "aj-tag-image")
+            }, external_react_default.a.createElement("img", {
+                className: classes.picture,
+                src: picture,
+                alt: ""
+            }), external_react_default.a.createElement("div", {
+                className: classes.content
+            }, content));
+        };
+        AJTagImage_AJTagImage.propTypes = {
+            content: prop_types_default.a.node.isRequired,
+            picture: prop_types_default.a.any,
+            color: prop_types_default.a.string
+        };
+        var src_AJTagImage_AJTagImage = AJTagImage_AJTagImage;
+        var src_AJTagImage = src_AJTagImage_AJTagImage;
         var src_AJTextButton = AJTextButton_AJTextButton;
         var src_AJTextCard = src_AJTextCard_AJTextCard;
-        __webpack_require__.d(__webpack_exports__, "AJButton", function() {
-            return src_AJButton;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJCodeSnippet", function() {
-            return src_AJCodeSnippet;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJContainedButton", function() {
-            return src_AJContainedButton;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJMobileHamburger", function() {
-            return src_AJMobileHamburger;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJModal", function() {
-            return src_AJModal;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJNavCircle", function() {
-            return src_AJNavCircle;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJNavList", function() {
-            return src_AJNavList;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJNavTextCircle", function() {
-            return src_AJNavTextCircle;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJOutlinedButton", function() {
-            return src_AJOutlinedButton;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJResponsiveGrid", function() {
-            return src_AJResponsiveGrid;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJSwitchIcon", function() {
-            return src_AJSwitchIcon;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJSwitch", function() {
-            return src_AJSwitch;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJTextButton", function() {
-            return src_AJTextButton;
-        });
-        __webpack_require__.d(__webpack_exports__, "AJTextCard", function() {
-            return src_AJTextCard;
-        });
     } ]);
 });

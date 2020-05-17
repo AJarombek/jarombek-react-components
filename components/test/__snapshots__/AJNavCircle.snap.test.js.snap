@@ -2,12 +2,12 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="aj-nav-circle ajNavCircle-0-2-1 ajNavCircle-0-0-2-9 active-0-2-2"
+  className="aj-nav-circle ajNavCircle-0-2-1 ajNavCircle-d0-0-2-9 active-0-2-2"
   onClick={[Function]}
 >
   <figure>
     <img
-      className="nav-right right-0-2-8 img-0-2-4 img-1-0-2-10"
+      className="nav-right right-0-2-8 img-0-2-4 img-d1-0-2-10"
       src="test-file-stub"
     />
   </figure>
