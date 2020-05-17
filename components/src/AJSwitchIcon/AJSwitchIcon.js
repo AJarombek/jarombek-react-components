@@ -70,11 +70,11 @@ const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, di
   return (
     <div className={classnames(classes.ajSwitchIconContainer, 'aj-switch-icon')}>
       <figure className={offIconClasses}>
-        <img src={offImageUrl} />
+        <img src={offImageUrl} alt="" />
       </figure>
       <AJSwitch onChange={onSwitchChange} initialState={initialState} disabled={disabled} />
       <figure className={onIconClasses}>
-        <img src={onImageUrl} />
+        <img src={onImageUrl} alt="" />
       </figure>
     </div>
   );

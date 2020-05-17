@@ -16,5 +16,7 @@ export {default as AJOutlinedButton} from './AJOutlinedButton';
 export {default as AJResponsiveGrid} from './AJResponsiveGrid';
 export {default as AJSwitchIcon} from './AJSwitchIcon';
 export {default as AJSwitch} from './AJSwitch';
+export {default as AJTag} from './AJTag';
+export {default as AJTagImage} from './AJTagImage';
 export {default as AJTextButton} from './AJTextButton';
 export {default as AJTextCard} from './AJTextCard';
