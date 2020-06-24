@@ -14,8 +14,8 @@ describe('unit tests', () => {
     const wrapper = shallow(
       <AJNavList
         items={[
-          {text: 'Home', onClick: () => {}},
-          {text: 'Profile', onClick: () => {}}
+          {content: 'Home', onClick: () => {}},
+          {content: 'Profile', onClick: () => {}}
         ]}
       />
     );
@@ -25,10 +25,16 @@ describe('unit tests', () => {
   });
 
   it('uses an empty array if items is not an array', () => {
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    consoleErrorSpy.mockImplementation(() => {});
+
     const wrapper = shallow(<AJNavList items={true} />);
 
     expect(wrapper.find('.aj-nav-list')).toHaveLength(1);
     expect(wrapper.find('.aj-nav-list-item')).toHaveLength(0);
+
+    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
   });
 });
 
@@ -41,8 +47,8 @@ describe('integration tests', () => {
     const wrapper = mount(
       <AJNavList
         items={[
-          {text: 'Home', onClick: funcHome},
-          {text: 'Profile', onClick: funcProfile}
+          {content: 'Home', onClick: funcHome},
+          {content: 'Profile', onClick: funcProfile}
         ]}
       />
     );

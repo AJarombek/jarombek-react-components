@@ -10,7 +10,9 @@ exports[`renders correctly 1`] = `
     <div
       onClick={[Function]}
     >
-      <div />
+      <div>
+        Home
+      </div>
     </div>
   </div>
   <div
@@ -19,7 +21,9 @@ exports[`renders correctly 1`] = `
     <div
       onClick={[Function]}
     >
-      <div />
+      <div>
+        Profile
+      </div>
     </div>
   </div>
 </div>

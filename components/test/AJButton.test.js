@@ -34,8 +34,15 @@ describe('integration tests', () => {
   });
 
   it('renders nothing if an invalid type is entered', () => {
+    // Mock the console error output (because we expect an error log from this test).
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    consoleErrorSpy.mockImplementation(() => {});
+
     const wrapper = mount(<AJButton type="invalid" disabled={false}>Invalid Button</AJButton>);
     expect(wrapper.html()).toBeNull();
+
+    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
   });
 });
 

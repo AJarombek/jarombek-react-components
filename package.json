@@ -4,6 +4,7 @@
   "description": "Andrew Jarombek's Reusable React Component Library",
   "main": "dist/components.js",
   "repository": "git+https://github.com/AJarombek/jarombek-react-components.git",
+  "license": "ISC",
   "keywords": [
     "React",
     "Storybook"
@@ -17,7 +18,8 @@
     "classnames": "^2.2.6",
     "highlight.js": "^10.0.3",
     "prop-types": "^15.7.2",
-    "react-jss": "^10.1.1"
+    "react-jss": "^10.1.1",
+    "uuid": "^8.2.0"
   },
   "peerDependencies": {
     "react": "^16.13.1",

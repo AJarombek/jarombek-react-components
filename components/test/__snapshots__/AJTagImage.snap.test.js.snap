@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajTagImage-0-2-1 ajTagImage-d0-0-2-4 aj-tag-image"
+>
+  <img
+    alt=""
+    className="picture-0-2-2"
+    src="https://asset.jarombek.com"
+  />
+  <div
+    className="content-0-2-3"
+  >
+    Snapshot TagImage
+  </div>
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="ajTagImage-0-2-1 ajTagImage-d1-0-2-5 aj-tag-image"
+>
+  <img
+    alt=""
+    className="picture-0-2-2"
+    src="https://asset.jarombek.com"
+  />
+  <div
+    className="content-0-2-3"
+  >
+    <p>
+      Snapshot TagImage
+    </p>
+  </div>
+</div>
+`;

@@ -42,11 +42,7 @@ const AJResponsiveGrid = ({items, smallBreakpoint='600px', mediumBreakpoint='900
 };
 
 AJResponsiveGrid.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.oneOfType([
-      PropTypes.instanceOf(AJTextCard)
-    ])
-  ).isRequired,
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
   smallBreakpoint: PropTypes.string,
   mediumBreakpoint: PropTypes.string,
   largeBreakpoint: PropTypes.string

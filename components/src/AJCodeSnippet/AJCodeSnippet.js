@@ -64,7 +64,7 @@ const AJCodeSnippet = ({children, language}) => {
 
 AJCodeSnippet.propTypes = {
   children: PropTypes.node.isRequired,
-  language: PropTypes.oneOf(['java', 'javascript']).isRequired
+  language: PropTypes.oneOf(['java', 'javascript'])
 };
 
 export default AJCodeSnippet;

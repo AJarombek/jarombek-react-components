@@ -8,6 +8,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 import classnames from 'classnames';
+import {v4 as uuid} from 'uuid';
 
 import styles from './styles';
 
@@ -39,7 +40,7 @@ const AJNavList = ({items}) => {
         }
 
         return (
-          <div key={item.content} className={listItemClasses}>
+          <div key={uuid()} className={listItemClasses}>
             <div onClick={() => item.onClick()}>
               <div>{item.content}</div>
             </div>

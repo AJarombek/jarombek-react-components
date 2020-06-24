@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="ajTag-0-2-1 ajTag-d0-0-2-2 aj-tag"
+>
+  Snapshot Tag
+</div>
+`;
+
+exports[`renders correctly with all props 1`] = `
+<div
+  className="ajTag-0-2-1 ajTag-d1-0-2-3 aj-tag"
+>
+  <p>
+    Snapshot Tag
+  </p>
+</div>
+`;

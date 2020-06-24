@@ -26,10 +26,16 @@ describe('unit tests', () => {
   });
 
   it('renders javascript by default', () => {
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    consoleErrorSpy.mockImplementation(() => {});
+
     const wrapper = shallow(<AJCodeSnippet language="invalid">const str = 'test';</AJCodeSnippet>);
     const codeSnippet = wrapper.find('code');
     expect(codeSnippet.hasClass('javascript')).toBe(true);
     expect(codeSnippet.hasClass(/(hljs)(-\d+)/)).toBe(true);
+
+    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
   });
 
   it('renders java when specified', () => {

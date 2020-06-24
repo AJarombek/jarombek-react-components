@@ -12,8 +12,8 @@ it('renders correctly', () => {
   const tree = renderer.create(
     <AJNavList
       items={[
-        {text: 'Home', onClick: () => {}},
-        {text: 'Profile', onClick: () => {}}
+        {content: 'Home', onClick: () => {}},
+        {content: 'Profile', onClick: () => {}}
       ]}
     />
   ).toJSON();

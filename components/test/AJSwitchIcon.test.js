@@ -49,6 +49,10 @@ describe('integration tests', () => {
   });
 
   it("still toggles when onChange isn't a function", () => {
+    // Mock the console error output (because we expect an error log from this test).
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    consoleErrorSpy.mockImplementation(() => {});
+
     const wrapper = mount(
       <AJSwitchIcon
         offImageUrl="https://asset.jarombek.com/jarombek.png"
@@ -68,5 +72,8 @@ describe('integration tests', () => {
       .toBe(false);
     expect(wrapper.find('.aj-switch-icon-off').hasClass(/(ajSwitchIconNotSelected)(-\d+)/))
       .toBe(true);
+
+    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
   });
 });

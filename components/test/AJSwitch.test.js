@@ -60,10 +60,17 @@ describe('unit tests', () => {
   });
 
   it('still toggles when onChange is not a function', () => {
+    // Mock the console error output (because we expect an error log from this test).
+    const consoleErrorSpy = jest.spyOn(console, 'error');
+    consoleErrorSpy.mockImplementation(() => {});
+
     const wrapper = shallow(<AJSwitch onChange="I should be a function" />);
 
     expect(wrapper.find('div').at(0).hasClass(/(ajSwitchInactive)(-\d+)/)).toBe(true);
     expect(wrapper.find('div').at(0).simulate('click'));
     expect(wrapper.find('div').at(0).hasClass(/(ajSwitchActive)(-\d+)/)).toBe(true);
+
+    expect(consoleErrorSpy).toHaveBeenCalled();
+    expect(consoleErrorSpy).toHaveBeenCalledTimes(1);
   });
 });
