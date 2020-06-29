@@ -58,5 +58,6 @@
     "update-test": "jest --update-snapshot",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
-  }
+  },
+  "typings": "./index.d.ts"
 }
