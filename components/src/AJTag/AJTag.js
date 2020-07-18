@@ -13,12 +13,12 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJTag = ({ content, color }) => {
+const AJTag = ({ content, color, className }) => {
   const backgroundColor = color ?? 'rgba(204, 204, 204, 0.6)';
   const classes = useStyles({ backgroundColor });
 
   return (
-    <div className={classnames(classes.ajTag, 'aj-tag')}>
+    <div className={classnames(classes.ajTag, 'aj-tag', className)}>
       {content}
     </div>
   );
@@ -26,7 +26,8 @@ const AJTag = ({ content, color }) => {
 
 AJTag.propTypes = {
   content: PropTypes.node.isRequired,
-  color: PropTypes.string
+  color: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default AJTag;

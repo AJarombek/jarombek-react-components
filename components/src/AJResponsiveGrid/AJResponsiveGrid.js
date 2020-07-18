@@ -21,11 +21,12 @@ const useStyles = createUseStyles(styles);
  * @param smallBreakpoint The smallest screen size breakpoint in the responsive grid.
  * @param mediumBreakpoint A medium sized screen breakpoint in the responsive grid.
  * @param largeBreakpoint The largest screen size breakpoint in the responsive grid.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements that represent a responsive grid of cards.
  * @constructor
  */
 const AJResponsiveGrid = ({items, smallBreakpoint='600px', mediumBreakpoint='900px',
-                            largeBreakpoint='1200px'}) => {
+                            largeBreakpoint='1200px', className}) => {
   const breakpoints = {
     small: smallBreakpoint,
     medium: mediumBreakpoint,
@@ -35,7 +36,7 @@ const AJResponsiveGrid = ({items, smallBreakpoint='600px', mediumBreakpoint='900
   const classes = useStyles(breakpoints);
 
   return (
-    <div className={classnames('aj-responsive-grid', classes.ajResponsiveGrid)}>
+    <div className={classnames('aj-responsive-grid', classes.ajResponsiveGrid, className)}>
       {items}
     </div>
   );
@@ -45,7 +46,8 @@ AJResponsiveGrid.propTypes = {
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
   smallBreakpoint: PropTypes.string,
   mediumBreakpoint: PropTypes.string,
-  largeBreakpoint: PropTypes.string
+  largeBreakpoint: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default AJResponsiveGrid;

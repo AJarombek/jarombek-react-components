@@ -10,6 +10,7 @@ exports[`renders correctly 1`] = `
   >
     <figure>
       <img
+        alt=""
         className="nav-right right-0-2-12 img-0-2-8 img-d1-0-2-14"
         src="test-file-stub"
       />

@@ -19,9 +19,10 @@ const useStyles = createUseStyles(styles);
  * @param onClick An action that occurs when the button is clicked.
  * @param disabled Whether the button is clickable or not.
  * @param ref A ref forwarded through the component to the AJBaseButton component.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a contained button.
  */
-const AJOutlinedButton = forwardRef(({children, onClick, disabled=false}, ref) => {
+const AJOutlinedButton = forwardRef(({children, onClick, disabled=false, className}, ref) => {
   const classes = useStyles();
 
   const enabledClasses = [
@@ -42,7 +43,8 @@ const AJOutlinedButton = forwardRef(({children, onClick, disabled=false}, ref) =
       disabled={disabled}
       enabledClasses={enabledClasses}
       disabledClasses={disabledClasses}
-      ref={ref}>
+      ref={ref}
+      className={className}>
 
       {children}
     </AJBaseButton>
@@ -52,7 +54,8 @@ const AJOutlinedButton = forwardRef(({children, onClick, disabled=false}, ref) =
 AJOutlinedButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default AJOutlinedButton;

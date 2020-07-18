@@ -20,16 +20,17 @@ const useStyles = createUseStyles(styles);
  * @param height The height of the circle.
  * @param active Whether the circle is active and can be clicked.
  * @param onClick An action which occurs when the circle is clicked.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a navigational arrow and circle.
  */
-const AJNavCircle = ({direction, height="25px", active=true, onClick}) => {
+const AJNavCircle = ({direction, height="25px", active=true, onClick, className}) => {
   const classes = useStyles({height});
 
   let circleClass;
   if (active) {
-    circleClass = classnames('aj-nav-circle', classes.ajNavCircle, classes.active);
+    circleClass = classnames('aj-nav-circle', classes.ajNavCircle, classes.active, className);
   } else {
-    circleClass = classnames('aj-nav-circle', classes.ajNavCircle, classes.inactive);
+    circleClass = classnames('aj-nav-circle', classes.ajNavCircle, classes.inactive, className);
     onClick = null;
   }
 
@@ -52,7 +53,7 @@ const AJNavCircle = ({direction, height="25px", active=true, onClick}) => {
   return (
     <div className={circleClass} onClick={onClick}>
       <figure>
-        <img className={pictureClass} src={arrow} />
+        <img className={pictureClass} src={arrow} alt="" />
       </figure>
     </div>
   );
@@ -62,7 +63,8 @@ AJNavCircle.propTypes = {
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired,
   height: PropTypes.string,
   active: PropTypes.bool,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string
 };
 
 export default AJNavCircle;

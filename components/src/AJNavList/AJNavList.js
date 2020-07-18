@@ -18,9 +18,10 @@ const useStyles = createUseStyles(styles);
  * Component representing a list commonly used by mobile dropdowns for the
  * website navigation header.
  * @param items Details about each item in the list.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements that make up a navigation list.
  */
-const AJNavList = ({items}) => {
+const AJNavList = ({items, className}) => {
   const classes = useStyles();
 
   if (!Array.isArray(items)) {
@@ -28,7 +29,7 @@ const AJNavList = ({items}) => {
   }
 
   return (
-    <div className={classnames(classes.ajNavList, 'aj-nav-list')}>
+    <div className={classnames(classes.ajNavList, 'aj-nav-list', className)}>
       { items.map((item, index) => {
 
         let listItemClasses;
@@ -55,7 +56,8 @@ AJNavList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     content: PropTypes.node.isRequired,
     onClick: PropTypes.func.isRequired
-  })).isRequired
+  })).isRequired,
+  className: PropTypes.string
 };
 
 export default AJNavList;

@@ -21,9 +21,10 @@ const useStyles = createUseStyles(styles);
  * switch is off.
  * @param initialState The initial on/off state of the switch.
  * @param disabled Whether clicking on the switch changes its state.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a toggleable switch.
  */
-const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
+const AJSwitch = ({onChange, initialState=false, disabled=false, className}) => {
   const classes = useStyles();
   const [state, setState] = useState(initialState);
 
@@ -40,12 +41,12 @@ const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
 
   const mainClass = state ?
     disabled ?
-      classnames(classes.ajSwitch, classes.ajSwitchActive, classes.ajSwitchDisabled, 'aj-switch'):
-      classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch')
+      classnames(classes.ajSwitch, classes.ajSwitchActive, classes.ajSwitchDisabled, 'aj-switch', className):
+      classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch', className)
     :
     disabled ?
-      classnames(classes.ajSwitch, classes.ajSwitchInactive, classes.ajSwitchDisabled, 'aj-switch'):
-      classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch');
+      classnames(classes.ajSwitch, classes.ajSwitchInactive, classes.ajSwitchDisabled, 'aj-switch', className):
+      classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch', className);
 
   const headClass = state ?
     classnames(classes.ajSwitchHead, classes.ajSwitchHeadActive, 'aj-switch-head') :
@@ -66,7 +67,8 @@ const AJSwitch = ({onChange, initialState=false, disabled=false}) => {
 AJSwitch.propTypes = {
   onChange: PropTypes.func.isRequired,
   initialState: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default AJSwitch;

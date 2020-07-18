@@ -18,10 +18,11 @@ const useStyles = createUseStyles(styles);
  * @param children The contents of the button.
  * @param onClick An action that occurs when the button is clicked.
  * @param disabled Whether the button is clickable or not.
+ * @param className Custom class attribute(s) attached to the component.
  * @param ref A ref forwarded through the component to the AJBaseButton component.
  * @return {*} React elements representing a contained button.
  */
-const AJContainedButton = forwardRef(({children, onClick, disabled=false}, ref) => {
+const AJContainedButton = forwardRef(({children, onClick, disabled=false, className}, ref) => {
   const classes = useStyles();
 
   const enabledClasses = [
@@ -42,6 +43,7 @@ const AJContainedButton = forwardRef(({children, onClick, disabled=false}, ref) 
       disabled={disabled}
       enabledClasses={enabledClasses}
       disabledClasses={disabledClasses}
+      className={className}
       ref={ref}>
 
       {children}
@@ -52,7 +54,8 @@ const AJContainedButton = forwardRef(({children, onClick, disabled=false}, ref) 
 AJContainedButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default AJContainedButton;

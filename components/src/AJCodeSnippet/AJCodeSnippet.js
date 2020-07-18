@@ -20,10 +20,11 @@ const useStyles = createUseStyles(styles);
  * @param children The code the is displayed in the code snippet.
  * @param language The language that the code is written in.  The language determines how the code
  * is syntax highlighted.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements that represent a snippet of code.
  * @constructor
  */
-const AJCodeSnippet = ({children, language}) => {
+const AJCodeSnippet = ({children, language, className}) => {
   const classes = useStyles();
 
   const languages = {
@@ -53,7 +54,7 @@ const AJCodeSnippet = ({children, language}) => {
   });
 
   return (
-    <div className="aj-code-snippet">
+    <div className={classnames("aj-code-snippet", className)}>
       <code title={lang.title} className={classnames(lang.className, classes.hljs)}
             ref={element => highlightedCode = element}>
         {children}
@@ -64,7 +65,8 @@ const AJCodeSnippet = ({children, language}) => {
 
 AJCodeSnippet.propTypes = {
   children: PropTypes.node.isRequired,
-  language: PropTypes.oneOf(['java', 'javascript'])
+  language: PropTypes.oneOf(['java', 'javascript']),
+  className: PropTypes.string,
 };
 
 export default AJCodeSnippet;

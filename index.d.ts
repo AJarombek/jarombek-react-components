@@ -4,7 +4,7 @@
  * @since 6/29/2020
  */
 
-import {ReactPropTypes, FunctionComponent} from "react";
+import {ReactPropTypes, FunctionComponent, ReactNode, RefObject} from "react";
 
 // AJBaseButton component (internal)
 
@@ -14,6 +14,7 @@ interface AJBaseButtonProps {
     disabled?: ReactPropTypes["bool"];
     enabledClasses?: ReactPropTypes["array"];
     disabledClasses?: ReactPropTypes["array"];
+    className?: string;
 }
 
 declare const AJBaseButton: FunctionComponent<AJBaseButtonProps>;
@@ -23,9 +24,10 @@ declare const AJBaseButton: FunctionComponent<AJBaseButtonProps>;
 type AJButtonType = 'contained' | 'outlined' | 'text'
 export interface AJButtonProps {
     type: AJButtonType,
-    children: ReactPropTypes["node"];
-    onClick?: ReactPropTypes["func"];
+    children: ReactNode | string;
+    onClick?: Function;
     disabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJButton: FunctionComponent<AJButtonProps>;
@@ -36,6 +38,7 @@ type AJCodeSnippetLanguage = 'java' | 'javascript'
 export interface AJCodeSnippetProps {
     children: ReactPropTypes["node"];
     language?: AJCodeSnippetLanguage;
+    className?: string;
 }
 
 export const AJCodeSnippet: FunctionComponent<AJCodeSnippetProps>;
@@ -46,6 +49,7 @@ export interface AJContainedButtonProps {
     children: ReactPropTypes["node"];
     onClick?: ReactPropTypes["func"];
     disabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJContainedButton: FunctionComponent<AJContainedButtonProps>;
@@ -53,7 +57,9 @@ export const AJContainedButton: FunctionComponent<AJContainedButtonProps>;
 // AJMobileHamburger component
 
 export interface AJMobileHamburgerProps {
-    onClick?: ReactPropTypes["func"];
+    onClick?: Function;
+    ref?: RefObject<HTMLInputElement>;
+    className?: string;
 }
 
 export const AJMobileHamburger: FunctionComponent<AJMobileHamburgerProps>;
@@ -64,6 +70,7 @@ export interface AJModalProps {
     children: ReactPropTypes["node"];
     onClickBackground?: ReactPropTypes["func"];
     backdrop?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJModal: FunctionComponent<AJModalProps>;
@@ -76,6 +83,7 @@ export interface AJNavCircleProps {
     height?: ReactPropTypes["string"];
     active?: ReactPropTypes["bool"];
     onClick: ReactPropTypes["func"];
+    className?: string;
 }
 
 export const AJNavCircle: FunctionComponent<AJNavCircleProps>;
@@ -83,12 +91,13 @@ export const AJNavCircle: FunctionComponent<AJNavCircleProps>;
 // AJNavList component
 
 interface AJNavListItems {
-    content: ReactPropTypes["node"];
-    onClick: ReactPropTypes["func"];
+    content: ReactNode | string;
+    onClick: Function;
 }
 
 export interface AJNavListProps {
-    items: [AJNavListItems];
+    items: AJNavListItems[];
+    className?: string;
 }
 
 export const AJNavList: FunctionComponent<AJNavListProps>;
@@ -103,6 +112,7 @@ export interface AJNavTextCircleProps {
     height?:  ReactPropTypes["string"];
     active?: ReactPropTypes["bool"];
     onClick: ReactPropTypes["func"];
+    className?: string;
 }
 
 export const AJNavTextCircle: FunctionComponent<AJNavTextCircleProps>;
@@ -113,6 +123,7 @@ export interface AJOutlinedButtonProps {
     children: ReactPropTypes["node"];
     onClick?: ReactPropTypes["func"];
     disabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJOutlinedButton: FunctionComponent<AJOutlinedButtonProps>;
@@ -120,10 +131,11 @@ export const AJOutlinedButton: FunctionComponent<AJOutlinedButtonProps>;
 // AJResponsiveGrid component
 
 export interface AJResponsiveGridProps {
-    items: [object];
+    items: object[];
     smallBreakpoint?: ReactPropTypes["string"];
     mediumBreakpoint?: ReactPropTypes["string"];
     largeBreakpoint?: ReactPropTypes["string"];
+    className?: string;
 }
 
 export const AJResponsiveGrid: FunctionComponent<AJResponsiveGridProps>;
@@ -134,6 +146,7 @@ export interface AJSwitchProps {
     onChange: ReactPropTypes["func"];
     initialState?: ReactPropTypes["bool"];
     disabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJSwitch: FunctionComponent<AJSwitchProps>;
@@ -146,6 +159,7 @@ export interface AJSwitchIconProps {
     onChange: ReactPropTypes["func"];
     initialState?: ReactPropTypes["bool"];
     disabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJSwitchIcon: FunctionComponent<AJSwitchIconProps>;
@@ -155,6 +169,7 @@ export const AJSwitchIcon: FunctionComponent<AJSwitchIconProps>;
 export interface AJTagProps {
     content: ReactPropTypes["node"];
     color?: ReactPropTypes["string"];
+    className?: string;
 }
 
 export const AJTag: FunctionComponent<AJTagProps>;
@@ -165,6 +180,7 @@ export interface AJTagImageProps {
     content: ReactPropTypes["node"];
     picture?: ReactPropTypes["any"];
     color?: ReactPropTypes["string"];
+    className?: string;
 }
 
 export const AJTagImage: FunctionComponent<AJTagImageProps>;
@@ -175,6 +191,7 @@ export interface AJTextButtonProps {
     children: ReactPropTypes["node"];
     onClick?: ReactPropTypes["func"];
     disabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJTextButton: FunctionComponent<AJTextButtonProps>;
@@ -188,6 +205,7 @@ export interface AJTextCardProps {
     action: ReactPropTypes["func"];
     actionText: ReactPropTypes["node"];
     actionDisabled?: ReactPropTypes["bool"];
+    className?: string;
 }
 
 export const AJTextCard: FunctionComponent<AJTextCardProps>;

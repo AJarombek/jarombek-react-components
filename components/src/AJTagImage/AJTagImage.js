@@ -13,12 +13,12 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJTagImage = ({ content, picture, color }) => {
+const AJTagImage = ({ content, picture, color, className }) => {
   const backgroundColor = color ?? 'rgba(204, 204, 204, 0.6)';
   const classes = useStyles({ backgroundColor });
 
   return (
-    <div className={classnames(classes.ajTagImage, 'aj-tag-image')}>
+    <div className={classnames(classes.ajTagImage, 'aj-tag-image', className)}>
       <img className={classes.picture} src={picture} alt=""/>
       <div className={classes.content}>
         {content}
@@ -30,7 +30,8 @@ const AJTagImage = ({ content, picture, color }) => {
 AJTagImage.propTypes = {
   content: PropTypes.node.isRequired,
   picture: PropTypes.any,
-  color: PropTypes.string
+  color: PropTypes.string,
+  className: PropTypes.string
 };
 
 export default AJTagImage;

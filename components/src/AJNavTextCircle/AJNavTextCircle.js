@@ -23,16 +23,17 @@ const useStyles = createUseStyles(styles);
  * @param height The height of the circle.
  * @param active Whether the circle is active and can be clicked.
  * @param onClick An action which occurs when the circle is clicked.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a navigational circle with text.
  */
-const AJNavTextCircle = ({text, textSide='right', direction, height, active, onClick}) => {
+const AJNavTextCircle = ({text, textSide='right', direction, height, active, onClick, className}) => {
   const classes = useStyles();
 
   let containerClasses;
   if (textSide === 'right') {
-    containerClasses = classnames(classes.ajNavTextCircle, classes.textRight);
+    containerClasses = classnames(classes.ajNavTextCircle, classes.textRight, className);
   } else {
-    containerClasses = classnames(classes.ajNavTextCircle, classes.textLeft);
+    containerClasses = classnames(classes.ajNavTextCircle, classes.textLeft, className);
   }
 
   return (
@@ -49,7 +50,8 @@ AJNavTextCircle.propTypes = {
   direction: PropTypes.oneOf(['up', 'down', 'left', 'right']).isRequired,
   height: PropTypes.string,
   active: PropTypes.bool,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  className: PropTypes.string
 };
 
 export default AJNavTextCircle;

@@ -17,10 +17,11 @@ const useStyles = createUseStyles(styles);
  * Component representing a hamburger icon which animates to an 'X' icon when clicked.  Commonly
  * used with mobile menu dropdowns.
  * @param onClick Additional behavior that occurs when the component is clicked.
+ * @param className Custom class attribute(s) attached to the component.
  * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements that represent a hamburger icon.
  */
-const AJMobileHamburger = forwardRef(({onClick}, ref) => {
+const AJMobileHamburger = forwardRef(({onClick, className}, ref) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 
@@ -28,7 +29,7 @@ const AJMobileHamburger = forwardRef(({onClick}, ref) => {
     classnames('aj-mobile-hamburger-active', classes.ajMobileHamburgerActive):
     classnames('aj-mobile-hamburger-inactive', classes.ajMobileHamburgerInactive);
 
-  const hamburgerClasses = classnames('aj-mobile-hamburger', classes.ajMobileHamburger);
+  const hamburgerClasses = classnames('aj-mobile-hamburger', classes.ajMobileHamburger, className);
 
   const onClickAction = () => {
     setActive(!active);
@@ -47,7 +48,8 @@ const AJMobileHamburger = forwardRef(({onClick}, ref) => {
 });
 
 AJMobileHamburger.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  className: PropTypes.string
 };
 
 export default AJMobileHamburger;

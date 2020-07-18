@@ -20,21 +20,22 @@ const useStyles = createUseStyles(styles);
  * @param disabled Whether the button is clickable or not.
  * @param enabledClasses Classes applied to the button when it is enabled.
  * @param disabledClasses Classes applied to the button when it is disabled.
+ * @param className Custom class attribute(s) attached to the component.
  * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements representing a text button.
  */
 const AJBaseButton = forwardRef(
-  ({children, onClick, disabledClasses, enabledClasses, disabled=false}, ref) => {
+  ({children, onClick, disabledClasses, enabledClasses, disabled=false, className}, ref) => {
     const classes = useStyles();
 
-    const className = disabled ?
-      classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses) :
-      classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses);
+    const finalClassNames = disabled ?
+      classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses, className) :
+      classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses, className);
 
     const onClickAction = disabled ? null : onClick;
 
     return (
-      <div className={className} onClick={onClickAction} ref={ref}>
+      <div className={finalClassNames} onClick={onClickAction} ref={ref}>
         <button type="button" disabled={disabled}>
           {children}
         </button>
@@ -48,7 +49,8 @@ AJBaseButton.propTypes = {
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
   enabledClasses: PropTypes.array,
-  disabledClasses: PropTypes.array
+  disabledClasses: PropTypes.array,
+  className: PropTypes.string
 };
 
 export default AJBaseButton;

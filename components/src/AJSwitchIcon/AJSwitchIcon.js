@@ -23,9 +23,10 @@ const useStyles = createUseStyles(styles);
  * switch is off.
  * @param initialState The initial on/off state of the switch.
  * @param disabled Whether clicking on the switch changes its state.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a toggleable switch with icons.
  */
-const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, disabled=false}) => {
+const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, disabled=false, className}) => {
   const classes = useStyles();
 
   /**
@@ -68,7 +69,7 @@ const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, di
   };
 
   return (
-    <div className={classnames(classes.ajSwitchIconContainer, 'aj-switch-icon')}>
+    <div className={classnames(classes.ajSwitchIconContainer, 'aj-switch-icon', className)}>
       <figure className={offIconClasses}>
         <img src={offImageUrl} alt="" />
       </figure>
@@ -85,7 +86,8 @@ AJSwitchIcon.propTypes = {
   onImageUrl: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   initialState: PropTypes.bool,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default AJSwitchIcon;

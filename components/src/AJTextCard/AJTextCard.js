@@ -23,13 +23,14 @@ const useStyles = createUseStyles(styles);
  * @param actionText Text of the action button in the footer of the card.  Can be text or
  * additional React elements.
  * @param actionDisabled Whether the action button is disabled from being clicked or not.
+ * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements that make up a text card.
  */
-const AJTextCard = ({title, subtitle, content, action, actionText, actionDisabled=false}) => {
+const AJTextCard = ({title, subtitle, content, action, actionText, actionDisabled=false, className}) => {
   const classes = useStyles();
 
   return (
-    <div className={classnames(classes.ajTextCard, 'aj-text-card')}>
+    <div className={classnames(classes.ajTextCard, 'aj-text-card', className)}>
       <div className="aj-text-card-header">
         <h2 className="aj-text-card-title">{title}</h2>
         <p className="aj-text-card-subtitle">{subtitle}</p>
@@ -50,7 +51,8 @@ AJTextCard.propTypes = {
   content: PropTypes.node.isRequired,
   action: PropTypes.func.isRequired,
   actionText: PropTypes.node.isRequired,
-  actionDisabled: PropTypes.bool
+  actionDisabled: PropTypes.bool,
+  className: PropTypes.string
 };
 
 export default AJTextCard;
