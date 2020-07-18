@@ -14,6 +14,7 @@ websites, along with any prototypes I create.
 | `dist`                   | Bundled and minified JavaScript code used when importing this repository as a dependency.  |
 | `.babelrc`               | Configuration for the Babel transpiler.                                                    |
 | `.eslintrc.js`           | Configuration for the ESLint JavaScript/React linter.                                      |
+| `.huskyrc`               | Pre-commit hooks for the repository.  Runs tests before allowing commits to be pushed.     |
 | `index.d.ts`             | Type definitions for components.  Used by TypeScript code and JavaScript IDEs.             |
 | `jest.config.js`         | Configuration for Jest unit testing.                                                       |
 | `package.json`           | Entry point for the npm application.  Contains dependency definitions.                     |
