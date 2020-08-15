@@ -7,14 +7,21 @@ Storyboard "stories" for React components.  These stories are examples of the co
 | Filename                       | Description                                                                                               |
 |--------------------------------|-----------------------------------------------------------------------------------------------------------|
 | `index.js`                     | JavaScript file containing imports from all the `storiesX.js` files.  These stories are shown in the UI.  |
+| `storiesAJButton.js`           | Stories for the `AJButton` component.                                                                     |
 | `storiesAJCodeSnippet.js`      | Stories for the `AJCodeSnippet` component.                                                                |
-| `storiesAJCodeSnippet.js`      | Stories for the `AJCodeSnippet` component.                                                                |
+| `storiesAJContainedButton.js`  | Stories for the `AJContainedButton` component.                                                            |
+| `storiesAJLoadingDots.js`      | Stories for the `AJLoadingDots` component.                                                                |
 | `storiesAJMobileHamburger.js`  | Stories for the `AJMobileHamburger` component.                                                            |
+| `storiesAJModal.js`            | Stories for the `AJModal` component.                                                                      |
 | `storiesAJNavCircle.js`        | Stories for the `AJNavCircle` component.                                                                  |
+| `storiesAJNavList.js`          | Stories for the `AJNavList` component.                                                                    |
 | `storiesAJNavTextCircle.js`    | Stories for the `AJNavTextCircle` component.                                                              |
+| `storiesAJOutlinedButton.js`   | Stories for the `AJOutlinedButton` component.                                                             |
 | `storiesAJResponsiveGrid.js`   | Stories for the `AJResponsiveGrid` component.                                                             |
 | `storiesAJSwitch.js`           | Stories for the `AJSwitch` component.                                                                     |
 | `storiesAJSwitchIcon.js`       | Stories for the `AJSwitchIcon` component.                                                                 |
+| `storiesAJTag.js`              | Stories for the `AJTag` component.                                                                        |
+| `storiesAJTagImage.js`         | Stories for the `AJTagImage` component.                                                                   |
 | `storiesAJTextButton.js`       | Stories for the `AJTextButton` component.                                                                 |
 | `storiesAJTextCard.js`         | Stories for the `AJTextCard` component.                                                                   |
 

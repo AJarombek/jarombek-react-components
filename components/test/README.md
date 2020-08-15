@@ -15,12 +15,15 @@ Unit tests and integration tests for the reusable React components.  Tests are w
 | `AJCodeSnippet.test.js`           | Unit tests and integration tests for the `AJCodeSnippet` component.                       |
 | `AJContainedButton.snap.test.js`  | Snapshot tests for the `AJContainedButton` component.                                     |
 | `AJContainedButton.test.js`       | Unit tests and integration tests for the `AJContainedButton` component.                   |
+| `AJLoadingDots.snap.test.js`      | Snapshot tests for the `AJLoadingDots` component.                                         |
 | `AJMobileHamburger.snap.test.js`  | Snapshot tests for the `AJMobileHamburger` component.                                     |
 | `AJMobileHamburger.test.js`       | Unit tests and integration tests for the `AJMobileHamburger` component.                   |
 | `AJModal.snap.test.js`            | Snapshot tests for the `AJModal` component.                                               |
 | `AJModal.test.js`                 | Unit tests and integration tests for the `AJModal` component.                             |
 | `AJNavCircle.snap.test.js`        | Snapshot tests for the `AJNavCircle` component.                                           |
 | `AJNavCircle.test.js`             | Unit tests and integration tests for the `AJNavCircle` component.                         |
+| `AJNavList.snap.test.js`          | Snapshot tests for the `AJNavList` component.                                             |
+| `AJNavList.test.js`               | Unit tests and integration tests for the `AJNavList` component.                           |
 | `AJNavTextCircle.snap.test.js`    | Snapshot tests for the `AJNavTextCircle` component.                                       |
 | `AJNavTextCircle.test.js`         | Unit tests and integration tests for the `AJNavTextCircle` component.                     |
 | `AJOutlinedButton.snap.test.js`   | Snapshot tests for the `AJOutlinedButton` component.                                      |
@@ -31,6 +34,8 @@ Unit tests and integration tests for the reusable React components.  Tests are w
 | `AJSwitch.test.js`                | Unit tests and integration tests for the `AJSwitch` component.                            |
 | `AJSwitchIcon.snap.test.js`       | Snapshot tests for the `AJSwitchIcon` component.                                          |
 | `AJSwitchIcon.test.js`            | Unit tests and integration tests for the `AJSwitchIcon` component.                        |
+| `AJTag.snap.test.js`              | Snapshot tests for the `AJTag` component.                                                 |
+| `AJTagImage.snap.test.js`         | Snapshot tests for the `AJTagImage` component.                                            |
 | `AJTextButton.snap.test.js`       | Snapshot tests for the `AJTextButton` component.                                          |
 | `AJTextButton.test.js`            | Unit tests and integration tests for the `AJTextButton` component.                        |
 | `AJTextCard.snap.test.js`         | Snapshot tests for the `AJTextCard` component.                                            |

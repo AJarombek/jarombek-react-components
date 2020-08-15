@@ -1,7 +1,7 @@
 /**
  * Reusable loading component which displays three horizontal dots.
  * @author Andrew Jarombek
- * @since 5/20/2018
+ * @since 8/14/2020
  */
 
 import React from 'react';
@@ -17,9 +17,9 @@ const AJLoadingDots = ({className}) => {
 
   return (
     <div className={classnames('aj-loading-dots', classes.container,  className)}>
-      <div className={classnames('jarbek-loading-circle', classes.circle, classes.first)} />
-      <div className={classnames('jarbek-loading-circle', classes.circle, classes.second)} />
-      <div className={classnames('jarbek-loading-circle', classes.circle, classes.third)} />
+      <div className={classnames('aj-loading-circle', classes.circle, classes.first)} />
+      <div className={classnames('aj-loading-circle', classes.circle, classes.second)} />
+      <div className={classnames('aj-loading-circle', classes.circle, classes.third)} />
     </div>
   );
 };

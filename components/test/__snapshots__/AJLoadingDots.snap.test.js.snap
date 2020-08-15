@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="aj-loading-dots container-0-2-1"
+>
+  <div
+    className="jarbek-loading-circle circle-0-2-2 first-0-2-3"
+  />
+  <div
+    className="jarbek-loading-circle circle-0-2-2 second-0-2-4"
+  />
+  <div
+    className="jarbek-loading-circle circle-0-2-2 third-0-2-5"
+  />
+</div>
+`;
