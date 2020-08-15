@@ -177,6 +177,9 @@
         __webpack_require__.d(__webpack_exports__, "AJContainedButton", function() {
             return src_AJContainedButton;
         });
+        __webpack_require__.d(__webpack_exports__, "AJLoadingDots", function() {
+            return src_AJLoadingDots;
+        });
         __webpack_require__.d(__webpack_exports__, "AJMobileHamburger", function() {
             return src_AJMobileHamburger;
         });
@@ -496,6 +499,61 @@
         };
         var AJContainedButton_AJContainedButton = AJContainedButton;
         var src_AJContainedButton = AJContainedButton_AJContainedButton;
+        var AJLoadingDots_styles = {
+            container: {
+                display: "grid",
+                gridTemplateColumns: "repeat(3, 1fr)",
+                gridTemplateRows: "100%"
+            },
+            circle: {
+                backgroundColor: "#333",
+                width: 40,
+                height: 40,
+                borderRadius: "50%",
+                margin: 5,
+                opacity: 0,
+                animation: "$fade 1s infinite"
+            },
+            first: {
+                animationDelay: "0s"
+            },
+            second: {
+                animationDelay: "0.25s"
+            },
+            third: {
+                animationDelay: "0.5s"
+            },
+            "@keyframes fade": {
+                "0%": {
+                    opacity: 0
+                },
+                "20%": {
+                    opacity: 1
+                },
+                "100%": {
+                    opacity: 0
+                }
+            }
+        };
+        var AJLoadingDots_useStyles = Object(external_react_jss_["createUseStyles"])(AJLoadingDots_styles);
+        var AJLoadingDots_AJLoadingDots = function AJLoadingDots(_ref) {
+            var className = _ref.className;
+            var classes = AJLoadingDots_useStyles();
+            return external_react_default.a.createElement("div", {
+                className: classnames_default()("aj-loading-dots", classes.container, className)
+            }, external_react_default.a.createElement("div", {
+                className: classnames_default()("jarbek-loading-circle", classes.circle, classes.first)
+            }), external_react_default.a.createElement("div", {
+                className: classnames_default()("jarbek-loading-circle", classes.circle, classes.second)
+            }), external_react_default.a.createElement("div", {
+                className: classnames_default()("jarbek-loading-circle", classes.circle, classes.third)
+            }));
+        };
+        AJLoadingDots_AJLoadingDots.propTypes = {
+            className: prop_types_default.a.string
+        };
+        var src_AJLoadingDots_AJLoadingDots = AJLoadingDots_AJLoadingDots;
+        var src_AJLoadingDots = src_AJLoadingDots_AJLoadingDots;
         var AJMobileHamburger_styles = {
             ajMobileHamburger: {
                 display: "inline-block",

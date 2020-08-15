@@ -1,6 +1,6 @@
 {
   "name": "jarombek-react-components",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Andrew Jarombek's Reusable React Component Library",
   "main": "dist/components.js",
   "repository": "git+https://github.com/AJarombek/jarombek-react-components.git",

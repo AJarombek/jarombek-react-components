@@ -7,6 +7,7 @@
 import './storiesAJButton';
 import './storiesAJCodeSnippet';
 import './storiesAJContainedButton';
+import './storiesAJLoadingDots';
 import './storiesAJMobileHamburger';
 import './storiesAJModal';
 import './storiesAJNavCircle';
