@@ -13,6 +13,7 @@ import './storiesAJModal';
 import './storiesAJNavCircle';
 import './storiesAJNavList';
 import './storiesAJNavTextCircle';
+import './storiesAJNotificationCircle';
 import './storiesAJOutlinedButton';
 import './storiesAJResponsiveGrid';
 import './storiesAJSwitch';

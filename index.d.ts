@@ -125,6 +125,14 @@ export interface AJNavTextCircleProps {
 
 export const AJNavTextCircle: FunctionComponent<AJNavTextCircleProps>;
 
+// AJNotificationCircle component
+
+export interface AJNotificationCircleProps {
+    count?: number;
+}
+
+export const AJNotificationCircle: FunctionComponent<AJNotificationCircleProps>;
+
 // AJOutlinedButton component
 
 export interface AJOutlinedButtonProps {

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="aj-notification-circle container-0-2-1"
+>
+  <p
+    className="count-0-2-2"
+  >
+    15
+  </p>
+</div>
+`;

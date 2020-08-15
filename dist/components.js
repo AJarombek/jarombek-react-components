@@ -195,6 +195,9 @@
         __webpack_require__.d(__webpack_exports__, "AJNavTextCircle", function() {
             return src_AJNavTextCircle;
         });
+        __webpack_require__.d(__webpack_exports__, "AJNotificationCircle", function() {
+            return src_AJNotificationCircle;
+        });
         __webpack_require__.d(__webpack_exports__, "AJOutlinedButton", function() {
             return src_AJOutlinedButton;
         });
@@ -542,11 +545,11 @@
             return external_react_default.a.createElement("div", {
                 className: classnames_default()("aj-loading-dots", classes.container, className)
             }, external_react_default.a.createElement("div", {
-                className: classnames_default()("jarbek-loading-circle", classes.circle, classes.first)
+                className: classnames_default()("aj-loading-circle", classes.circle, classes.first)
             }), external_react_default.a.createElement("div", {
-                className: classnames_default()("jarbek-loading-circle", classes.circle, classes.second)
+                className: classnames_default()("aj-loading-circle", classes.circle, classes.second)
             }), external_react_default.a.createElement("div", {
-                className: classnames_default()("jarbek-loading-circle", classes.circle, classes.third)
+                className: classnames_default()("aj-loading-circle", classes.circle, classes.third)
             }));
         };
         AJLoadingDots_AJLoadingDots.propTypes = {
@@ -973,6 +976,38 @@
         };
         var src_AJNavTextCircle_AJNavTextCircle = AJNavTextCircle_AJNavTextCircle;
         var src_AJNavTextCircle = src_AJNavTextCircle_AJNavTextCircle;
+        var AJNotificationCircle_styles = {
+            container: {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                borderRadius: "50%",
+                width: 20,
+                height: 20,
+                backgroundColor: "#333"
+            },
+            count: {
+                fontSize: "12px",
+                color: "white",
+                margin: 0,
+                textAlign: "center"
+            }
+        };
+        var AJNotificationCircle_useStyles = Object(external_react_jss_["createUseStyles"])(AJNotificationCircle_styles);
+        var AJNotificationCircle_AJNotificationCircle = function AJNotificationCircle(_ref) {
+            var count = _ref.count;
+            var classes = AJNotificationCircle_useStyles();
+            return external_react_default.a.createElement("div", {
+                className: classnames_default()("aj-notification-circle", classes.container)
+            }, external_react_default.a.createElement("p", {
+                className: classes.count
+            }, count));
+        };
+        AJNotificationCircle_AJNotificationCircle.propTypes = {
+            count: prop_types_default.a.number
+        };
+        var src_AJNotificationCircle_AJNotificationCircle = AJNotificationCircle_AJNotificationCircle;
+        var src_AJNotificationCircle = src_AJNotificationCircle_AJNotificationCircle;
         var AJOutlinedButton_styles = {
             ajOutlinedButton: {
                 padding: "8px",
