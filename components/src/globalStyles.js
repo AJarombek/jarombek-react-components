@@ -7,6 +7,10 @@
 export default {
   '@font-face': [
     {
+      fontFamily: 'ElegantIcons',
+      src: 'url("http://global.jarombek.io/fonts/ElegantIcons.ttf") format("truetype")'
+    },
+    {
       fontFamily: 'Roboto-Bold',
       fontWeight: 'bold',
       src: 'url(http://global.jarombek.io/fonts/Roboto-Bold.ttf) format(truetype)'
@@ -22,6 +26,10 @@ export default {
       src: 'url(http://global.jarombek.io/fonts/Roboto-Thin.ttf) format(truetype)'
     }
   ],
+  elegantIcons: {
+    fontFamily: "'ElegantIcons', Helvetica, sans-serif",
+    fontStyle: 'normal'
+  },
   robotoBold: {
     fontFamily: "'Roboto-Bold', Helvetica, sans-serif",
     fontStyle: 'normal'
