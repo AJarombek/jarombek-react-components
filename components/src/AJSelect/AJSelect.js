@@ -14,11 +14,11 @@ import styles from './styles';
 const useStyles = createUseStyles(styles);
 
 const AJSelect = ({
-  title,
+  placeholder,
   options,
   defaultOption=0,
-  onClickSelect,
-  onClickListOption,
+  onClickSelect=() => {},
+  onClickListOption=() => {},
   disabled=false,
   className
 }) => {
@@ -26,14 +26,20 @@ const AJSelect = ({
   const [selected, setSelected] = useState(defaultOption);
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleOnClickSelect = () => {
+    setIsOpen(!isOpen);
+    onClickSelect();
+  };
+
   const handleOnClickListOption = (option, index) => {
+    setSelected(index);
     onClickListOption(option);
   };
 
   return (
-    <div className={classnames('aj-select', classes.ajSelect)}>
-      <div onClick={onClickSelect}>
-        <div>{title}</div>
+    <div className={classnames('aj-select', classes.ajSelect, className)}>
+      <div onClick={handleOnClickSelect} className={classes.ajSelectLabel}>
+        <div>{!!selected && placeholder}</div>
         <div className={classnames(
           classes.ajSelectArrow, isOpen ? classes.ajSelectOpen : classes.ajSelectClosed
         )}>
@@ -54,7 +60,7 @@ const AJSelect = ({
 };
 
 AJSelect.propTypes = {
-  title: PropTypes.node.isRequired,
+  placeholder: PropTypes.node.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     content: PropTypes.node,
     value: PropTypes.object

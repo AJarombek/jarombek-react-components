@@ -16,6 +16,7 @@ export {default as AJNavTextCircle} from './AJNavTextCircle';
 export {default as AJNotificationCircle} from './AJNotificationCircle';
 export {default as AJOutlinedButton} from './AJOutlinedButton';
 export {default as AJResponsiveGrid} from './AJResponsiveGrid';
+export {default as AJSelect} from './AJSelect';
 export {default as AJSwitchIcon} from './AJSwitchIcon';
 export {default as AJSwitch} from './AJSwitch';
 export {default as AJTag} from './AJTag';
