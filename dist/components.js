@@ -204,6 +204,9 @@
         __webpack_require__.d(__webpack_exports__, "AJResponsiveGrid", function() {
             return src_AJResponsiveGrid;
         });
+        __webpack_require__.d(__webpack_exports__, "AJSelect", function() {
+            return src_AJSelect;
+        });
         __webpack_require__.d(__webpack_exports__, "AJSwitchIcon", function() {
             return src_AJSwitchIcon;
         });
@@ -1061,6 +1064,9 @@
         var src_AJOutlinedButton = AJOutlinedButton_AJOutlinedButton;
         var globalStyles = {
             "@font-face": [ {
+                fontFamily: "ElegantIcons",
+                src: 'url("http://global.jarombek.io/fonts/ElegantIcons.ttf") format("truetype")'
+            }, {
                 fontFamily: "Roboto-Bold",
                 fontWeight: "bold",
                 src: "url(http://global.jarombek.io/fonts/Roboto-Bold.ttf) format(truetype)"
@@ -1073,6 +1079,10 @@
                 fontWeight: "bold",
                 src: "url(http://global.jarombek.io/fonts/Roboto-Thin.ttf) format(truetype)"
             } ],
+            elegantIcons: {
+                fontFamily: "'ElegantIcons', Helvetica, sans-serif",
+                fontStyle: "normal"
+            },
             robotoBold: {
                 fontFamily: "'Roboto-Bold', Helvetica, sans-serif",
                 fontStyle: "normal"
@@ -1322,6 +1332,170 @@
         };
         var src_AJResponsiveGrid_AJResponsiveGrid = AJResponsiveGrid_AJResponsiveGrid;
         var src_AJResponsiveGrid = src_AJResponsiveGrid_AJResponsiveGrid;
+        function AJSelect_styles_ownKeys(object, enumerableOnly) {
+            var keys = Object.keys(object);
+            if (Object.getOwnPropertySymbols) {
+                var symbols = Object.getOwnPropertySymbols(object);
+                if (enumerableOnly) symbols = symbols.filter(function(sym) {
+                    return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+                });
+                keys.push.apply(keys, symbols);
+            }
+            return keys;
+        }
+        function AJSelect_styles_objectSpread(target) {
+            for (var i = 1; i < arguments.length; i++) {
+                var source = arguments[i] != null ? arguments[i] : {};
+                if (i % 2) {
+                    AJSelect_styles_ownKeys(Object(source), true).forEach(function(key) {
+                        AJSelect_styles_defineProperty(target, key, source[key]);
+                    });
+                } else if (Object.getOwnPropertyDescriptors) {
+                    Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+                } else {
+                    AJSelect_styles_ownKeys(Object(source)).forEach(function(key) {
+                        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+                    });
+                }
+            }
+            return target;
+        }
+        function AJSelect_styles_defineProperty(obj, key, value) {
+            if (key in obj) {
+                Object.defineProperty(obj, key, {
+                    value: value,
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
+                });
+            } else {
+                obj[key] = value;
+            }
+            return obj;
+        }
+        var AJSelect_styles = {
+            ajSelect: {
+                display: "flex"
+            },
+            ajSelectArrow: AJSelect_styles_objectSpread(AJSelect_styles_objectSpread({}, globalStyles.elegantIcons), {}, {
+                paddingLeft: 10
+            }),
+            ajSelectLabel: {
+                display: "flex",
+                position: "relative",
+                cursor: "pointer",
+                height: 30,
+                padding: 5,
+                border: "1px solid #BBB",
+                borderRadius: 3,
+                alignItems: "center"
+            },
+            ajSelectDisabled: {
+                backgroundColor: "#EEE",
+                cursor: "not-allowed"
+            },
+            ajSelectList: {
+                position: "absolute",
+                cursor: "pointer",
+                margin: 0,
+                padding: 0,
+                top: 50,
+                "& > li": {
+                    listStyleType: "none",
+                    padding: "10px 6px",
+                    textAlign: "center",
+                    "&:hover": {
+                        backgroundColor: "#d2d2d2"
+                    }
+                }
+            }
+        };
+        function AJSelect_slicedToArray(arr, i) {
+            return AJSelect_arrayWithHoles(arr) || AJSelect_iterableToArrayLimit(arr, i) || AJSelect_nonIterableRest();
+        }
+        function AJSelect_nonIterableRest() {
+            throw new TypeError("Invalid attempt to destructure non-iterable instance");
+        }
+        function AJSelect_iterableToArrayLimit(arr, i) {
+            if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+                return;
+            }
+            var _arr = [];
+            var _n = true;
+            var _d = false;
+            var _e = undefined;
+            try {
+                for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+                    _arr.push(_s.value);
+                    if (i && _arr.length === i) break;
+                }
+            } catch (err) {
+                _d = true;
+                _e = err;
+            } finally {
+                try {
+                    if (!_n && _i["return"] != null) _i["return"]();
+                } finally {
+                    if (_d) throw _e;
+                }
+            }
+            return _arr;
+        }
+        function AJSelect_arrayWithHoles(arr) {
+            if (Array.isArray(arr)) return arr;
+        }
+        var AJSelect_useStyles = Object(external_react_jss_["createUseStyles"])(AJSelect_styles);
+        var AJSelect_AJSelect = function AJSelect(_ref) {
+            var placeholder = _ref.placeholder, options = _ref.options, defaultOption = _ref.defaultOption, _ref$onClickSelect = _ref.onClickSelect, onClickSelect = _ref$onClickSelect === void 0 ? function() {} : _ref$onClickSelect, _ref$onClickListOptio = _ref.onClickListOption, onClickListOption = _ref$onClickListOptio === void 0 ? function() {} : _ref$onClickListOptio, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled, className = _ref.className;
+            var classes = AJSelect_useStyles();
+            var _useState = Object(external_react_["useState"])(defaultOption), _useState2 = AJSelect_slicedToArray(_useState, 2), selected = _useState2[0], setSelected = _useState2[1];
+            var _useState3 = Object(external_react_["useState"])(false), _useState4 = AJSelect_slicedToArray(_useState3, 2), isOpen = _useState4[0], setIsOpen = _useState4[1];
+            var disabledClassNames = disabled ? classnames_default()("aj-select-disabled", classes.ajSelectDisabled) : null;
+            var handleOnClickSelect = function handleOnClickSelect() {
+                if (!disabled) {
+                    onClickSelect(!isOpen);
+                    setIsOpen(!isOpen);
+                }
+            };
+            var handleOnClickListOption = function handleOnClickListOption(option, index) {
+                if (!disabled) {
+                    setSelected(index + 1);
+                    setIsOpen(false);
+                    onClickListOption(option);
+                }
+            };
+            return external_react_default.a.createElement("div", {
+                className: classnames_default()("aj-select", classes.ajSelect, className)
+            }, external_react_default.a.createElement("div", {
+                onClick: handleOnClickSelect,
+                className: classnames_default()(classes.ajSelectLabel, disabledClassNames)
+            }, external_react_default.a.createElement("div", null, selected ? options[selected - 1].content : placeholder), external_react_default.a.createElement("div", {
+                className: classnames_default()(classes.ajSelectArrow, isOpen ? classes.ajSelectOpen : classes.ajSelectClosed)
+            }, isOpen ? "B" : "C")), isOpen && external_react_default.a.createElement("ul", {
+                className: classes.ajSelectList
+            }, options.map(function(option, index) {
+                return external_react_default.a.createElement("li", {
+                    key: option.value,
+                    onClick: function onClick() {
+                        return handleOnClickListOption(option, index);
+                    }
+                }, option.content);
+            })));
+        };
+        AJSelect_AJSelect.propTypes = {
+            placeholder: prop_types_default.a.node.isRequired,
+            options: prop_types_default.a.arrayOf(prop_types_default.a.shape({
+                content: prop_types_default.a.node,
+                value: prop_types_default.a.object
+            })).isRequired,
+            defaultOption: prop_types_default.a.number,
+            onClickSelect: prop_types_default.a.func,
+            onClickListOption: prop_types_default.a.func,
+            disabled: prop_types_default.a.bool,
+            className: prop_types_default.a.string
+        };
+        var src_AJSelect_AJSelect = AJSelect_AJSelect;
+        var src_AJSelect = src_AJSelect_AJSelect;
         var AJSwitchIcon_styles = {
             ajSwitchIconContainer: {
                 display: "flex",

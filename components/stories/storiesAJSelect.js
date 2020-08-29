@@ -17,4 +17,11 @@ storiesOf('AJSelect', module)
       disabled={false}
       onClickListOption={(option) => console.info(option)}
     />
+  )
+  .add('disabled', () =>
+    <AJSelect
+      options={[{content: 'Hidden', value: 'hidden'}]}
+      placeholder="Disabled Select"
+      disabled={true}
+    />
   );

@@ -13,10 +13,21 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
+/**
+ * Component resembling the HTML <select> element.
+ * @param placeholder Value shown on the label when no options are selected.
+ * @param options The options displayed in the dropdown.
+ * @param defaultOption The option selected by default.
+ * @param onClickSelect Actions to take when the label is clicked.
+ * @param onClickListOption Actions to take when one of the options in the dropdown is selected.
+ * @param disabled Whether or not the select element is clickable.
+ * @param className Custom class for the component.
+ * @return {*} The React component.
+ */
 const AJSelect = ({
   placeholder,
   options,
-  defaultOption=0,
+  defaultOption,
   onClickSelect=() => {},
   onClickListOption=() => {},
   disabled=false,
@@ -26,20 +37,31 @@ const AJSelect = ({
   const [selected, setSelected] = useState(defaultOption);
   const [isOpen, setIsOpen] = useState(false);
 
+  const disabledClassNames = disabled ?
+    classnames('aj-select-disabled', classes.ajSelectDisabled) : null;
+
   const handleOnClickSelect = () => {
-    setIsOpen(!isOpen);
-    onClickSelect();
+    if (!disabled) {
+      onClickSelect(!isOpen);
+      setIsOpen(!isOpen);
+    }
   };
 
   const handleOnClickListOption = (option, index) => {
-    setSelected(index);
-    onClickListOption(option);
+    if (!disabled) {
+      setSelected(index + 1);
+      setIsOpen(false);
+      onClickListOption(option);
+    }
   };
 
   return (
     <div className={classnames('aj-select', classes.ajSelect, className)}>
-      <div onClick={handleOnClickSelect} className={classes.ajSelectLabel}>
-        <div>{!!selected && placeholder}</div>
+      <div
+        onClick={handleOnClickSelect}
+        className={classnames(classes.ajSelectLabel, disabledClassNames)}
+      >
+        <div>{selected ? options[selected - 1].content : placeholder}</div>
         <div className={classnames(
           classes.ajSelectArrow, isOpen ? classes.ajSelectOpen : classes.ajSelectClosed
         )}>

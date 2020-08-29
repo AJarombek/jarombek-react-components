@@ -156,6 +156,25 @@ export interface AJResponsiveGridProps {
 
 export const AJResponsiveGrid: FunctionComponent<AJResponsiveGridProps>;
 
+// AJSelect component
+
+export interface AJSelectOptions {
+    content: ReactNode;
+    value: object;
+}
+
+export interface AJSelectProps {
+    placeholder: ReactNode;
+    options: AJSelectOptions;
+    defaultOption?: number;
+    onClickSelect?: Function;
+    onClickListOption?: Function;
+    disabled?: boolean;
+    className?: string;
+}
+
+export const AJSelect: FunctionComponent<AJSelectProps>;
+
 // AJSwitch component
 
 export interface AJSwitchProps {

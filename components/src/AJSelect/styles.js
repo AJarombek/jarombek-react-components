@@ -18,15 +18,27 @@ export default {
     display: 'flex',
     position: 'relative',
     cursor: 'pointer',
-    height: 50,
-    padding: 10
+    height: 30,
+    padding: 5,
+    border: '1px solid #BBB',
+    borderRadius: 3,
+    alignItems: 'center'
+  },
+  ajSelectDisabled: {
+    backgroundColor: '#EEE',
+    cursor: 'not-allowed'
   },
   ajSelectList: {
     position: 'absolute',
     cursor: 'pointer',
+    margin: 0,
+    padding: 0,
+    top: 50,
 
     '& > li': {
       listStyleType: 'none',
+      padding: '10px 6px',
+      textAlign: 'center',
 
       '&:hover': {
         backgroundColor: '#d2d2d2'
