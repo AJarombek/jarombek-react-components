@@ -40,6 +40,8 @@ const AJSelect = ({
   const disabledClassNames = disabled ?
     classnames('aj-select-disabled', classes.ajSelectDisabled) : null;
 
+  const isOpenClassNames = isOpen ? 'aj-select-open' : 'aj-select-closed';
+
   const handleOnClickSelect = () => {
     if (!disabled) {
       onClickSelect(!isOpen);
@@ -54,7 +56,7 @@ const AJSelect = ({
   };
 
   return (
-    <div className={classnames('aj-select', classes.ajSelect, className)}>
+    <div className={classnames('aj-select', classes.ajSelect, isOpenClassNames, className)}>
       <div
         onClick={handleOnClickSelect}
         className={classnames(classes.ajSelectLabel, disabledClassNames)}
@@ -80,7 +82,7 @@ const AJSelect = ({
 };
 
 AJSelect.propTypes = {
-  placeholder: PropTypes.node.isRequired,
+  placeholder: PropTypes.node,
   options: PropTypes.arrayOf(PropTypes.shape({
     content: PropTypes.node,
     value: PropTypes.any

@@ -8,7 +8,8 @@ import globalStyles from '../globalStyles';
 
 export default {
   ajSelect: {
-    display: 'flex'
+    display: 'flex',
+    position: 'relative'
   },
   ajSelectArrow: {
     ...globalStyles.elegantIcons,
@@ -34,6 +35,7 @@ export default {
     margin: 0,
     padding: 0,
     top: 50,
+    width: '100%',
 
     '& > li': {
       listStyleType: 'none',

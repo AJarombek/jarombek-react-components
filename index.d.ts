@@ -164,8 +164,8 @@ export interface AJSelectOptions {
 }
 
 export interface AJSelectProps {
-    placeholder: ReactNode;
-    options: AJSelectOptions;
+    placeholder?: ReactNode;
+    options: AJSelectOptions[];
     defaultOption?: number;
     onClickSelect?: Function;
     onClickListOption?: Function;

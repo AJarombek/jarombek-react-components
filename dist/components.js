@@ -1375,7 +1375,8 @@
         }
         var AJSelect_styles = {
             ajSelect: {
-                display: "flex"
+                display: "flex",
+                position: "relative"
             },
             ajSelectArrow: AJSelect_styles_objectSpread(AJSelect_styles_objectSpread({}, globalStyles.elegantIcons), {}, {
                 paddingLeft: 10
@@ -1400,6 +1401,7 @@
                 margin: 0,
                 padding: 0,
                 top: 50,
+                width: "100%",
                 "& > li": {
                     listStyleType: "none",
                     padding: "10px 6px",
@@ -1451,6 +1453,7 @@
             var _useState = Object(external_react_["useState"])(defaultOption), _useState2 = AJSelect_slicedToArray(_useState, 2), selected = _useState2[0], setSelected = _useState2[1];
             var _useState3 = Object(external_react_["useState"])(false), _useState4 = AJSelect_slicedToArray(_useState3, 2), isOpen = _useState4[0], setIsOpen = _useState4[1];
             var disabledClassNames = disabled ? classnames_default()("aj-select-disabled", classes.ajSelectDisabled) : null;
+            var isOpenClassNames = isOpen ? "aj-select-open" : "aj-select-closed";
             var handleOnClickSelect = function handleOnClickSelect() {
                 if (!disabled) {
                     onClickSelect(!isOpen);
@@ -1463,7 +1466,7 @@
                 onClickListOption(option);
             };
             return external_react_default.a.createElement("div", {
-                className: classnames_default()("aj-select", classes.ajSelect, className)
+                className: classnames_default()("aj-select", classes.ajSelect, isOpenClassNames, className)
             }, external_react_default.a.createElement("div", {
                 onClick: handleOnClickSelect,
                 className: classnames_default()(classes.ajSelectLabel, disabledClassNames)
@@ -1481,7 +1484,7 @@
             })));
         };
         AJSelect_AJSelect.propTypes = {
-            placeholder: prop_types_default.a.node.isRequired,
+            placeholder: prop_types_default.a.node,
             options: prop_types_default.a.arrayOf(prop_types_default.a.shape({
                 content: prop_types_default.a.node,
                 value: prop_types_default.a.any

@@ -2,7 +2,7 @@
 
 exports[`renders correctly 1`] = `
 <div
-  className="aj-select ajSelect-0-2-1"
+  className="aj-select ajSelect-0-2-1 aj-select-closed"
 >
   <div
     className="ajSelectLabel-0-2-3"
