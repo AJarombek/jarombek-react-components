@@ -48,11 +48,9 @@ const AJSelect = ({
   };
 
   const handleOnClickListOption = (option, index) => {
-    if (!disabled) {
-      setSelected(index + 1);
-      setIsOpen(false);
-      onClickListOption(option);
-    }
+    setSelected(index + 1);
+    setIsOpen(false);
+    onClickListOption(option);
   };
 
   return (
@@ -68,7 +66,7 @@ const AJSelect = ({
           {isOpen ? '\u0042' : '\u0043'}
         </div>
       </div>
-      {isOpen && (
+      {isOpen && !disabled && (
         <ul className={classes.ajSelectList}>
           {options.map((option, index) => (
             <li key={option.value} onClick={() => handleOnClickListOption(option, index)}>
@@ -85,7 +83,7 @@ AJSelect.propTypes = {
   placeholder: PropTypes.node.isRequired,
   options: PropTypes.arrayOf(PropTypes.shape({
     content: PropTypes.node,
-    value: PropTypes.object
+    value: PropTypes.any
   })).isRequired,
   defaultOption: PropTypes.number,
   onClickSelect: PropTypes.func,

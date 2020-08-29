@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="aj-select ajSelect-0-2-1"
+>
+  <div
+    className="ajSelectLabel-0-2-3"
+    onClick={[Function]}
+  >
+    <div />
+    <div
+      className="ajSelectArrow-0-2-2"
+    >
+      C
+    </div>
+  </div>
+</div>
+`;

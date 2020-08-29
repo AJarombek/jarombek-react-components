@@ -160,7 +160,7 @@ export const AJResponsiveGrid: FunctionComponent<AJResponsiveGridProps>;
 
 export interface AJSelectOptions {
     content: ReactNode;
-    value: object;
+    value: any;
 }
 
 export interface AJSelectProps {

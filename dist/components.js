@@ -1458,11 +1458,9 @@
                 }
             };
             var handleOnClickListOption = function handleOnClickListOption(option, index) {
-                if (!disabled) {
-                    setSelected(index + 1);
-                    setIsOpen(false);
-                    onClickListOption(option);
-                }
+                setSelected(index + 1);
+                setIsOpen(false);
+                onClickListOption(option);
             };
             return external_react_default.a.createElement("div", {
                 className: classnames_default()("aj-select", classes.ajSelect, className)
@@ -1471,7 +1469,7 @@
                 className: classnames_default()(classes.ajSelectLabel, disabledClassNames)
             }, external_react_default.a.createElement("div", null, selected ? options[selected - 1].content : placeholder), external_react_default.a.createElement("div", {
                 className: classnames_default()(classes.ajSelectArrow, isOpen ? classes.ajSelectOpen : classes.ajSelectClosed)
-            }, isOpen ? "B" : "C")), isOpen && external_react_default.a.createElement("ul", {
+            }, isOpen ? "B" : "C")), isOpen && !disabled && external_react_default.a.createElement("ul", {
                 className: classes.ajSelectList
             }, options.map(function(option, index) {
                 return external_react_default.a.createElement("li", {
@@ -1486,7 +1484,7 @@
             placeholder: prop_types_default.a.node.isRequired,
             options: prop_types_default.a.arrayOf(prop_types_default.a.shape({
                 content: prop_types_default.a.node,
-                value: prop_types_default.a.object
+                value: prop_types_default.a.any
             })).isRequired,
             defaultOption: prop_types_default.a.number,
             onClickSelect: prop_types_default.a.func,
