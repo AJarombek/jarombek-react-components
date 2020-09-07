@@ -7,7 +7,7 @@
 
 import React, {useState} from 'react';
 import {storiesOf} from '@storybook/react';
-import {AJSelect} from '../src';
+import { AJSelect, AJSwitch } from '../src';
 
 storiesOf('AJSelect', module)
   .add('default', () =>
@@ -24,4 +24,34 @@ storiesOf('AJSelect', module)
       placeholder="Disabled Select"
       disabled={true}
     />
-  );
+  )
+  .add('toggle default option', () => {
+    const Parent = ({ children, ...props }) => {
+      const [state, setState] = useState(false);
+      return (
+        <div>
+          <AJSwitch onChange={(newState) => setState(newState)} initialState={state} />
+          {children(state)}
+        </div>
+      );
+    };
+
+    return (
+      <Parent>
+        {(state) => (
+          <AJSelect
+            options={[{
+              content: 'Option 1',
+              value: 0
+            }, {
+              content: 'Option 2',
+              value: 1
+            }]}
+            placeholder="Toggleable Default Option Select"
+            disabled={false}
+            defaultOption={+state + 1}
+          />
+        )}
+      </Parent>
+    );
+  });

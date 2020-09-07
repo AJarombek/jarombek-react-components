@@ -3,7 +3,7 @@
         var a = typeof exports === "object" ? factory(require("react"), require("react-jss"), require("highlight.js")) : factory(root["react"], root["react-jss"], root["highlight.js"]);
         for (var i in a) (typeof exports === "object" ? exports : root)[i] = a[i];
     }
-})(window, function(__WEBPACK_EXTERNAL_MODULE__1__, __WEBPACK_EXTERNAL_MODULE__3__, __WEBPACK_EXTERNAL_MODULE__4__) {
+})(window, function(__WEBPACK_EXTERNAL_MODULE__1__, __WEBPACK_EXTERNAL_MODULE__3__, __WEBPACK_EXTERNAL_MODULE__6__) {
     return function(modules) {
         var installedModules = {};
         function __webpack_require__(moduleId) {
@@ -67,12 +67,12 @@
             return Object.prototype.hasOwnProperty.call(object, property);
         };
         __webpack_require__.p = "";
-        return __webpack_require__(__webpack_require__.s = 7);
+        return __webpack_require__(__webpack_require__.s = 12);
     }([ function(module, exports, __webpack_require__) {
         if (false) {
             var throwOnDirectAccess, ReactIs;
         } else {
-            module.exports = __webpack_require__(5)();
+            module.exports = __webpack_require__(7)();
         }
     }, function(module, exports) {
         module.exports = __WEBPACK_EXTERNAL_MODULE__1__;
@@ -116,10 +116,33 @@
     }, function(module, exports) {
         module.exports = __WEBPACK_EXTERNAL_MODULE__3__;
     }, function(module, exports) {
-        module.exports = __WEBPACK_EXTERNAL_MODULE__4__;
+        function _defineProperty(obj, key, value) {
+            if (key in obj) {
+                Object.defineProperty(obj, key, {
+                    value: value,
+                    enumerable: true,
+                    configurable: true,
+                    writable: true
+                });
+            } else {
+                obj[key] = value;
+            }
+            return obj;
+        }
+        module.exports = _defineProperty;
+    }, function(module, exports, __webpack_require__) {
+        var arrayWithHoles = __webpack_require__(9);
+        var iterableToArrayLimit = __webpack_require__(10);
+        var nonIterableRest = __webpack_require__(11);
+        function _slicedToArray(arr, i) {
+            return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
+        }
+        module.exports = _slicedToArray;
+    }, function(module, exports) {
+        module.exports = __WEBPACK_EXTERNAL_MODULE__6__;
     }, function(module, exports, __webpack_require__) {
         "use strict";
-        var ReactPropTypesSecret = __webpack_require__(6);
+        var ReactPropTypesSecret = __webpack_require__(8);
         function emptyFunction() {}
         function emptyFunctionWithReset() {}
         emptyFunctionWithReset.resetWarningCache = emptyFunction;
@@ -165,6 +188,43 @@
         "use strict";
         var ReactPropTypesSecret = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";
         module.exports = ReactPropTypesSecret;
+    }, function(module, exports) {
+        function _arrayWithHoles(arr) {
+            if (Array.isArray(arr)) return arr;
+        }
+        module.exports = _arrayWithHoles;
+    }, function(module, exports) {
+        function _iterableToArrayLimit(arr, i) {
+            if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
+                return;
+            }
+            var _arr = [];
+            var _n = true;
+            var _d = false;
+            var _e = undefined;
+            try {
+                for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+                    _arr.push(_s.value);
+                    if (i && _arr.length === i) break;
+                }
+            } catch (err) {
+                _d = true;
+                _e = err;
+            } finally {
+                try {
+                    if (!_n && _i["return"] != null) _i["return"]();
+                } finally {
+                    if (_d) throw _e;
+                }
+            }
+            return _arr;
+        }
+        module.exports = _iterableToArrayLimit;
+    }, function(module, exports) {
+        function _nonIterableRest() {
+            throw new TypeError("Invalid attempt to destructure non-iterable instance");
+        }
+        module.exports = _nonIterableRest;
     }, function(module, __webpack_exports__, __webpack_require__) {
         "use strict";
         __webpack_require__.r(__webpack_exports__);
@@ -270,24 +330,13 @@
         var AJButton_AJButton = AJButton;
         var src_AJButton = AJButton_AJButton;
         var external_react_jss_ = __webpack_require__(3);
-        var external_highlight_js_ = __webpack_require__(4);
+        var external_highlight_js_ = __webpack_require__(6);
         var external_highlight_js_default = __webpack_require__.n(external_highlight_js_);
         var classnames = __webpack_require__(2);
         var classnames_default = __webpack_require__.n(classnames);
+        var defineProperty = __webpack_require__(4);
+        var defineProperty_default = __webpack_require__.n(defineProperty);
         var _before;
-        function _defineProperty(obj, key, value) {
-            if (key in obj) {
-                Object.defineProperty(obj, key, {
-                    value: value,
-                    enumerable: true,
-                    configurable: true,
-                    writable: true
-                });
-            } else {
-                obj[key] = value;
-            }
-            return obj;
-        }
         var styles = {
             hljs: {
                 display: "block",
@@ -314,10 +363,10 @@
                     position: "sticky",
                     left: "90%",
                     float: "right"
-                }, _defineProperty(_before, "@media screen and (max-width: 700px)", {
+                }, defineProperty_default()(_before, "@media screen and (max-width: 700px)", {
                     marginRight: "5px",
                     left: "88%"
-                }), _defineProperty(_before, "@media screen and (max-width: 480px)", {
+                }), defineProperty_default()(_before, "@media screen and (max-width: 480px)", {
                     marginRight: "10px",
                     left: "85%"
                 }), _before),
@@ -560,6 +609,8 @@
         };
         var src_AJLoadingDots_AJLoadingDots = AJLoadingDots_AJLoadingDots;
         var src_AJLoadingDots = src_AJLoadingDots_AJLoadingDots;
+        var slicedToArray = __webpack_require__(5);
+        var slicedToArray_default = __webpack_require__.n(slicedToArray);
         var AJMobileHamburger_styles = {
             ajMobileHamburger: {
                 display: "inline-block",
@@ -607,45 +658,11 @@
             },
             ajMobileHamburgerInactive: {}
         };
-        function _slicedToArray(arr, i) {
-            return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
-        }
-        function _nonIterableRest() {
-            throw new TypeError("Invalid attempt to destructure non-iterable instance");
-        }
-        function _iterableToArrayLimit(arr, i) {
-            if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-                return;
-            }
-            var _arr = [];
-            var _n = true;
-            var _d = false;
-            var _e = undefined;
-            try {
-                for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-                    _arr.push(_s.value);
-                    if (i && _arr.length === i) break;
-                }
-            } catch (err) {
-                _d = true;
-                _e = err;
-            } finally {
-                try {
-                    if (!_n && _i["return"] != null) _i["return"]();
-                } finally {
-                    if (_d) throw _e;
-                }
-            }
-            return _arr;
-        }
-        function _arrayWithHoles(arr) {
-            if (Array.isArray(arr)) return arr;
-        }
         var AJMobileHamburger_useStyles = Object(external_react_jss_["createUseStyles"])(AJMobileHamburger_styles);
         var AJMobileHamburger = Object(external_react_["forwardRef"])(function(_ref, ref) {
             var onClick = _ref.onClick, className = _ref.className;
             var classes = AJMobileHamburger_useStyles();
-            var _useState = Object(external_react_["useState"])(false), _useState2 = _slicedToArray(_useState, 2), active = _useState2[0], setActive = _useState2[1];
+            var _useState = Object(external_react_["useState"])(false), _useState2 = slicedToArray_default()(_useState, 2), active = _useState2[0], setActive = _useState2[1];
             var spanClassName = active ? classnames_default()("aj-mobile-hamburger-active", classes.ajMobileHamburgerActive) : classnames_default()("aj-mobile-hamburger-inactive", classes.ajMobileHamburgerInactive);
             var hamburgerClasses = classnames_default()("aj-mobile-hamburger", classes.ajMobileHamburger, className);
             var onClickAction = function onClickAction() {
@@ -1112,7 +1129,7 @@
                 var source = arguments[i] != null ? arguments[i] : {};
                 if (i % 2) {
                     ownKeys(Object(source), true).forEach(function(key) {
-                        styles_defineProperty(target, key, source[key]);
+                        defineProperty_default()(target, key, source[key]);
                     });
                 } else if (Object.getOwnPropertyDescriptors) {
                     Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
@@ -1123,19 +1140,6 @@
                 }
             }
             return target;
-        }
-        function styles_defineProperty(obj, key, value) {
-            if (key in obj) {
-                Object.defineProperty(obj, key, {
-                    value: value,
-                    enumerable: true,
-                    configurable: true,
-                    writable: true
-                });
-            } else {
-                obj[key] = value;
-            }
-            return obj;
         }
         var AJTextButton_styles = {
             ajTextButton: {
@@ -1202,7 +1206,7 @@
                 var source = arguments[i] != null ? arguments[i] : {};
                 if (i % 2) {
                     styles_ownKeys(Object(source), true).forEach(function(key) {
-                        AJTextCard_styles_defineProperty(target, key, source[key]);
+                        defineProperty_default()(target, key, source[key]);
                     });
                 } else if (Object.getOwnPropertyDescriptors) {
                     Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
@@ -1213,19 +1217,6 @@
                 }
             }
             return target;
-        }
-        function AJTextCard_styles_defineProperty(obj, key, value) {
-            if (key in obj) {
-                Object.defineProperty(obj, key, {
-                    value: value,
-                    enumerable: true,
-                    configurable: true,
-                    writable: true
-                });
-            } else {
-                obj[key] = value;
-            }
-            return obj;
         }
         var AJTextCard_styles = {
             ajTextCard: styles_objectSpread(styles_objectSpread({}, globalStyles.robotoThin), {}, {
@@ -1273,19 +1264,6 @@
             className: prop_types_default.a.string
         };
         var src_AJTextCard_AJTextCard = AJTextCard_AJTextCard;
-        function AJResponsiveGrid_styles_defineProperty(obj, key, value) {
-            if (key in obj) {
-                Object.defineProperty(obj, key, {
-                    value: value,
-                    enumerable: true,
-                    configurable: true,
-                    writable: true
-                });
-            } else {
-                obj[key] = value;
-            }
-            return obj;
-        }
         var AJResponsiveGrid_styles = {
             ajResponsiveGrid: function ajResponsiveGrid(_ref) {
                 var _ref2;
@@ -1295,15 +1273,15 @@
                     gridTemplateColumns: "1fr 1fr 1fr",
                     gridGap: "20px",
                     "-ms-grid-columns": "1fr 1fr 1fr"
-                }, AJResponsiveGrid_styles_defineProperty(_ref2, "@media screen and (max-width: ".concat(large, ") and (min-width: ").concat(medium, ")"), {
+                }, defineProperty_default()(_ref2, "@media screen and (max-width: ".concat(large, ") and (min-width: ").concat(medium, ")"), {
                     gridTemplateColumns: "1fr 1fr",
                     gridGap: "20px",
                     "-ms-grid-columns": "1fr 1fr"
-                }), AJResponsiveGrid_styles_defineProperty(_ref2, "@media screen and (max-width: ".concat(medium, ") and (min-width: ").concat(small, ")"), {
+                }), defineProperty_default()(_ref2, "@media screen and (max-width: ".concat(medium, ") and (min-width: ").concat(small, ")"), {
                     gridTemplateColumns: "1fr",
                     gridGap: "15px",
                     "-ms-grid-columns": "1fr"
-                }), AJResponsiveGrid_styles_defineProperty(_ref2, "@media screen and (max-width: ".concat(small, ")"), {
+                }), defineProperty_default()(_ref2, "@media screen and (max-width: ".concat(small, ")"), {
                     gridTemplateColumns: "1fr",
                     gridGap: "10px",
                     "-ms-grid-columns": "1fr"
@@ -1348,7 +1326,7 @@
                 var source = arguments[i] != null ? arguments[i] : {};
                 if (i % 2) {
                     AJSelect_styles_ownKeys(Object(source), true).forEach(function(key) {
-                        AJSelect_styles_defineProperty(target, key, source[key]);
+                        defineProperty_default()(target, key, source[key]);
                     });
                 } else if (Object.getOwnPropertyDescriptors) {
                     Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
@@ -1359,19 +1337,6 @@
                 }
             }
             return target;
-        }
-        function AJSelect_styles_defineProperty(obj, key, value) {
-            if (key in obj) {
-                Object.defineProperty(obj, key, {
-                    value: value,
-                    enumerable: true,
-                    configurable: true,
-                    writable: true
-                });
-            } else {
-                obj[key] = value;
-            }
-            return obj;
         }
         var AJSelect_styles = {
             ajSelect: {
@@ -1412,46 +1377,17 @@
                 }
             }
         };
-        function AJSelect_slicedToArray(arr, i) {
-            return AJSelect_arrayWithHoles(arr) || AJSelect_iterableToArrayLimit(arr, i) || AJSelect_nonIterableRest();
-        }
-        function AJSelect_nonIterableRest() {
-            throw new TypeError("Invalid attempt to destructure non-iterable instance");
-        }
-        function AJSelect_iterableToArrayLimit(arr, i) {
-            if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-                return;
-            }
-            var _arr = [];
-            var _n = true;
-            var _d = false;
-            var _e = undefined;
-            try {
-                for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-                    _arr.push(_s.value);
-                    if (i && _arr.length === i) break;
-                }
-            } catch (err) {
-                _d = true;
-                _e = err;
-            } finally {
-                try {
-                    if (!_n && _i["return"] != null) _i["return"]();
-                } finally {
-                    if (_d) throw _e;
-                }
-            }
-            return _arr;
-        }
-        function AJSelect_arrayWithHoles(arr) {
-            if (Array.isArray(arr)) return arr;
-        }
         var AJSelect_useStyles = Object(external_react_jss_["createUseStyles"])(AJSelect_styles);
         var AJSelect_AJSelect = function AJSelect(_ref) {
             var placeholder = _ref.placeholder, options = _ref.options, defaultOption = _ref.defaultOption, _ref$onClickSelect = _ref.onClickSelect, onClickSelect = _ref$onClickSelect === void 0 ? function() {} : _ref$onClickSelect, _ref$onClickListOptio = _ref.onClickListOption, onClickListOption = _ref$onClickListOptio === void 0 ? function() {} : _ref$onClickListOptio, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled, className = _ref.className;
             var classes = AJSelect_useStyles();
-            var _useState = Object(external_react_["useState"])(defaultOption), _useState2 = AJSelect_slicedToArray(_useState, 2), selected = _useState2[0], setSelected = _useState2[1];
-            var _useState3 = Object(external_react_["useState"])(false), _useState4 = AJSelect_slicedToArray(_useState3, 2), isOpen = _useState4[0], setIsOpen = _useState4[1];
+            var _useState = Object(external_react_["useState"])(null), _useState2 = slicedToArray_default()(_useState, 2), selected = _useState2[0], setSelected = _useState2[1];
+            var _useState3 = Object(external_react_["useState"])(false), _useState4 = slicedToArray_default()(_useState3, 2), isOpen = _useState4[0], setIsOpen = _useState4[1];
+            Object(external_react_["useEffect"])(function() {
+                if (defaultOption && defaultOption !== selected) {
+                    setSelected(defaultOption);
+                }
+            }, [ defaultOption ]);
             var disabledClassNames = disabled ? classnames_default()("aj-select-disabled", classes.ajSelectDisabled) : null;
             var isOpenClassNames = isOpen ? "aj-select-open" : "aj-select-closed";
             var handleOnClickSelect = function handleOnClickSelect() {
@@ -1557,45 +1493,11 @@
                 backgroundColor: "#ccc"
             }
         };
-        function AJSwitch_slicedToArray(arr, i) {
-            return AJSwitch_arrayWithHoles(arr) || AJSwitch_iterableToArrayLimit(arr, i) || AJSwitch_nonIterableRest();
-        }
-        function AJSwitch_nonIterableRest() {
-            throw new TypeError("Invalid attempt to destructure non-iterable instance");
-        }
-        function AJSwitch_iterableToArrayLimit(arr, i) {
-            if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-                return;
-            }
-            var _arr = [];
-            var _n = true;
-            var _d = false;
-            var _e = undefined;
-            try {
-                for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-                    _arr.push(_s.value);
-                    if (i && _arr.length === i) break;
-                }
-            } catch (err) {
-                _d = true;
-                _e = err;
-            } finally {
-                try {
-                    if (!_n && _i["return"] != null) _i["return"]();
-                } finally {
-                    if (_d) throw _e;
-                }
-            }
-            return _arr;
-        }
-        function AJSwitch_arrayWithHoles(arr) {
-            if (Array.isArray(arr)) return arr;
-        }
         var AJSwitch_useStyles = Object(external_react_jss_["createUseStyles"])(AJSwitch_styles);
         var AJSwitch_AJSwitch = function AJSwitch(_ref) {
             var onChange = _ref.onChange, _ref$initialState = _ref.initialState, initialState = _ref$initialState === void 0 ? false : _ref$initialState, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled, className = _ref.className;
             var classes = AJSwitch_useStyles();
-            var _useState = Object(external_react_["useState"])(initialState), _useState2 = AJSwitch_slicedToArray(_useState, 2), state = _useState2[0], setState = _useState2[1];
+            var _useState = Object(external_react_["useState"])(initialState), _useState2 = slicedToArray_default()(_useState, 2), state = _useState2[0], setState = _useState2[1];
             var onClick = function onClick() {
                 if (!disabled) {
                     var newState = !state;
@@ -1624,40 +1526,6 @@
             className: prop_types_default.a.string
         };
         var src_AJSwitch_AJSwitch = AJSwitch_AJSwitch;
-        function AJSwitchIcon_slicedToArray(arr, i) {
-            return AJSwitchIcon_arrayWithHoles(arr) || AJSwitchIcon_iterableToArrayLimit(arr, i) || AJSwitchIcon_nonIterableRest();
-        }
-        function AJSwitchIcon_nonIterableRest() {
-            throw new TypeError("Invalid attempt to destructure non-iterable instance");
-        }
-        function AJSwitchIcon_iterableToArrayLimit(arr, i) {
-            if (!(Symbol.iterator in Object(arr) || Object.prototype.toString.call(arr) === "[object Arguments]")) {
-                return;
-            }
-            var _arr = [];
-            var _n = true;
-            var _d = false;
-            var _e = undefined;
-            try {
-                for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-                    _arr.push(_s.value);
-                    if (i && _arr.length === i) break;
-                }
-            } catch (err) {
-                _d = true;
-                _e = err;
-            } finally {
-                try {
-                    if (!_n && _i["return"] != null) _i["return"]();
-                } finally {
-                    if (_d) throw _e;
-                }
-            }
-            return _arr;
-        }
-        function AJSwitchIcon_arrayWithHoles(arr) {
-            if (Array.isArray(arr)) return arr;
-        }
         var AJSwitchIcon_useStyles = Object(external_react_jss_["createUseStyles"])(AJSwitchIcon_styles);
         var AJSwitchIcon_AJSwitchIcon = function AJSwitchIcon(_ref) {
             var offImageUrl = _ref.offImageUrl, onImageUrl = _ref.onImageUrl, onChange = _ref.onChange, _ref$initialState = _ref.initialState, initialState = _ref$initialState === void 0 ? false : _ref$initialState, _ref$disabled = _ref.disabled, disabled = _ref$disabled === void 0 ? false : _ref$disabled, className = _ref.className;
@@ -1668,8 +1536,8 @@
             var getOnIconClasses = function getOnIconClasses(state) {
                 return state ? classnames_default()(classes.ajSwitchIcon, "aj-switch-icon-on") : classnames_default()(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, "aj-switch-icon-on");
             };
-            var _useState = Object(external_react_["useState"])(getOffIconClasses(initialState)), _useState2 = AJSwitchIcon_slicedToArray(_useState, 2), offIconClasses = _useState2[0], setOffIconClasses = _useState2[1];
-            var _useState3 = Object(external_react_["useState"])(getOnIconClasses(initialState)), _useState4 = AJSwitchIcon_slicedToArray(_useState3, 2), onIconClasses = _useState4[0], setOnIconClasses = _useState4[1];
+            var _useState = Object(external_react_["useState"])(getOffIconClasses(initialState)), _useState2 = slicedToArray_default()(_useState, 2), offIconClasses = _useState2[0], setOffIconClasses = _useState2[1];
+            var _useState3 = Object(external_react_["useState"])(getOnIconClasses(initialState)), _useState4 = slicedToArray_default()(_useState3, 2), onIconClasses = _useState4[0], setOnIconClasses = _useState4[1];
             var onSwitchChange = function onSwitchChange(state) {
                 setOffIconClasses(getOffIconClasses(state));
                 setOnIconClasses(getOnIconClasses(state));

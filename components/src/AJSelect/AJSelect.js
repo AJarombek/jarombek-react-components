@@ -4,7 +4,7 @@
  * @since 8/26/2020
  */
 
-import React, {useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import {createUseStyles} from 'react-jss';
 import classnames from 'classnames';
@@ -34,8 +34,14 @@ const AJSelect = ({
   className
 }) => {
   const classes = useStyles();
-  const [selected, setSelected] = useState(defaultOption);
+  const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (defaultOption && defaultOption !== selected) {
+      setSelected(defaultOption);
+    }
+  }, [defaultOption]);
 
   const disabledClassNames = disabled ?
     classnames('aj-select-disabled', classes.ajSelectDisabled) : null;

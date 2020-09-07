@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import {shallow, mount} from 'enzyme';
 import AJSelect from '../src/AJSelect/AJSelect';
 
 describe('unit tests', () => {
@@ -84,5 +84,23 @@ describe('unit tests', () => {
     expect(wrapper.find('li').at(0).simulate('click'));
 
     expect(wrapper.find('.aj-select').childAt(0).childAt(0).text()).toEqual('Item 1');
+  });
+
+  it('has a toggleable default option', async () => {
+    const wrapper = await mount(
+      <AJSelect
+        placeholder="Select Item"
+        options={[{ content: 'Item 1', value: 1 }, { content: 'Item 2', value: 2 }]}
+        defaultOption={1}
+      />
+    );
+
+    expect(wrapper.find('.aj-select').childAt(0).childAt(0).text()).toEqual('Item 1');
+    wrapper.setProps({ defaultOption: 2 });
+    expect(wrapper.find('.aj-select').childAt(0).childAt(0).text()).toEqual('Item 2');
+
+    // Changing the default option to null has no impact.
+    wrapper.setProps({ defaultOption: null });
+    expect(wrapper.find('.aj-select').childAt(0).childAt(0).text()).toEqual('Item 2');
   });
 });
