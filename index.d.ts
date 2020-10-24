@@ -35,7 +35,7 @@ export const AJButton: FunctionComponent<AJButtonProps>;
 // AJButtonGroup component
 
 export interface AJButtonGroupProps {
-    type: AJButtonType,
+    className?: string;
     children: ReactNode | string;
 }
 
