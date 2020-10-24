@@ -5,6 +5,7 @@
  */
 
 export {default as AJButton} from './AJButton';
+export {default as AJButtonGroup} from './AJButtonGroup';
 export {default as AJCodeSnippet} from './AJCodeSnippet';
 export {default as AJContainedButton} from './AJContainedButton';
 export {default as AJLoadingDots} from './AJLoadingDots';

@@ -11,6 +11,7 @@ Directory containing all the React components.  Each component has its own sub-d
 | `assets`                 | Images used in the reusable components.                                                                      |
 | `AJBaseButton`           | Underlying component shared between all button components.                                                   |
 | `AJButton`               | High level component that represents `AJContainedButton`, `AJOutlinedButton`, and `AJTextButton` components. |
+| `AJButtonGroup`          | Grouping of `AJButton` components.                                                                           |
 | `AJCodeSnippet`          | Component representing a snippet of programming language code.                                               |
 | `AJContainedButton`      | Component representing a button with a contained style (a solid background(.                                 |
 | `AJLoadingDots`          | Component representing a series of dots displayed with a loading animation.                                  |

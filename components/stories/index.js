@@ -5,6 +5,7 @@
  */
 
 import './storiesAJButton';
+import './storiesAJButtonGroup';
 import './storiesAJCodeSnippet';
 import './storiesAJContainedButton';
 import './storiesAJLoadingDots';
