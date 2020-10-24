@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="buttonGroup-0-2-1"
+>
+  <div
+    className="ajBaseButton-0-2-5 ajBaseButtonEnabled-0-2-6 aj-contained-button ajContainedButton-0-2-2 ajContainedButtonEnabled-0-2-3"
+  >
+    <button
+      disabled={false}
+      type="button"
+    >
+      <div>
+        Snapshot Button #1
+      </div>
+    </button>
+  </div>
+  <div
+    className="ajBaseButton-0-2-5 ajBaseButtonEnabled-0-2-6 aj-outlined-button ajOutlinedButton-0-2-8 ajOutlinedButtonEnabled-0-2-9"
+  >
+    <button
+      disabled={false}
+      type="button"
+    >
+      Snapshot Button #2
+    </button>
+  </div>
+  <div
+    className="ajBaseButton-0-2-5 ajBaseButtonDisabled-0-2-7 aj-outlined-button ajOutlinedButton-0-2-8 ajOutlinedButtonDisabled-0-2-10"
+    onClick={null}
+  >
+    <button
+      disabled={true}
+      type="button"
+    >
+      <div>
+        Snapshot Button #3
+      </div>
+    </button>
+  </div>
+</div>
+`;

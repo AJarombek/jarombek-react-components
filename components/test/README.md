@@ -11,6 +11,7 @@ Unit tests and integration tests for the reusable React components.  Tests are w
 | `AJBaseButton.test.js`              | Unit tests and integration tests for the `AJCodeSnippet` component.                       |
 | `AJButton.snap.test.js`             | Snapshot tests for the `AJButton` component.                                              |
 | `AJButton.test.js`                  | Unit tests and integration tests for the `AJButton` component.                            |
+| `AJButtonGroup.snap.test.js`        | Snapshot tests for the `AJButtonGroup` component.                                         |
 | `AJCodeSnippet.snap.test.js`        | Snapshot tests for the `AJCodeSnippet` component.                                         |
 | `AJCodeSnippet.test.js`             | Unit tests and integration tests for the `AJCodeSnippet` component.                       |
 | `AJContainedButton.snap.test.js`    | Snapshot tests for the `AJContainedButton` component.                                     |

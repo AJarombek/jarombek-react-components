@@ -5,6 +5,23 @@
 Reusable React.js components for my [SaintsXCTF](https://saintsxctf.com) and [Jarombek.com](https://jarombek.com) 
 websites, along with any prototypes I create.
 
+### Commands
+
+```bash
+# Install the dependencies for the project
+nvm use v10.15.3
+yarn
+
+# Start Storyboard
+yarn storybook
+
+# Run the component tests
+yarn test
+
+# Build the distributable bundle
+yarn build
+```
+
 ### Files
 
 | Filename                 | Description                                                                                |

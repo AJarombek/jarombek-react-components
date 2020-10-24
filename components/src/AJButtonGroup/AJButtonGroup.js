@@ -12,18 +12,18 @@ import classnames from 'classnames';
 
 const useStyles = createUseStyles(styles);
 
-const AJButtonGroup = ({ type, children }) => {
+const AJButtonGroup = ({ children, className }) => {
     const classes = useStyles();
 
     return (
-        <div className={classnames(classes.buttonGroup, classes[type])}>
+        <div className={classnames(classes.buttonGroup, className)}>
             {children}
         </div>
     );
 };
 
 AJButtonGroup.propTypes = {
-    type: PropTypes.oneOf(['contained', 'outlined', 'text']).isRequired
+    className: PropTypes.string
 };
 
 export default AJButtonGroup;

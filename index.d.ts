@@ -32,6 +32,15 @@ export interface AJButtonProps {
 
 export const AJButton: FunctionComponent<AJButtonProps>;
 
+// AJButtonGroup component
+
+export interface AJButtonGroupProps {
+    type: AJButtonType,
+    children: ReactNode | string;
+}
+
+export const AJButtonGroup: FunctionComponent<AJButtonGroupProps>;
+
 // AJCodeSnippet component
 
 type AJCodeSnippetLanguage = 'java' | 'javascript'

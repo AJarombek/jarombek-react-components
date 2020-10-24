@@ -6,6 +6,17 @@
 
 export default {
     buttonGroup: {
-
+        '& > div:not(:first-child):not(:last-child)': {
+            borderRadius: 0
+        },
+        '& > div:nth-child(n + 1)': {
+            marginLeft: '2px'
+        },
+        '& > div:first-child': {
+            borderRadius: '4px 0 0 4px'
+        },
+        '& > div:last-child': {
+            borderRadius: '0 4px 4px 0'
+        }
     }
 }
