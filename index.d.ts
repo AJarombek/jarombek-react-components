@@ -4,7 +4,9 @@
  * @since 6/29/2020
  */
 
-import {FunctionComponent, ReactNode, RefObject} from "react";
+// @ts-ignore
+import React, {FunctionComponent, ReactNode, RefObject} from "react";
+import { ClassValue } from 'classnames/types';
 
 // AJBaseButton component (internal)
 
@@ -152,6 +154,20 @@ export interface AJOutlinedButtonProps {
 }
 
 export const AJOutlinedButton: FunctionComponent<AJOutlinedButtonProps>;
+
+// AJRadioButton component
+
+export interface AJRadioButtonProps {
+    id: string;
+    name: string;
+    value: string;
+    label: ReactNode;
+    defaultChecked?: boolean;
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    className?: ClassValue;
+}
+
+export const AJRadioButton: FunctionComponent<AJRadioButtonProps>;
 
 // AJResponsiveGrid component
 

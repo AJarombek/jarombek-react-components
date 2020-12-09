@@ -8,11 +8,17 @@ module.exports = {
   env: {
     browser: true,
     es2020: true,
-    jest: true
+    jest: true,
   },
   extends: [
     'airbnb',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
   ],
-  parser: "babel-eslint"
+  parser: 'babel-eslint',
+  rules: {
+    'react/jsx-filename-extension': ['off'],
+    'react/forbid-prop-types': ['off'],
+    'react/require-default-props': ['off'],
+  },
+  ignorePatterns: ['webpack.config.js', 'jest.config.js', 'index.d.ts'],
 };

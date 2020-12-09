@@ -1626,7 +1626,7 @@
         var AJTag_useStyles = Object(external_react_jss_["createUseStyles"])(AJTag_styles);
         var AJTag_AJTag = function AJTag(_ref) {
             var content = _ref.content, color = _ref.color, className = _ref.className;
-            var backgroundColor = color !== null && color !== void 0 ? color : "rgba(204, 204, 204, 0.6)";
+            var backgroundColor = color !== null && color !== void 0 ? color : "";
             var classes = AJTag_useStyles({
                 backgroundColor: backgroundColor
             });

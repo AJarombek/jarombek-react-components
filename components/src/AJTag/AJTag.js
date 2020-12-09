@@ -6,7 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -14,7 +14,7 @@ import styles from './styles';
 const useStyles = createUseStyles(styles);
 
 const AJTag = ({ content, color, className }) => {
-  const backgroundColor = color ?? 'rgba(204, 204, 204, 0.6)';
+  const backgroundColor = color ?? '';
   const classes = useStyles({ backgroundColor });
 
   return (
@@ -27,7 +27,7 @@ const AJTag = ({ content, color, className }) => {
 AJTag.propTypes = {
   content: PropTypes.node.isRequired,
   color: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJTag;
