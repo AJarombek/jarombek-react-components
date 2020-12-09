@@ -16,7 +16,7 @@
   "homepage": "https://github.com/AJarombek/jarombek-react-components#readme",
   "dependencies": {
     "classnames": "^2.2.6",
-    "highlight.js": "^10.0.3",
+    "highlight.js": "^10.4.1",
     "prop-types": "^15.7.2",
     "react-jss": "^10.1.1",
     "uuid": "^8.2.0"
