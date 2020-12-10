@@ -264,6 +264,9 @@
         __webpack_require__.d(__webpack_exports__, "AJOutlinedButton", function() {
             return src_AJOutlinedButton;
         });
+        __webpack_require__.d(__webpack_exports__, "AJRadioButton", function() {
+            return src_AJRadioButton;
+        });
         __webpack_require__.d(__webpack_exports__, "AJResponsiveGrid", function() {
             return src_AJResponsiveGrid;
         });
@@ -1111,6 +1114,84 @@
         };
         var AJOutlinedButton_AJOutlinedButton = AJOutlinedButton;
         var src_AJOutlinedButton = AJOutlinedButton_AJOutlinedButton;
+        var AJRadioButton_styles = {
+            radio: {
+                "& > label": {
+                    display: "flex",
+                    alignItems: "center"
+                }
+            },
+            inputWrapper: {
+                display: "flex"
+            },
+            input: {
+                opacity: 0,
+                width: 0,
+                height: 0,
+                margin: 0,
+                padding: 0,
+                "& + div:before": {
+                    content: '""',
+                    display: "block",
+                    height: 10,
+                    width: 10,
+                    borderRadius: "50%",
+                    transition: "180ms transform ease-in-out",
+                    transform: "scale(0)",
+                    boxShadow: "inset 10px 10px #990000"
+                },
+                "&:checked + div:before": {
+                    transform: "scale(1)"
+                }
+            },
+            customRadio: {
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: 20,
+                height: 20,
+                borderRadius: "50%",
+                border: "2px solid #990000",
+                cursor: "pointer"
+            },
+            customLabel: {
+                marginLeft: 10,
+                cursor: "text"
+            }
+        };
+        var AJRadioButton_useStyles = Object(external_react_jss_["createUseStyles"])(AJRadioButton_styles);
+        var AJRadioButton_AJRadioButton = function AJRadioButton(_ref) {
+            var id = _ref.id, name = _ref.name, value = _ref.value, label = _ref.label, _ref$defaultChecked = _ref.defaultChecked, defaultChecked = _ref$defaultChecked === void 0 ? false : _ref$defaultChecked, onChange = _ref.onChange, className = _ref.className;
+            var classes = AJRadioButton_useStyles();
+            return external_react_default.a.createElement("div", {
+                className: classnames_default()(classes.radio, "aj-radio", className)
+            }, external_react_default.a.createElement("label", null, external_react_default.a.createElement("div", {
+                className: classes.inputWrapper
+            }, external_react_default.a.createElement("input", {
+                type: "radio",
+                id: id,
+                name: name,
+                value: value,
+                className: classes.input,
+                defaultChecked: defaultChecked,
+                onChange: onChange
+            }), external_react_default.a.createElement("div", {
+                className: classes.customRadio
+            })), external_react_default.a.createElement("div", {
+                className: classes.customLabel
+            }, label)));
+        };
+        AJRadioButton_AJRadioButton.propTypes = {
+            id: prop_types_default.a.string.isRequired,
+            name: prop_types_default.a.string.isRequired,
+            value: prop_types_default.a.string.isRequired,
+            label: prop_types_default.a.node.isRequired,
+            defaultChecked: prop_types_default.a.bool,
+            onChange: prop_types_default.a.func.isRequired,
+            className: prop_types_default.a.any.isRequired
+        };
+        var src_AJRadioButton_AJRadioButton = AJRadioButton_AJRadioButton;
+        var src_AJRadioButton = src_AJRadioButton_AJRadioButton;
         var globalStyles = {
             "@font-face": [ {
                 fontFamily: "ElegantIcons",

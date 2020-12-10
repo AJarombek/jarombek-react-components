@@ -19,6 +19,7 @@ module.exports = {
     'react/jsx-filename-extension': ['off'],
     'react/forbid-prop-types': ['off'],
     'react/require-default-props': ['off'],
+    'react/jsx-boolean-value': ['off'],
   },
   ignorePatterns: ['webpack.config.js', 'jest.config.js', 'index.d.ts'],
 };

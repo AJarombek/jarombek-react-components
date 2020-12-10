@@ -22,6 +22,7 @@ Directory containing all the React components.  Each component has its own sub-d
 | `AJNavTextCircle`        | Component representing a navigation circle with text describing the action.                                  |
 | `AJNotificationCircle`   | Component representing a circle that displays a notification count.                                          |
 | `AJOutlinedButton`       | Component representing a button with a solid outline.                                                        |
+| `AJRadioButton`          | Component representing a radio button with custom styling.                                                   |
 | `AJResponsiveGrid`       | Component representing a responsive grid of cards.                                                           |
 | `AJSelect`               | Component with similar functionality as the HTML `<select>` element.                                         |
 | `AJSwitch`               | Component representing a toggleable switch with two states - on and off.                                     |

@@ -16,6 +16,7 @@ import './storiesAJNavList';
 import './storiesAJNavTextCircle';
 import './storiesAJNotificationCircle';
 import './storiesAJOutlinedButton';
+import './storiesAJRadioButton';
 import './storiesAJResponsiveGrid';
 import './storiesAJSelect';
 import './storiesAJSwitch';
