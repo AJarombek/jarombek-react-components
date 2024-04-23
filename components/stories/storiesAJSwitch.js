@@ -4,21 +4,16 @@
  * @since 12/31/2019
  */
 
-import React, {useState} from 'react';
-import {storiesOf} from '@storybook/react';
-import {AJSwitch} from '../src';
+import React, { useState } from 'react';
+import { storiesOf } from '@storybook/react';
+import { AJSwitch } from '../src';
 
 storiesOf('AJSwitch', module)
-  .add('default', () =>
+  .add('default', () => <AJSwitch onChange={(state) => console.info(`AJSwitch state: ${state}`)} disabled={false} />)
+  .add('disabled', () => (
     <AJSwitch
-      onChange={state => console.info(`AJSwitch state: ${state}`)}
-      disabled={false}
-    />
-  )
-  .add('disabled', () =>
-    <AJSwitch
-      onChange={state => console.info(`Disabled AJSwitch state: ${state}`)}
+      onChange={(state) => console.info(`Disabled AJSwitch state: ${state}`)}
       initialState={true}
       disabled={true}
     />
-  );
+  ));

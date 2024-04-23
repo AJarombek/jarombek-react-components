@@ -5,7 +5,7 @@
  */
 
 export default {
-  ajTagImage: ({backgroundColor}) => ({
+  ajTagImage: ({ backgroundColor }) => ({
     backgroundColor,
     display: 'flex',
     cursor: 'pointer',
@@ -15,15 +15,15 @@ export default {
     transition: 'all .4s ease',
 
     '&:hover': {
-      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.5)'
-    }
+      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.5)',
+    },
   }),
   picture: {
     height: '40px',
     maxWidth: '45px',
-    margin: '5px'
+    margin: '5px',
   },
   content: {
-    marginLeft: '10px'
-  }
-}
+    marginLeft: '10px',
+  },
+};

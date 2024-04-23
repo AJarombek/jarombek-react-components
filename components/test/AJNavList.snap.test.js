@@ -9,13 +9,15 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <AJNavList
-      items={[
-        {content: 'Home', onClick: () => {}},
-        {content: 'Profile', onClick: () => {}}
-      ]}
-    />
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <AJNavList
+        items={[
+          { content: 'Home', onClick: () => {} },
+          { content: 'Profile', onClick: () => {} },
+        ]}
+      />,
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

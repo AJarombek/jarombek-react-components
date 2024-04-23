@@ -4,9 +4,9 @@
  * @since 11/24/2019
  */
 
-import React, {createRef} from 'react';
-import {storiesOf} from '@storybook/react';
-import {AJMobileHamburger, AJTextButton} from '../src';
+import React, { createRef } from 'react';
+import { storiesOf } from '@storybook/react';
+import { AJMobileHamburger, AJTextButton } from '../src';
 
 storiesOf('AJMobileHamburger', module)
   .add('default', () => <AJMobileHamburger />)

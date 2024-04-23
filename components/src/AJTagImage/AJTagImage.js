@@ -6,7 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -19,10 +19,8 @@ const AJTagImage = ({ content, picture, color, className }) => {
 
   return (
     <div className={classnames(classes.ajTagImage, 'aj-tag-image', className)}>
-      <img className={classes.picture} src={picture} alt=""/>
-      <div className={classes.content}>
-        {content}
-      </div>
+      <img className={classes.picture} src={picture} alt="" />
+      <div className={classes.content}>{content}</div>
     </div>
   );
 };
@@ -31,7 +29,7 @@ AJTagImage.propTypes = {
   content: PropTypes.node.isRequired,
   picture: PropTypes.any,
   color: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJTagImage;

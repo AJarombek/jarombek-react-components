@@ -9,13 +9,8 @@ import AJButton from '../src/AJButton/AJButton';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <AJButton
-      type="contained"
-      children={<div>Snapshot Test</div>}
-      onClick={f=>f}
-      disabled={true}
-    />
-  ).toJSON();
+  const tree = renderer
+    .create(<AJButton type="contained" children={<div>Snapshot Test</div>} onClick={(f) => f} disabled={true} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

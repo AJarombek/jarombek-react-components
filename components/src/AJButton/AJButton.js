@@ -5,9 +5,9 @@
  * @since 1/12/2020
  */
 
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import {AJContainedButton, AJOutlinedButton, AJTextButton} from '../../src';
+import { AJContainedButton, AJOutlinedButton, AJTextButton } from '../../src';
 
 /**
  * Component for a button which can be one of many different types.
@@ -19,39 +19,23 @@ import {AJContainedButton, AJOutlinedButton, AJTextButton} from '../../src';
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a contained, outlined, or text button.
  */
-const AJButton = forwardRef(({type, children, onClick, disabled=false, className}, ref) => {
-
+const AJButton = forwardRef(({ type, children, onClick, disabled = false, className }, ref) => {
   switch (type) {
     case 'contained':
       return (
-        <AJContainedButton
-          onClick={onClick}
-          disabled={disabled}
-          ref={ref}
-          className={className}>
-
+        <AJContainedButton onClick={onClick} disabled={disabled} ref={ref} className={className}>
           {children}
         </AJContainedButton>
       );
     case 'outlined':
       return (
-        <AJOutlinedButton
-          onClick={onClick}
-          disabled={disabled}
-          ref={ref}
-          className={className}>
-
+        <AJOutlinedButton onClick={onClick} disabled={disabled} ref={ref} className={className}>
           {children}
         </AJOutlinedButton>
       );
     case 'text':
       return (
-        <AJTextButton
-          onClick={onClick}
-          disabled={disabled}
-          ref={ref}
-          className={className}>
-
+        <AJTextButton onClick={onClick} disabled={disabled} ref={ref} className={className}>
           {children}
         </AJTextButton>
       );
@@ -65,7 +49,7 @@ AJButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJButton;

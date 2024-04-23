@@ -6,7 +6,7 @@
 
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -28,10 +28,10 @@ const AJSelect = ({
   placeholder,
   options,
   defaultOption,
-  onClickSelect=() => {},
-  onClickListOption=() => {},
-  disabled=false,
-  className
+  onClickSelect = () => {},
+  onClickListOption = () => {},
+  disabled = false,
+  className,
 }) => {
   const classes = useStyles();
   const [selected, setSelected] = useState(null);
@@ -43,8 +43,7 @@ const AJSelect = ({
     }
   }, [defaultOption]);
 
-  const disabledClassNames = disabled ?
-    classnames('aj-select-disabled', classes.ajSelectDisabled) : null;
+  const disabledClassNames = disabled ? classnames('aj-select-disabled', classes.ajSelectDisabled) : null;
 
   const isOpenClassNames = isOpen ? 'aj-select-open' : 'aj-select-closed';
 
@@ -63,14 +62,9 @@ const AJSelect = ({
 
   return (
     <div className={classnames('aj-select', classes.ajSelect, isOpenClassNames, className)}>
-      <div
-        onClick={handleOnClickSelect}
-        className={classnames(classes.ajSelectLabel, disabledClassNames)}
-      >
+      <div onClick={handleOnClickSelect} className={classnames(classes.ajSelectLabel, disabledClassNames)}>
         <div>{selected ? options[selected - 1].content : placeholder}</div>
-        <div className={classnames(
-          classes.ajSelectArrow, isOpen ? classes.ajSelectOpen : classes.ajSelectClosed
-        )}>
+        <div className={classnames(classes.ajSelectArrow, isOpen ? classes.ajSelectOpen : classes.ajSelectClosed)}>
           {isOpen ? '\u0042' : '\u0043'}
         </div>
       </div>
@@ -89,15 +83,17 @@ const AJSelect = ({
 
 AJSelect.propTypes = {
   placeholder: PropTypes.node,
-  options: PropTypes.arrayOf(PropTypes.shape({
-    content: PropTypes.node,
-    value: PropTypes.any
-  })).isRequired,
+  options: PropTypes.arrayOf(
+    PropTypes.shape({
+      content: PropTypes.node,
+      value: PropTypes.any,
+    }),
+  ).isRequired,
   defaultOption: PropTypes.number,
   onClickSelect: PropTypes.func,
   onClickListOption: PropTypes.func,
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJSelect;

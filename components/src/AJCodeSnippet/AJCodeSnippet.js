@@ -4,9 +4,9 @@
  * @since 12/30/2019
  */
 
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import hljs from 'highlight.js';
 import classnames from 'classnames';
 
@@ -24,26 +24,26 @@ const useStyles = createUseStyles(styles);
  * @return {*} React elements that represent a snippet of code.
  * @constructor
  */
-const AJCodeSnippet = ({children, language, className}) => {
+const AJCodeSnippet = ({ children, language, className }) => {
   const classes = useStyles();
 
   const languages = {
     javascript: {
-      title: "JavaScript",
-      name: "javascript",
-      className: "javascript"
+      title: 'JavaScript',
+      name: 'javascript',
+      className: 'javascript',
     },
     java: {
-      title: "Java",
-      name: "java",
-      className: "java"
-    }
+      title: 'Java',
+      name: 'java',
+      className: 'java',
+    },
   };
 
   const lang = languages[language] || languages.javascript;
 
   if (!language) {
-    lang.title = "";
+    lang.title = '';
   }
 
   let highlightedCode;
@@ -54,9 +54,12 @@ const AJCodeSnippet = ({children, language, className}) => {
   });
 
   return (
-    <div className={classnames("aj-code-snippet", className)}>
-      <code title={lang.title} className={classnames(lang.className, classes.hljs)}
-            ref={element => highlightedCode = element}>
+    <div className={classnames('aj-code-snippet', className)}>
+      <code
+        title={lang.title}
+        className={classnames(lang.className, classes.hljs)}
+        ref={(element) => (highlightedCode = element)}
+      >
         {children}
       </code>
     </div>

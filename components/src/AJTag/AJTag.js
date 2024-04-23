@@ -17,11 +17,7 @@ const AJTag = ({ content, color, className }) => {
   const backgroundColor = color ?? '';
   const classes = useStyles({ backgroundColor });
 
-  return (
-    <div className={classnames(classes.ajTag, 'aj-tag', className)}>
-      {content}
-    </div>
-  );
+  return <div className={classnames(classes.ajTag, 'aj-tag', className)}>{content}</div>;
 };
 
 AJTag.propTypes = {

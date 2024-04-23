@@ -5,11 +5,10 @@
  */
 
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import AJCodeSnippet from '../src/AJCodeSnippet/AJCodeSnippet';
 
 describe('unit tests', () => {
-
   it('renders', () => {
     const wrapper = shallow(
       <AJCodeSnippet language="java">
@@ -20,7 +19,7 @@ describe('unit tests', () => {
           }
         }
         `}
-      </AJCodeSnippet>
+      </AJCodeSnippet>,
     );
     expect(wrapper.exists()).toBe(true);
   });
@@ -47,7 +46,6 @@ describe('unit tests', () => {
 });
 
 describe('integration tests', () => {
-
   it('title prop has value Java when language is java', () => {
     const wrapper = mount(<AJCodeSnippet language="java">public class Test {}</AJCodeSnippet>);
     expect(wrapper.find('code').prop('title')).toEqual('Java');

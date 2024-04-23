@@ -9,11 +9,11 @@ import globalStyles from '../globalStyles';
 export default {
   ajSelect: {
     display: 'flex',
-    position: 'relative'
+    position: 'relative',
   },
   ajSelectArrow: {
     ...globalStyles.elegantIcons,
-    paddingLeft: 10
+    paddingLeft: 10,
   },
   ajSelectLabel: {
     display: 'flex',
@@ -23,11 +23,11 @@ export default {
     padding: 5,
     border: '1px solid #BBB',
     borderRadius: 3,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   ajSelectDisabled: {
     backgroundColor: '#EEE',
-    cursor: 'not-allowed'
+    cursor: 'not-allowed',
   },
   ajSelectList: {
     position: 'absolute',
@@ -43,8 +43,8 @@ export default {
       textAlign: 'center',
 
       '&:hover': {
-        backgroundColor: '#d2d2d2'
-      }
-    }
-  }
+        backgroundColor: '#d2d2d2',
+      },
+    },
+  },
 };

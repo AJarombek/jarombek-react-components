@@ -9,7 +9,7 @@ websites, along with any prototypes I create.
 
 ```bash
 # Install the dependencies for the project
-nvm use v10.15.3
+nvm use v20.11.0
 yarn
 
 # Start Storyboard
@@ -35,7 +35,6 @@ yarn build
 | `index.d.ts`             | Type definitions for components.  Used by TypeScript code and JavaScript IDEs.             |
 | `jest.config.js`         | Configuration for Jest unit testing.                                                       |
 | `package.json`           | Entry point for the npm application.  Contains dependency definitions.                     |
-| `setup.sh`               | Bash commands to setup and run the reusable component project.                             |
 | `webpack.config.js`      | Configuration for the Webpack bundler.                                                     |
 | `yarn.lock`              | Versions of each Yarn/npm dependency.                                                      |
 

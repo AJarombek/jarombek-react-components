@@ -4,9 +4,9 @@
  * @since 1/12/2020
  */
 
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 
 import styles from './styles';
 import AJBaseButton from '../AJBaseButton/AJBaseButton';
@@ -22,20 +22,12 @@ const useStyles = createUseStyles(styles);
  * @param ref A ref forwarded through the component to the AJBaseButton component.
  * @return {*} React elements representing a contained button.
  */
-const AJContainedButton = forwardRef(({children, onClick, disabled=false, className}, ref) => {
+const AJContainedButton = forwardRef(({ children, onClick, disabled = false, className }, ref) => {
   const classes = useStyles();
 
-  const enabledClasses = [
-    'aj-contained-button',
-    classes.ajContainedButton,
-    classes.ajContainedButtonEnabled
-  ];
+  const enabledClasses = ['aj-contained-button', classes.ajContainedButton, classes.ajContainedButtonEnabled];
 
-  const disabledClasses = [
-    'aj-contained-button',
-    classes.ajContainedButton,
-    classes.ajContainedButtonDisabled
-  ];
+  const disabledClasses = ['aj-contained-button', classes.ajContainedButton, classes.ajContainedButtonDisabled];
 
   return (
     <AJBaseButton
@@ -44,8 +36,8 @@ const AJContainedButton = forwardRef(({children, onClick, disabled=false, classN
       enabledClasses={enabledClasses}
       disabledClasses={disabledClasses}
       className={className}
-      ref={ref}>
-
+      ref={ref}
+    >
       {children}
     </AJBaseButton>
   );
@@ -55,7 +47,7 @@ AJContainedButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJContainedButton;

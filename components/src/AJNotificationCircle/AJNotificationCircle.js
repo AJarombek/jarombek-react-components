@@ -5,8 +5,8 @@
  */
 
 import React from 'react';
-import PropTypes from "prop-types";
-import {createUseStyles} from 'react-jss';
+import PropTypes from 'prop-types';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 import styles from './styles';
 
@@ -23,7 +23,7 @@ const AJNotificationCircle = ({ count }) => {
 };
 
 AJNotificationCircle.propTypes = {
-  count: PropTypes.number
+  count: PropTypes.number,
 };
 
 export default AJNotificationCircle;

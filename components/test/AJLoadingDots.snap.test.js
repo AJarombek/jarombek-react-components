@@ -9,6 +9,6 @@ import AJLoadingDots from '../src/AJLoadingDots/AJLoadingDots';
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<AJLoadingDots/>).toJSON();
+  const tree = renderer.create(<AJLoadingDots />).toJSON();
   expect(tree).toMatchSnapshot();
 });

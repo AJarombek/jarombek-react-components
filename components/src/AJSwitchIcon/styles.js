@@ -8,7 +8,7 @@ export default {
   ajSwitchIconContainer: {
     display: 'flex',
     height: '30px',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   ajSwitchIcon: {
     height: '25px',
@@ -17,10 +17,10 @@ export default {
 
     '& > img': {
       height: '100%',
-      width: '100%'
-    }
+      width: '100%',
+    },
   },
   ajSwitchIconNotSelected: {
-    filter: 'opacity(0.75) grayscale(1)'
-  }
+    filter: 'opacity(0.75) grayscale(1)',
+  },
 };

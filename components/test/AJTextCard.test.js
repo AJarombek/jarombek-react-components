@@ -4,21 +4,21 @@
  * @since 11/27/2019
  */
 
-import React, {useState} from 'react';
-import {shallow, mount} from 'enzyme';
+import React, { useState } from 'react';
+import { shallow, mount } from 'enzyme';
 import AJTextCard from '../src/AJTextCard/AJTextCard';
 
 describe('unit tests', () => {
-
-  const basicTextCard =
+  const basicTextCard = (
     <AJTextCard
       title="Test"
       subtitle="Written: 11/27/2019"
       content="Testing..."
-      action={f=>f}
+      action={(f) => f}
       actionText="Action"
       actionDisabled={false}
-    />;
+    />
+  );
 
   it('renders', () => {
     const wrapper = shallow(basicTextCard);
@@ -43,15 +43,14 @@ describe('unit tests', () => {
 
   it('renders proper content within react elements', () => {
     const wrapper = shallow(basicTextCard);
-    expect(wrapper.find('.aj-text-card-title').text()).toEqual("Test");
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Written: 11/27/2019");
-    expect(wrapper.find('.aj-text-card-content').text()).toEqual("Testing...");
+    expect(wrapper.find('.aj-text-card-title').text()).toEqual('Test');
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Written: 11/27/2019');
+    expect(wrapper.find('.aj-text-card-content').text()).toEqual('Testing...');
   });
 });
 
 describe('integration tests', () => {
-
-  const createTextCardWrapper = (disabled=false) => {
+  const createTextCardWrapper = (disabled = false) => {
     const Parent = ({ children, ...props }) => {
       const [state, setState] = useState(0);
       return (
@@ -69,58 +68,58 @@ describe('integration tests', () => {
             title="Test"
             subtitle={`Times Clicked: ${state}`}
             content="Testing..."
-            action={() => setState(state += 1)}
+            action={() => setState((state += 1))}
             actionText="Action"
             actionDisabled={disabled}
           />
         )}
-      </Parent>
+      </Parent>,
     );
   };
 
   it('action occurs when the footer button is clicked', () => {
     const wrapper = createTextCardWrapper();
 
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Times Clicked: 0');
 
     // onClick works if you click the button...
     expect(wrapper.find('button').simulate('click'));
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 1");
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Times Clicked: 1');
 
     // ... or the div surrounding the button
     expect(wrapper.find('.aj-text-card-footer').childAt(0).simulate('click'));
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 2");
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Times Clicked: 2');
   });
 
   it('action does not occur when the footer button is clicked but actionDisabled is true', () => {
     const wrapper = createTextCardWrapper(true);
 
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Times Clicked: 0');
 
     // onClick works if you click the button...
     expect(wrapper.find('button').simulate('click'));
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Times Clicked: 0');
 
     // ... or the div surrounding the button
     expect(wrapper.find('.aj-text-card-footer').childAt(0).simulate('click'));
-    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual("Times Clicked: 0");
+    expect(wrapper.find('.aj-text-card-subtitle').text()).toEqual('Times Clicked: 0');
   });
 
   it('action enabled by default', () => {
-    const noActionDisabledTextCard =
+    const noActionDisabledTextCard = (
       <AJTextCard
         title="Test"
         subtitle="Written: 12/11/2019"
         content="Testing..."
-        action={f=>f}
+        action={(f) => f}
         actionText="Action"
-      />;
+      />
+    );
 
     const wrapper = mount(noActionDisabledTextCard);
     expect(wrapper.props().actionDisabled).toBeUndefined();
-    expect(wrapper.find('button').getDOMNode().attributes.getNamedItem('type').value)
-      .toEqual('button');
+    expect(wrapper.find('button').getDOMNode().attributes.getNamedItem('type').value).toEqual('button');
 
     expect(wrapper.find('button').prop('disabled')).toEqual(false);
-  })
+  });
 });

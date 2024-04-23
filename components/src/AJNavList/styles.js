@@ -9,7 +9,7 @@ export default {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
   },
   ajNavListItem: {
     width: '100%',
@@ -27,18 +27,18 @@ export default {
       cursor: 'pointer',
 
       '&:hover': {
-        textDecoration: 'underline'
+        textDecoration: 'underline',
       },
 
       '& > div': {
         margin: '0 auto',
-        alignSelf: 'center'
-      }
-    }
+        alignSelf: 'center',
+      },
+    },
   },
   ajNavListLastItem: {
     '& > div': {
-      borderBottom: 'none'
-    }
-  }
+      borderBottom: 'none',
+    },
+  },
 };

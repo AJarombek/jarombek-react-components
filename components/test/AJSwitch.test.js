@@ -5,13 +5,12 @@
  */
 
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import AJSwitch from '../src/AJSwitch/AJSwitch';
 
 describe('unit tests', () => {
-
   it('renders', () => {
-    const wrapper = shallow(<AJSwitch onChange={f=>f} />);
+    const wrapper = shallow(<AJSwitch onChange={(f) => f} />);
     expect(wrapper.exists()).toBe(true);
   });
 
@@ -66,9 +65,19 @@ describe('unit tests', () => {
 
     const wrapper = shallow(<AJSwitch onChange="I should be a function" />);
 
-    expect(wrapper.find('div').at(0).hasClass(/(ajSwitchInactive)(-\d+)/)).toBe(true);
+    expect(
+      wrapper
+        .find('div')
+        .at(0)
+        .hasClass(/(ajSwitchInactive)(-\d+)/),
+    ).toBe(true);
     expect(wrapper.find('div').at(0).simulate('click'));
-    expect(wrapper.find('div').at(0).hasClass(/(ajSwitchActive)(-\d+)/)).toBe(true);
+    expect(
+      wrapper
+        .find('div')
+        .at(0)
+        .hasClass(/(ajSwitchActive)(-\d+)/),
+    ).toBe(true);
 
     expect(consoleErrorSpy).toHaveBeenCalled();
     expect(consoleErrorSpy).toHaveBeenCalledTimes(1);

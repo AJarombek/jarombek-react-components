@@ -19,7 +19,7 @@ export default {
       backgroundColor: 'transparent',
 
       '&:focus': {
-        outline: 'none'
+        outline: 'none',
       },
 
       '& > span, & > span:before, & > span:after': {
@@ -31,30 +31,30 @@ export default {
         backgroundColor: 'black',
         position: 'absolute',
         content: '""',
-        transition: 'all 50ms ease'
+        transition: 'all 50ms ease',
       },
 
       '& > span:before': {
-        top: '-8px'
+        top: '-8px',
       },
 
       '& > span:after': {
-        top: '8px'
-      }
-    }
+        top: '8px',
+      },
+    },
   },
   ajMobileHamburgerActive: {
     backgroundColor: 'transparent !important',
 
     '&:before': {
       top: '0 !important',
-      transform: 'rotate(45deg)'
+      transform: 'rotate(45deg)',
     },
 
     '&:after': {
       top: '0 !important',
-      transform: 'rotate(-45deg)'
-    }
+      transform: 'rotate(-45deg)',
+    },
   },
-  ajMobileHamburgerInactive: {}
+  ajMobileHamburgerInactive: {},
 };

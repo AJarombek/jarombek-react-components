@@ -4,9 +4,9 @@
  * @since 1/1/2020
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -26,7 +26,7 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a toggleable switch with icons.
  */
-const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, disabled=false, className}) => {
+const AJSwitchIcon = ({ offImageUrl, onImageUrl, onChange, initialState = false, disabled = false, className }) => {
   const classes = useStyles();
 
   /**
@@ -35,9 +35,9 @@ const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, di
    * @return {*} The classes attached to the 'off' icon.
    */
   const getOffIconClasses = (state) => {
-    return state ?
-      classnames(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, 'aj-switch-icon-off') :
-      classnames(classes.ajSwitchIcon, 'aj-switch-icon-off');
+    return state
+      ? classnames(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, 'aj-switch-icon-off')
+      : classnames(classes.ajSwitchIcon, 'aj-switch-icon-off');
   };
 
   /**
@@ -46,9 +46,9 @@ const AJSwitchIcon = ({offImageUrl, onImageUrl, onChange, initialState=false, di
    * @return {*} The classes attached to the 'on' icon.
    */
   const getOnIconClasses = (state) => {
-    return state ?
-      classnames(classes.ajSwitchIcon, 'aj-switch-icon-on') :
-      classnames(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, 'aj-switch-icon-on');
+    return state
+      ? classnames(classes.ajSwitchIcon, 'aj-switch-icon-on')
+      : classnames(classes.ajSwitchIcon, classes.ajSwitchIconNotSelected, 'aj-switch-icon-on');
   };
 
   // Hooks for the classes attached to the 'figure' elements.
@@ -87,7 +87,7 @@ AJSwitchIcon.propTypes = {
   onChange: PropTypes.func.isRequired,
   initialState: PropTypes.bool,
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJSwitchIcon;

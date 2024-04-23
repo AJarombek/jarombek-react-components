@@ -11,14 +11,14 @@ export default {
     borderRadius: '4px',
 
     '& button': {
-      backgroundColor: 'transparent'
-    }
+      backgroundColor: 'transparent',
+    },
   },
   ajContainedButtonEnabled: {
     backgroundColor: '#bbb',
 
     '&:active': {
-      backgroundColor: '#ccc'
+      backgroundColor: '#ccc',
     },
 
     '& button': {
@@ -26,15 +26,15 @@ export default {
       transition: 'color 0.25s ease',
 
       '&:active': {
-        color: '#222'
-      }
-    }
+        color: '#222',
+      },
+    },
   },
   ajContainedButtonDisabled: {
     backgroundColor: '#eee',
 
     '& button': {
-      color: '#999'
-    }
-  }
+      color: '#999',
+    },
+  },
 };

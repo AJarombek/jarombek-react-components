@@ -2,7 +2,7 @@ export default {
   container: {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
-    gridTemplateRows: '100%'
+    gridTemplateRows: '100%',
   },
   circle: {
     backgroundColor: '#333',
@@ -11,20 +11,20 @@ export default {
     borderRadius: '50%',
     margin: 5,
     opacity: 0,
-    animation: '$fade 1s infinite'
+    animation: '$fade 1s infinite',
   },
   first: {
-    animationDelay: '0s'
+    animationDelay: '0s',
   },
   second: {
-    animationDelay: '0.25s'
+    animationDelay: '0.25s',
   },
   third: {
-    animationDelay: '0.5s'
+    animationDelay: '0.5s',
   },
   '@keyframes fade': {
     '0%': { opacity: 0 },
     '20%': { opacity: 1 },
-    '100%': { opacity: 0 }
-  }
+    '100%': { opacity: 0 },
+  },
 };

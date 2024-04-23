@@ -9,8 +9,8 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <AJNavCircle height="40px" active={true} direction="right" onClick={f=>f} />
-  ).toJSON();
+  const tree = renderer
+    .create(<AJNavCircle height="40px" active={true} direction="right" onClick={(f) => f} />)
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

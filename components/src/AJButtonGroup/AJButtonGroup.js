@@ -5,25 +5,21 @@
  */
 
 import React from 'react';
-import styles from "./styles";
+import styles from './styles';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 const useStyles = createUseStyles(styles);
 
 const AJButtonGroup = ({ children, className }) => {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <div className={classnames(classes.buttonGroup, className)}>
-            {children}
-        </div>
-    );
+  return <div className={classnames(classes.buttonGroup, className)}>{children}</div>;
 };
 
 AJButtonGroup.propTypes = {
-    className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJButtonGroup;

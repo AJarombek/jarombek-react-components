@@ -5,15 +5,12 @@
  */
 
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import AJContainedButton from '../src/AJContainedButton/AJContainedButton';
 
 describe('unit tests', () => {
-
   it('renders', () => {
-    const wrapper = shallow(
-      <AJContainedButton disabled={false}>Test Contained Button</AJContainedButton>
-    );
+    const wrapper = shallow(<AJContainedButton disabled={false}>Test Contained Button</AJContainedButton>);
     expect(wrapper.exists()).toBe(true);
   });
 });

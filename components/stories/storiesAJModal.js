@@ -4,12 +4,16 @@
  * @since 1/5/2020
  */
 
-import React, {useState} from 'react';
-import {storiesOf} from '@storybook/react';
-import {AJModal, AJTextButton} from '../src';
+import React, { useState } from 'react';
+import { storiesOf } from '@storybook/react';
+import { AJModal, AJTextButton } from '../src';
 
 storiesOf('AJModal', module)
-  .add('default', () => <AJModal><div>Modal Content</div></AJModal>)
+  .add('default', () => (
+    <AJModal>
+      <div>Modal Content</div>
+    </AJModal>
+  ))
   .add('with onClick background action', () => {
     const Parent = ({ children, ...props }) => {
       const [state, setState] = useState(false);
@@ -23,9 +27,7 @@ storiesOf('AJModal', module)
 
     return (
       <Parent>
-        {(state, setState) => (
-          state ? <AJModal onClickBackground={() => setState(false)}>Modal</AJModal> : null
-        )}
+        {(state, setState) => (state ? <AJModal onClickBackground={() => setState(false)}>Modal</AJModal> : null)}
       </Parent>
     );
   });

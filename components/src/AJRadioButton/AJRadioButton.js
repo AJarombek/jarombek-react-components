@@ -12,15 +12,7 @@ import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJRadioButton = ({
-  id,
-  name,
-  value,
-  label,
-  defaultChecked = false,
-  onChange,
-  className,
-}) => {
+const AJRadioButton = ({ id, name, value, label, defaultChecked = false, onChange, className }) => {
   const classes = useStyles();
 
   return (

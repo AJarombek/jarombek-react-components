@@ -9,6 +9,6 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(<AJMobileHamburger/>).toJSON();
+  const tree = renderer.create(<AJMobileHamburger />).toJSON();
   expect(tree).toMatchSnapshot();
 });

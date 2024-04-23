@@ -4,9 +4,9 @@
  * @since 11/16/2019
  */
 
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 
 import styles from './styles';
 import AJBaseButton from '../AJBaseButton/AJBaseButton';
@@ -22,20 +22,12 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a text button.
  */
-const AJTextButton = forwardRef(({children, onClick, disabled=false, className}, ref) => {
+const AJTextButton = forwardRef(({ children, onClick, disabled = false, className }, ref) => {
   const classes = useStyles();
 
-  const enabledClasses = [
-    'aj-text-button',
-    classes.ajTextButton,
-    classes.ajTextButtonEnabled
-  ];
+  const enabledClasses = ['aj-text-button', classes.ajTextButton, classes.ajTextButtonEnabled];
 
-  const disabledClasses = [
-    'aj-text-button',
-    classes.ajTextButton,
-    classes.ajTextButtonDisabled
-  ];
+  const disabledClasses = ['aj-text-button', classes.ajTextButton, classes.ajTextButtonDisabled];
 
   return (
     <AJBaseButton
@@ -44,8 +36,8 @@ const AJTextButton = forwardRef(({children, onClick, disabled=false, className},
       enabledClasses={enabledClasses}
       disabledClasses={disabledClasses}
       ref={ref}
-      className={className}>
-
+      className={className}
+    >
       {children}
     </AJBaseButton>
   );
@@ -55,7 +47,7 @@ AJTextButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJTextButton;

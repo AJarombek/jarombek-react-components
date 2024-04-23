@@ -4,9 +4,9 @@
  * @since 12/31/2019
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -24,7 +24,7 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a toggleable switch.
  */
-const AJSwitch = ({onChange, initialState=false, disabled=false, className}) => {
+const AJSwitch = ({ onChange, initialState = false, disabled = false, className }) => {
   const classes = useStyles();
   const [state, setState] = useState(initialState);
 
@@ -39,22 +39,21 @@ const AJSwitch = ({onChange, initialState=false, disabled=false, className}) => 
     }
   };
 
-  const mainClass = state ?
-    disabled ?
-      classnames(classes.ajSwitch, classes.ajSwitchActive, classes.ajSwitchDisabled, 'aj-switch', className):
-      classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch', className)
-    :
-    disabled ?
-      classnames(classes.ajSwitch, classes.ajSwitchInactive, classes.ajSwitchDisabled, 'aj-switch', className):
-      classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch', className);
+  const mainClass = state
+    ? disabled
+      ? classnames(classes.ajSwitch, classes.ajSwitchActive, classes.ajSwitchDisabled, 'aj-switch', className)
+      : classnames(classes.ajSwitch, classes.ajSwitchActive, 'aj-switch', className)
+    : disabled
+      ? classnames(classes.ajSwitch, classes.ajSwitchInactive, classes.ajSwitchDisabled, 'aj-switch', className)
+      : classnames(classes.ajSwitch, classes.ajSwitchInactive, 'aj-switch', className);
 
-  const headClass = state ?
-    classnames(classes.ajSwitchHead, classes.ajSwitchHeadActive, 'aj-switch-head') :
-    classnames(classes.ajSwitchHead, classes.ajSwitchHeadInactive, 'aj-switch-head');
+  const headClass = state
+    ? classnames(classes.ajSwitchHead, classes.ajSwitchHeadActive, 'aj-switch-head')
+    : classnames(classes.ajSwitchHead, classes.ajSwitchHeadInactive, 'aj-switch-head');
 
-  const tailClass = state ?
-    classnames(classes.ajSwitchTail, classes.ajSwitchTailActive, 'aj-switch-tail') :
-    classnames(classes.ajSwitchTail, classes.ajSwitchTailInactive, 'aj-switch-tail');
+  const tailClass = state
+    ? classnames(classes.ajSwitchTail, classes.ajSwitchTailActive, 'aj-switch-tail')
+    : classnames(classes.ajSwitchTail, classes.ajSwitchTailInactive, 'aj-switch-tail');
 
   return (
     <div className={mainClass} onClick={onClick}>
@@ -68,7 +67,7 @@ AJSwitch.propTypes = {
   onChange: PropTypes.func.isRequired,
   initialState: PropTypes.bool,
   disabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJSwitch;

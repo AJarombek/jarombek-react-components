@@ -4,12 +4,11 @@
  * @since 11/26/2019
  */
 
-import React, {useState} from 'react';
-import {shallow, mount} from 'enzyme';
+import React, { useState } from 'react';
+import { shallow, mount } from 'enzyme';
 import AJMobileHamburger from '../src/AJMobileHamburger/AJMobileHamburger';
 
 describe('unit tests', () => {
-
   it('renders', () => {
     const wrapper = shallow(<AJMobileHamburger />);
     expect(wrapper.exists()).toBe(true);
@@ -55,29 +54,25 @@ describe('integration tests', () => {
       const [visible, setVisible] = useState(false);
       return (
         <div>
-          <p>Mobile Dropdown Visible: {visible ? "Yes" : "No"}</p>
+          <p>Mobile Dropdown Visible: {visible ? 'Yes' : 'No'}</p>
           {children(visible, setVisible)}
         </div>
       );
     };
 
     const wrapper = mount(
-      <Parent>
-        {(visible, setVisible) => (
-          <AJMobileHamburger onClick={() => setVisible(!visible)} />
-        )}
-      </Parent>
+      <Parent>{(visible, setVisible) => <AJMobileHamburger onClick={() => setVisible(!visible)} />}</Parent>,
     );
 
     expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
-    expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: No");
+    expect(wrapper.find('p').text()).toEqual('Mobile Dropdown Visible: No');
 
     wrapper.find('div').at(1).simulate('click');
     expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(true);
-    expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: Yes");
+    expect(wrapper.find('p').text()).toEqual('Mobile Dropdown Visible: Yes');
 
     wrapper.find('div').at(1).simulate('click');
     expect(wrapper.find('span').hasClass(/(ajMobileHamburgerActive)(-\d+)/)).toBe(false);
-    expect(wrapper.find('p').text()).toEqual("Mobile Dropdown Visible: No");
+    expect(wrapper.find('p').text()).toEqual('Mobile Dropdown Visible: No');
   });
 });

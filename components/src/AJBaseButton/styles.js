@@ -10,25 +10,25 @@ export default {
     cursor: 'pointer',
 
     '& button': {
-      border: 'none'
+      border: 'none',
     },
 
     '&:focus, & > button:focus': {
-      outline: 'none'
-    }
+      outline: 'none',
+    },
   },
   ajBaseButtonEnabled: {
     cursor: 'pointer',
 
     '& button': {
-      cursor: 'pointer'
-    }
+      cursor: 'pointer',
+    },
   },
   ajBaseButtonDisabled: {
     cursor: 'not-allowed',
 
     '& button': {
-      cursor: 'not-allowed'
-    }
-  }
+      cursor: 'not-allowed',
+    },
+  },
 };

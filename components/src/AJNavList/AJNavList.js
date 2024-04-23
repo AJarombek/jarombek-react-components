@@ -6,9 +6,9 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
-import {v4 as uuid} from 'uuid';
+import { v4 as uuid } from 'uuid';
 
 import styles from './styles';
 
@@ -21,7 +21,7 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements that make up a navigation list.
  */
-const AJNavList = ({items, className}) => {
+const AJNavList = ({ items, className }) => {
   const classes = useStyles();
 
   if (!Array.isArray(items)) {
@@ -30,14 +30,17 @@ const AJNavList = ({items, className}) => {
 
   return (
     <div className={classnames(classes.ajNavList, 'aj-nav-list', className)}>
-      { items.map((item, index) => {
-
+      {items.map((item, index) => {
         let listItemClasses;
         if (index === items.length - 1) {
-          listItemClasses = classnames(classes.ajNavListItem, 'aj-nav-list-item',
-            classes.ajNavListLastItem, 'aj-nav-list-last-item')
+          listItemClasses = classnames(
+            classes.ajNavListItem,
+            'aj-nav-list-item',
+            classes.ajNavListLastItem,
+            'aj-nav-list-last-item',
+          );
         } else {
-          listItemClasses = classnames(classes.ajNavListItem, 'aj-nav-list-item')
+          listItemClasses = classnames(classes.ajNavListItem, 'aj-nav-list-item');
         }
 
         return (
@@ -53,11 +56,13 @@ const AJNavList = ({items, className}) => {
 };
 
 AJNavList.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.shape({
-    content: PropTypes.node.isRequired,
-    onClick: PropTypes.func.isRequired
-  })).isRequired,
-  className: PropTypes.string
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      content: PropTypes.node.isRequired,
+      onClick: PropTypes.func.isRequired,
+    }),
+  ).isRequired,
+  className: PropTypes.string,
 };
 
 export default AJNavList;

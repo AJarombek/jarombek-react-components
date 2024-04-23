@@ -4,9 +4,9 @@
  * @since 1/10/2020
  */
 
-import React, {forwardRef} from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -25,12 +25,12 @@ const useStyles = createUseStyles(styles);
  * @return {*} React elements representing a text button.
  */
 const AJBaseButton = forwardRef(
-  ({children, onClick, disabledClasses, enabledClasses, disabled=false, className}, ref) => {
+  ({ children, onClick, disabledClasses, enabledClasses, disabled = false, className }, ref) => {
     const classes = useStyles();
 
-    const finalClassNames = disabled ?
-      classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses, className) :
-      classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses, className);
+    const finalClassNames = disabled
+      ? classnames(classes.ajBaseButton, classes.ajBaseButtonDisabled, disabledClasses, className)
+      : classnames(classes.ajBaseButton, classes.ajBaseButtonEnabled, enabledClasses, className);
 
     const onClickAction = disabled ? null : onClick;
 
@@ -41,7 +41,7 @@ const AJBaseButton = forwardRef(
         </button>
       </div>
     );
-  }
+  },
 );
 
 AJBaseButton.propTypes = {
@@ -50,7 +50,7 @@ AJBaseButton.propTypes = {
   disabled: PropTypes.bool,
   enabledClasses: PropTypes.array,
   disabledClasses: PropTypes.array,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJBaseButton;

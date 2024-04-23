@@ -9,6 +9,6 @@ import AJNotificationCircle from '../src/AJNotificationCircle/AJNotificationCirc
 import renderer from 'react-test-renderer';
 
 it('renders correctly', () => {
-  const tree = renderer.create(<AJNotificationCircle count={15}/>).toJSON();
+  const tree = renderer.create(<AJNotificationCircle count={15} />).toJSON();
   expect(tree).toMatchSnapshot();
 });

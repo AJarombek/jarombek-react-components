@@ -7,15 +7,15 @@
 export default {
   ajNavTextCircle: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   textRight: {
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   textLeft: {
-    flexDirection: 'row-reverse'
+    flexDirection: 'row-reverse',
   },
   description: {
-    margin: '0 10px'
-  }
+    margin: '0 10px',
+  },
 };

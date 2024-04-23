@@ -5,18 +5,18 @@
  */
 
 import React from 'react';
-import PropTypes from "prop-types";
-import {createUseStyles} from 'react-jss';
+import PropTypes from 'prop-types';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 import styles from './styles';
 
 const useStyles = createUseStyles(styles);
 
-const AJLoadingDots = ({className}) => {
+const AJLoadingDots = ({ className }) => {
   const classes = useStyles();
 
   return (
-    <div className={classnames('aj-loading-dots', classes.container,  className)}>
+    <div className={classnames('aj-loading-dots', classes.container, className)}>
       <div className={classnames('aj-loading-circle', classes.circle, classes.first)} />
       <div className={classnames('aj-loading-circle', classes.circle, classes.second)} />
       <div className={classnames('aj-loading-circle', classes.circle, classes.third)} />
@@ -25,7 +25,7 @@ const AJLoadingDots = ({className}) => {
 };
 
 AJLoadingDots.propTypes = {
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJLoadingDots;

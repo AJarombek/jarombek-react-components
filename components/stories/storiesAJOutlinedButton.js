@@ -4,9 +4,9 @@
  * @since 1/11/2020
  */
 
-import React, {useState, createRef} from 'react';
-import {storiesOf} from '@storybook/react';
-import {AJOutlinedButton} from '../src';
+import React, { useState, createRef } from 'react';
+import { storiesOf } from '@storybook/react';
+import { AJOutlinedButton } from '../src';
 
 storiesOf('AJOutlinedButton', module)
   .add('default', () => <AJOutlinedButton children="Outlined Button" />)
@@ -14,14 +14,13 @@ storiesOf('AJOutlinedButton', module)
   .add('with onClick', () => {
     const Parent = ({ children, ...props }) => {
       const [state, setState] = useState(0);
-      return <div>{children(state, setState)}</div>
+      return <div>{children(state, setState)}</div>;
     };
 
     return (
       <Parent>
         {(state, setState) => (
-          <AJOutlinedButton children={`Clicked: ${state}`}
-                        onClick={() => setState(state += 1)} />
+          <AJOutlinedButton children={`Clicked: ${state}`} onClick={() => setState((state += 1))} />
         )}
       </Parent>
     );
@@ -29,7 +28,7 @@ storiesOf('AJOutlinedButton', module)
   .add('with ref', () => {
     const Parent = ({ children, ...props }) => {
       const [colored, setColored] = useState(false);
-      return <div>{children(colored, setColored)}</div>
+      return <div>{children(colored, setColored)}</div>;
     };
 
     return (
@@ -48,12 +47,8 @@ storiesOf('AJOutlinedButton', module)
           };
 
           return (
-            <AJOutlinedButton
-              children={colored ? 'Remove Color' : 'Add Color'}
-              onClick={onClick}
-              ref={buttonRef}
-            />
-          )
+            <AJOutlinedButton children={colored ? 'Remove Color' : 'Add Color'} onClick={onClick} ref={buttonRef} />
+          );
         }}
       </Parent>
     );

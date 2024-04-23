@@ -12,12 +12,12 @@ export default {
     borderRadius: '4px',
 
     '& button': {
-      backgroundColor: 'transparent'
-    }
+      backgroundColor: 'transparent',
+    },
   },
   ajOutlinedButtonEnabled: {
     '&:active': {
-      backgroundColor: '#f5f5f5'
+      backgroundColor: '#f5f5f5',
     },
 
     '& button': {
@@ -25,13 +25,13 @@ export default {
       transition: 'color 0.25s ease',
 
       '&:active': {
-        color: '#222'
-      }
-    }
+        color: '#222',
+      },
+    },
   },
   ajOutlinedButtonDisabled: {
     '& button': {
-      color: '#999'
-    }
-  }
+      color: '#999',
+    },
+  },
 };

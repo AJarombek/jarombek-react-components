@@ -5,23 +5,19 @@
  */
 
 import React from 'react';
-import {storiesOf} from '@storybook/react';
-import {AJCodeSnippet} from '../src';
+import { storiesOf } from '@storybook/react';
+import { AJCodeSnippet } from '../src';
 
 storiesOf('AJCodeSnippet', module)
-  .add('default', () =>
-    <AJCodeSnippet language="javascript">
-      const j = 25;
-    </AJCodeSnippet>
-  )
-  .add('no language prop', () =>
+  .add('default', () => <AJCodeSnippet language="javascript">const j = 25;</AJCodeSnippet>)
+  .add('no language prop', () => (
     <AJCodeSnippet>
       {`[1,2,3].forEach(item => {
   console.info(item);
 })`}
     </AJCodeSnippet>
-  )
-  .add('multi-line', () =>
+  ))
+  .add('multi-line', () => (
     <AJCodeSnippet language="java">
       {`public class Test {
   public static void main(String... args) {
@@ -29,4 +25,4 @@ storiesOf('AJCodeSnippet', module)
   }
 }`}
     </AJCodeSnippet>
-  );
+  ));

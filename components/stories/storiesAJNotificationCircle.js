@@ -5,8 +5,7 @@
  */
 
 import React from 'react';
-import {storiesOf} from '@storybook/react';
+import { storiesOf } from '@storybook/react';
 import { AJNotificationCircle } from '../src';
 
-storiesOf('AJNotificationCircle', module)
-  .add('default', () => <AJNotificationCircle count={10} />);
+storiesOf('AJNotificationCircle', module).add('default', () => <AJNotificationCircle count={10} />);

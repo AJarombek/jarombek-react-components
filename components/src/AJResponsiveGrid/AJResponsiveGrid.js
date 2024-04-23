@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import AJTextCard from '../AJTextCard/AJTextCard';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import styles from './styles';
 import classnames from 'classnames';
 
@@ -25,21 +25,22 @@ const useStyles = createUseStyles(styles);
  * @return {*} React elements that represent a responsive grid of cards.
  * @constructor
  */
-const AJResponsiveGrid = ({items, smallBreakpoint='600px', mediumBreakpoint='900px',
-                            largeBreakpoint='1200px', className}) => {
+const AJResponsiveGrid = ({
+  items,
+  smallBreakpoint = '600px',
+  mediumBreakpoint = '900px',
+  largeBreakpoint = '1200px',
+  className,
+}) => {
   const breakpoints = {
     small: smallBreakpoint,
     medium: mediumBreakpoint,
-    large: largeBreakpoint
+    large: largeBreakpoint,
   };
 
   const classes = useStyles(breakpoints);
 
-  return (
-    <div className={classnames('aj-responsive-grid', classes.ajResponsiveGrid, className)}>
-      {items}
-    </div>
-  );
+  return <div className={classnames('aj-responsive-grid', classes.ajResponsiveGrid, className)}>{items}</div>;
 };
 
 AJResponsiveGrid.propTypes = {
@@ -47,7 +48,7 @@ AJResponsiveGrid.propTypes = {
   smallBreakpoint: PropTypes.string,
   mediumBreakpoint: PropTypes.string,
   largeBreakpoint: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJResponsiveGrid;

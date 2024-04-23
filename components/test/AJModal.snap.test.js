@@ -9,10 +9,12 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <AJModal backdrop={true}>
-      <div>Modal Snapshot Test</div>
-    </AJModal>
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <AJModal backdrop={true}>
+        <div>Modal Snapshot Test</div>
+      </AJModal>,
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

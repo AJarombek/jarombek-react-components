@@ -5,19 +5,18 @@
  */
 
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import AJNavList from '../src/AJNavList/AJNavList';
 
 describe('unit tests', () => {
-
   it('renders', () => {
     const wrapper = shallow(
       <AJNavList
         items={[
-          {content: 'Home', onClick: () => {}},
-          {content: 'Profile', onClick: () => {}}
+          { content: 'Home', onClick: () => {} },
+          { content: 'Profile', onClick: () => {} },
         ]}
-      />
+      />,
     );
     expect(wrapper.exists()).toBe(true);
     expect(wrapper.find('.aj-nav-list')).toHaveLength(1);
@@ -39,7 +38,6 @@ describe('unit tests', () => {
 });
 
 describe('integration tests', () => {
-
   it('onClick works as expected', () => {
     const funcHome = jest.fn();
     const funcProfile = jest.fn();
@@ -47,10 +45,10 @@ describe('integration tests', () => {
     const wrapper = mount(
       <AJNavList
         items={[
-          {content: 'Home', onClick: funcHome},
-          {content: 'Profile', onClick: funcProfile}
+          { content: 'Home', onClick: funcHome },
+          { content: 'Profile', onClick: funcProfile },
         ]}
-      />
+      />,
     );
 
     expect(funcHome).not.toHaveBeenCalled();
@@ -74,5 +72,4 @@ describe('integration tests', () => {
     expect(funcProfile).toHaveBeenCalled();
     expect(funcProfile).toHaveBeenCalledTimes(1);
   });
-
 });

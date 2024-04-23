@@ -5,7 +5,7 @@
  */
 
 export default {
-  ajTag: ({backgroundColor}) => ({
+  ajTag: ({ backgroundColor }) => ({
     backgroundColor,
     display: 'inline-block',
     cursor: 'pointer',
@@ -15,7 +15,7 @@ export default {
     transition: 'all .4s ease',
 
     '&:hover': {
-      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.5)'
-    }
-  })
-}
+      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.5)',
+    },
+  }),
+};

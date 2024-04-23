@@ -5,18 +5,20 @@
  */
 
 import React from 'react';
-import {shallow, mount} from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import AJSelect from '../src/AJSelect/AJSelect';
 
 describe('unit tests', () => {
-
   it('invokes onClickSelect as expected', () => {
     const onClickSelect = jest.fn();
     const wrapper = shallow(
       <AJSelect
-        options={[{content: 'Item 1', value: 1}, {content: 'Item 2', value: 2}]}
+        options={[
+          { content: 'Item 1', value: 1 },
+          { content: 'Item 2', value: 2 },
+        ]}
         onClickSelect={onClickSelect}
-      />
+      />,
     );
 
     expect(wrapper.find('.aj-select').childAt(0).simulate('click'));
@@ -36,22 +38,25 @@ describe('unit tests', () => {
     const onClickListOption = jest.fn();
     const wrapper = shallow(
       <AJSelect
-        options={[{content: 'Item 1', value: 1}, {content: 'Item 2', value: 2}]}
+        options={[
+          { content: 'Item 1', value: 1 },
+          { content: 'Item 2', value: 2 },
+        ]}
         onClickListOption={onClickListOption}
-      />
+      />,
     );
 
     expect(wrapper.find('.aj-select').childAt(0).simulate('click'));
     expect(wrapper.find('li').at(0).simulate('click'));
     expect(onClickListOption).toHaveBeenCalled();
     expect(onClickListOption).toHaveBeenCalledTimes(1);
-    expect(onClickListOption).toHaveBeenCalledWith({content: 'Item 1', value: 1});
+    expect(onClickListOption).toHaveBeenCalledWith({ content: 'Item 1', value: 1 });
 
     expect(wrapper.find('.aj-select').childAt(0).simulate('click'));
     expect(wrapper.find('li').at(1).simulate('click'));
     expect(onClickListOption).toHaveBeenCalled();
     expect(onClickListOption).toHaveBeenCalledTimes(2);
-    expect(onClickListOption).toHaveBeenCalledWith({content: 'Item 2', value: 2});
+    expect(onClickListOption).toHaveBeenCalledWith({ content: 'Item 2', value: 2 });
 
     expect(wrapper.exists()).toBe(true);
   });
@@ -60,10 +65,13 @@ describe('unit tests', () => {
     const onClickSelect = jest.fn();
     const wrapper = shallow(
       <AJSelect
-        options={[{ content: 'Item 1', value: 1 }, { content: 'Item 2', value: 2 }]}
+        options={[
+          { content: 'Item 1', value: 1 },
+          { content: 'Item 2', value: 2 },
+        ]}
         onClickSelect={onClickSelect}
         disabled={true}
-      />
+      />,
     );
 
     expect(wrapper.find('.aj-select').childAt(0).simulate('click'));
@@ -74,8 +82,11 @@ describe('unit tests', () => {
     const wrapper = shallow(
       <AJSelect
         placeholder="Select Item"
-        options={[{ content: 'Item 1', value: 1 }, { content: 'Item 2', value: 2 }]}
-      />
+        options={[
+          { content: 'Item 1', value: 1 },
+          { content: 'Item 2', value: 2 },
+        ]}
+      />,
     );
 
     expect(wrapper.find('.aj-select').childAt(0).childAt(0).text()).toEqual('Select Item');
@@ -90,9 +101,12 @@ describe('unit tests', () => {
     const wrapper = await mount(
       <AJSelect
         placeholder="Select Item"
-        options={[{ content: 'Item 1', value: 1 }, { content: 'Item 2', value: 2 }]}
+        options={[
+          { content: 'Item 1', value: 1 },
+          { content: 'Item 2', value: 2 },
+        ]}
         defaultOption={1}
-      />
+      />,
     );
 
     expect(wrapper.find('.aj-select').childAt(0).childAt(0).text()).toEqual('Item 1');

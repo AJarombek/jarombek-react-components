@@ -11,7 +11,7 @@ export default {
     top: '50%',
     left: '50%',
     position: 'absolute',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
   },
   ajModalBackdrop: {
     width: '100vw',
@@ -21,9 +21,9 @@ export default {
     left: 0,
     overflow: 'hidden',
     position: 'fixed',
-    cursor: 'pointer'
+    cursor: 'pointer',
   },
   ajModalColorBackdrop: {
-    backgroundColor: 'rgba(0, 0, 0, 0.3)'
-  }
-}
+    backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  },
+};

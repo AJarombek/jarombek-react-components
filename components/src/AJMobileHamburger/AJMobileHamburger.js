@@ -4,10 +4,10 @@
  * @since 11/16/2019
  */
 
-import React, {useState, forwardRef} from 'react';
+import React, { useState, forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 
 import styles from './styles';
 
@@ -21,13 +21,13 @@ const useStyles = createUseStyles(styles);
  * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements that represent a hamburger icon.
  */
-const AJMobileHamburger = forwardRef(({onClick, className}, ref) => {
+const AJMobileHamburger = forwardRef(({ onClick, className }, ref) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);
 
-  const spanClassName = active ?
-    classnames('aj-mobile-hamburger-active', classes.ajMobileHamburgerActive):
-    classnames('aj-mobile-hamburger-inactive', classes.ajMobileHamburgerInactive);
+  const spanClassName = active
+    ? classnames('aj-mobile-hamburger-active', classes.ajMobileHamburgerActive)
+    : classnames('aj-mobile-hamburger-inactive', classes.ajMobileHamburgerInactive);
 
   const hamburgerClasses = classnames('aj-mobile-hamburger', classes.ajMobileHamburger, className);
 
@@ -49,7 +49,7 @@ const AJMobileHamburger = forwardRef(({onClick, className}, ref) => {
 
 AJMobileHamburger.propTypes = {
   onClick: PropTypes.func,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJMobileHamburger;

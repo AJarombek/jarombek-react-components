@@ -6,7 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import styles from './styles';
@@ -23,8 +23,8 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a navigational arrow and circle.
  */
-const AJNavCircle = ({direction, height="25px", active=true, onClick, className}) => {
-  const classes = useStyles({height});
+const AJNavCircle = ({ direction, height = '25px', active = true, onClick, className }) => {
+  const classes = useStyles({ height });
 
   let circleClass;
   if (active) {
@@ -64,7 +64,7 @@ AJNavCircle.propTypes = {
   height: PropTypes.string,
   active: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJNavCircle;

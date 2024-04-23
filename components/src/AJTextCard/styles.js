@@ -17,7 +17,7 @@ export default {
     boxShadow: '0 1px 3px rgba(170, 170, 170, 0.5)',
 
     '&:hover': {
-      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.8)'
-    }
-  }
+      boxShadow: '0 1px 3px rgba(170, 170, 170, 0.8)',
+    },
+  },
 };

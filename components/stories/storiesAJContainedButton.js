@@ -4,9 +4,9 @@
  * @since 1/13/2020
  */
 
-import React, {useState, createRef} from 'react';
-import {storiesOf} from '@storybook/react';
-import {AJContainedButton} from '../src';
+import React, { useState, createRef } from 'react';
+import { storiesOf } from '@storybook/react';
+import { AJContainedButton } from '../src';
 
 storiesOf('AJContainedButton', module)
   .add('default', () => <AJContainedButton children="Contained Button" />)
@@ -14,14 +14,13 @@ storiesOf('AJContainedButton', module)
   .add('with onClick', () => {
     const Parent = ({ children, ...props }) => {
       const [state, setState] = useState(0);
-      return <div>{children(state, setState)}</div>
+      return <div>{children(state, setState)}</div>;
     };
 
     return (
       <Parent>
         {(state, setState) => (
-          <AJContainedButton children={`Clicked: ${state}`}
-                            onClick={() => setState(state += 1)} />
+          <AJContainedButton children={`Clicked: ${state}`} onClick={() => setState((state += 1))} />
         )}
       </Parent>
     );
@@ -29,7 +28,7 @@ storiesOf('AJContainedButton', module)
   .add('with ref', () => {
     const Parent = ({ children, ...props }) => {
       const [colored, setColored] = useState(false);
-      return <div>{children(colored, setColored)}</div>
+      return <div>{children(colored, setColored)}</div>;
     };
 
     return (
@@ -48,12 +47,8 @@ storiesOf('AJContainedButton', module)
           };
 
           return (
-            <AJContainedButton
-              children={colored ? 'Remove Color' : 'Add Color'}
-              onClick={onClick}
-              ref={buttonRef}
-            />
-          )
+            <AJContainedButton children={colored ? 'Remove Color' : 'Add Color'} onClick={onClick} ref={buttonRef} />
+          );
         }}
       </Parent>
     );

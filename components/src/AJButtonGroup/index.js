@@ -1,3 +1,3 @@
-import AJButtonGroup from "./AJButtonGroup";
+import AJButtonGroup from './AJButtonGroup';
 
 export default AJButtonGroup;

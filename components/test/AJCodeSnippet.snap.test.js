@@ -9,15 +9,17 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <AJCodeSnippet language="javascript">
-      {`
+  const tree = renderer
+    .create(
+      <AJCodeSnippet language="javascript">
+        {`
       const list = [0, 1, 2, 3];
       for (let item in list) {
         console.info(item);
       }
       `}
-    </AJCodeSnippet>
-  ).toJSON();
+      </AJCodeSnippet>,
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

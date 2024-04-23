@@ -6,7 +6,7 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {createUseStyles} from 'react-jss';
+import { createUseStyles } from 'react-jss';
 import classnames from 'classnames';
 
 import AJTextButton from '../AJTextButton/AJTextButton';
@@ -26,7 +26,7 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements that make up a text card.
  */
-const AJTextCard = ({title, subtitle, content, action, actionText, actionDisabled=false, className}) => {
+const AJTextCard = ({ title, subtitle, content, action, actionText, actionDisabled = false, className }) => {
   const classes = useStyles();
 
   return (
@@ -39,7 +39,9 @@ const AJTextCard = ({title, subtitle, content, action, actionText, actionDisable
         <p className="aj-text-card-content">{content}</p>
       </div>
       <div className="aj-text-card-footer">
-        <AJTextButton onClick={action} disabled={actionDisabled}>{actionText}</AJTextButton>
+        <AJTextButton onClick={action} disabled={actionDisabled}>
+          {actionText}
+        </AJTextButton>
       </div>
     </div>
   );
@@ -52,7 +54,7 @@ AJTextCard.propTypes = {
   action: PropTypes.func.isRequired,
   actionText: PropTypes.node.isRequired,
   actionDisabled: PropTypes.bool,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default AJTextCard;

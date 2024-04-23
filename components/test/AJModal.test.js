@@ -4,12 +4,11 @@
  * @since 1/5/2020
  */
 
-import React, {useState} from 'react';
-import {shallow, mount} from 'enzyme';
+import React, { useState } from 'react';
+import { shallow, mount } from 'enzyme';
 import { AJModal } from '../src';
 
 describe('unit tests', () => {
-
   it('renders', () => {
     const wrapper = shallow(<AJModal>Modal Unit Test</AJModal>);
     expect(wrapper.exists()).toBe(true);
@@ -17,16 +16,12 @@ describe('unit tests', () => {
 
   it('renders with colored backdrop', () => {
     const wrapper = shallow(<AJModal backdrop={true}>Modal Unit Test</AJModal>);
-    expect(wrapper.find('.aj-modal-backdrop')
-      .hasClass(/(ajModalColorBackdrop)(-\d+)/))
-      .toBe(true);
+    expect(wrapper.find('.aj-modal-backdrop').hasClass(/(ajModalColorBackdrop)(-\d+)/)).toBe(true);
   });
 
   it('renders without colored backdrop', () => {
     const wrapper = shallow(<AJModal backdrop={false}>Modal Unit Test</AJModal>);
-    expect(wrapper.find('.aj-modal-backdrop')
-      .hasClass(/(ajModalColorBackdrop)(-\d+)/))
-      .toBe(false);
+    expect(wrapper.find('.aj-modal-backdrop').hasClass(/(ajModalColorBackdrop)(-\d+)/)).toBe(false);
   });
 
   it('has a functional onClickBackground method', () => {

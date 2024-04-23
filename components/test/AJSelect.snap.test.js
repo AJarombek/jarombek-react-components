@@ -9,8 +9,15 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(
-    <AJSelect options={[{content: 'Item 1', value: 1}, {content: 'Item 2', value: 2}]}/>
-  ).toJSON();
+  const tree = renderer
+    .create(
+      <AJSelect
+        options={[
+          { content: 'Item 1', value: 1 },
+          { content: 'Item 2', value: 2 },
+        ]}
+      />,
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });

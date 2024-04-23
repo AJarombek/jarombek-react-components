@@ -14,12 +14,12 @@ export default {
     '& button': {
       ...globalStyles.robotoRegular,
       display: 'block',
-      backgroundColor: 'transparent'
-    }
+      backgroundColor: 'transparent',
+    },
   },
   ajTextButtonEnabled: {
     '&:active': {
-      backgroundColor: '#f5f5f5'
+      backgroundColor: '#f5f5f5',
     },
 
     '& button': {
@@ -27,13 +27,13 @@ export default {
       transition: 'color 0.25s ease',
 
       '&:active': {
-        color: '#222'
-      }
-    }
+        color: '#222',
+      },
+    },
   },
   ajTextButtonDisabled: {
     '& button': {
-      color: '#999'
-    }
-  }
+      color: '#999',
+    },
+  },
 };
