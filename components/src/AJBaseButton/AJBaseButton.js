@@ -24,6 +24,7 @@ const useStyles = createUseStyles(styles);
  * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements representing a text button.
  */
+// eslint-disable-next-line react/display-name
 const AJBaseButton = forwardRef(
   ({ children, onClick, disabledClasses, enabledClasses, disabled = false, className }, ref) => {
     const classes = useStyles();

@@ -1,5 +1,3 @@
-/* eslint-disable import/no-extraneous-dependencies */
-
 /**
  * Storyboard stories for the AJRadioButton component.
  * @author Andrew Jarombek

@@ -18,7 +18,7 @@ storiesOf('AJNavList', module)
     />
   ))
   .add('node items', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [clickedHome, setClickedHome] = useState(0);
       const [clickedProfile, setClickedProfile] = useState(0);
       const [clickedTeam, setClickedTeam] = useState(0);

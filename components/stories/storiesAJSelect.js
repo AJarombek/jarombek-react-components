@@ -22,7 +22,7 @@ storiesOf('AJSelect', module)
     <AJSelect options={[{ content: 'Hidden', value: 'hidden' }]} placeholder="Disabled Select" disabled={true} />
   ))
   .add('toggle default option', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(false);
       return (
         <div>

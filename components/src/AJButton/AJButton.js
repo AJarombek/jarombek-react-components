@@ -19,6 +19,7 @@ import { AJContainedButton, AJOutlinedButton, AJTextButton } from '../../src';
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a contained, outlined, or text button.
  */
+// eslint-disable-next-line react/display-name
 const AJButton = forwardRef(({ type, children, onClick, disabled = false, className }, ref) => {
   switch (type) {
     case 'contained':

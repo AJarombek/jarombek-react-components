@@ -4,7 +4,7 @@
  * @since 12/29/2019
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { AJNavTextCircle } from '../src';
 

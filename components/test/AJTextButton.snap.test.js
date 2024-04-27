@@ -9,13 +9,23 @@ import renderer from 'react-test-renderer';
  */
 
 it('renders correctly', () => {
-  const tree = renderer.create(<AJTextButton children={<div>Snapshot Test</div>} />).toJSON();
+  const tree = renderer
+    .create(
+      <AJTextButton>
+        <div>Snapshot Test</div>
+      </AJTextButton>,
+    )
+    .toJSON();
   expect(tree).toMatchSnapshot();
 });
 
 it('renders correctly with all props', () => {
   const tree = renderer
-    .create(<AJTextButton children={<div>Snapshot Test</div>} onClick={(f) => f} disabled={true} />)
+    .create(
+      <AJTextButton onClick={(f) => f} disabled={true}>
+        <div>Snapshot Test</div>
+      </AJTextButton>,
+    )
     .toJSON();
   expect(tree).toMatchSnapshot();
 });

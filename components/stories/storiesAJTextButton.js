@@ -9,21 +9,21 @@ import { storiesOf } from '@storybook/react';
 import { AJTextButton } from '../src';
 
 storiesOf('AJTextButton', module)
-  .add('default', () => <AJTextButton children="Text Button" />)
+  .add('default', () => <AJTextButton>Text Button</AJTextButton>)
   .add('with onClick', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
     };
 
     return (
       <Parent>
-        {(state, setState) => <AJTextButton children={`Clicked: ${state}`} onClick={() => setState((state += 1))} />}
+        {(state, setState) => <AJTextButton onClick={() => setState((state += 1))}>Clicked: ${state}</AJTextButton>}
       </Parent>
     );
   })
   .add('with ref', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [colored, setColored] = useState(false);
       return <div>{children(colored, setColored)}</div>;
     };
@@ -43,7 +43,11 @@ storiesOf('AJTextButton', module)
             setColored(!colored);
           };
 
-          return <AJTextButton children={colored ? 'Remove Color' : 'Add Color'} onClick={onClick} ref={buttonRef} />;
+          return (
+            <AJTextButton onClick={onClick} ref={buttonRef}>
+              {colored ? 'Remove Color' : 'Add Color'}
+            </AJTextButton>
+          );
         }}
       </Parent>
     );

@@ -4,8 +4,8 @@
  * @since 1/5/2020
  */
 
-import React, { useState } from 'react';
-import { shallow, mount } from 'enzyme';
+import React from 'react';
+import { shallow } from 'enzyme';
 import { AJModal } from '../src';
 
 describe('unit tests', () => {

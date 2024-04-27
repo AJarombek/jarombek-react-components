@@ -22,6 +22,7 @@ const useStyles = createUseStyles(styles);
  * @param ref A ref forwarded through the component to the AJBaseButton component.
  * @return {*} React elements representing a contained button.
  */
+// eslint-disable-next-line react/display-name
 const AJContainedButton = forwardRef(({ children, onClick, disabled = false, className }, ref) => {
   const classes = useStyles();
 

@@ -48,7 +48,7 @@ describe('unit tests', () => {
 
 describe('integration tests', () => {
   it('accepts additional onClick logic', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       // The AJMobileHamburger is commonly used for mobile menu dropdowns.  This state simulates
       // displaying or hiding a mobile dropdown based on the status of the AJMobileHamburger.
       const [visible, setVisible] = useState(false);

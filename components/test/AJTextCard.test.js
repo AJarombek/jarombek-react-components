@@ -51,7 +51,7 @@ describe('unit tests', () => {
 
 describe('integration tests', () => {
   const createTextCardWrapper = (disabled = false) => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return (
         <div>

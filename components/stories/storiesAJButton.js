@@ -9,11 +9,23 @@ import { storiesOf } from '@storybook/react';
 import { AJButton } from '../src';
 
 storiesOf('AJButton', module)
-  .add('contained', () => <AJButton type="contained" children="Contained Button" disabled={false} />)
-  .add('outlined', () => <AJButton type="outlined" children="Outlined Button" disabled={true} />)
-  .add('text', () => <AJButton type="text" children="Text Button" disabled={false} />)
+  .add('contained', () => (
+    <AJButton type="contained" disabled={false}>
+      Contained Button
+    </AJButton>
+  ))
+  .add('outlined', () => (
+    <AJButton type="outlined" disabled={true}>
+      Outlined Button
+    </AJButton>
+  ))
+  .add('text', () => (
+    <AJButton type="text" disabled={false}>
+      Text Button
+    </AJButton>
+  ))
   .add('with onClick', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
     };
@@ -21,13 +33,15 @@ storiesOf('AJButton', module)
     return (
       <Parent>
         {(state, setState) => (
-          <AJButton type="contained" children={`Clicked: ${state}`} onClick={() => setState((state += 1))} />
+          <AJButton type="contained" onClick={() => setState((state += 1))}>
+            Clicked: ${state}
+          </AJButton>
         )}
       </Parent>
     );
   })
   .add('with ref', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [colored, setColored] = useState(false);
       return <div>{children(colored, setColored)}</div>;
     };
@@ -48,12 +62,9 @@ storiesOf('AJButton', module)
           };
 
           return (
-            <AJButton
-              type="contained"
-              children={colored ? 'Remove Color' : 'Add Color'}
-              onClick={onClick}
-              ref={buttonRef}
-            />
+            <AJButton type="contained" onClick={onClick} ref={buttonRef}>
+              {colored ? 'Remove Color' : 'Add Color'}
+            </AJButton>
           );
         }}
       </Parent>

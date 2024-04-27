@@ -24,7 +24,7 @@ storiesOf('AJCard', module)
     />
   ))
   .add('with action', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return (
         <div>

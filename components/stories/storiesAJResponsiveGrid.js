@@ -12,6 +12,7 @@ storiesOf('AJResponsiveGrid', module).add('default', () => (
   <AJResponsiveGrid
     items={[
       <AJTextCard
+        key="1"
         title="Tuesday, December 24th"
         subtitle={<>Christmas Eve</>}
         content={
@@ -25,6 +26,7 @@ storiesOf('AJResponsiveGrid', module).add('default', () => (
         actionDisabled={false}
       />,
       <AJTextCard
+        key="2"
         title="Wednesday, December 25th"
         subtitle={<>Christmas</>}
         content={
@@ -38,6 +40,7 @@ storiesOf('AJResponsiveGrid', module).add('default', () => (
         actionDisabled={false}
       />,
       <AJTextCard
+        key="3"
         title="Thursday, December 26th"
         subtitle={<>Christmas</>}
         content={<>A bit calmer today. Cousins from North Carolina stopping by for dinner.</>}
@@ -56,6 +59,7 @@ storiesOf('AJResponsiveGrid', module).add('custom breakpoints', () => (
     largeBreakpoint="700px"
     items={[
       <AJTextCard
+        key="1"
         title="Friday, December 27th"
         subtitle={<>Elasticsearch Research</>}
         content={
@@ -68,6 +72,7 @@ storiesOf('AJResponsiveGrid', module).add('custom breakpoints', () => (
         actionText="More Info"
       />,
       <AJTextCard
+        key="2"
         title="Saturday, December 28th"
         subtitle={<>Elasticsearch Writing</>}
         content={

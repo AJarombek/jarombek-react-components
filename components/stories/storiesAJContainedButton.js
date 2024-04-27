@@ -9,10 +9,10 @@ import { storiesOf } from '@storybook/react';
 import { AJContainedButton } from '../src';
 
 storiesOf('AJContainedButton', module)
-  .add('default', () => <AJContainedButton children="Contained Button" />)
+  .add('default', () => <AJContainedButton>Contained Button</AJContainedButton>)
   .add('disabled', () => <AJContainedButton disabled={true}>Contained Button</AJContainedButton>)
   .add('with onClick', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
     };
@@ -20,13 +20,13 @@ storiesOf('AJContainedButton', module)
     return (
       <Parent>
         {(state, setState) => (
-          <AJContainedButton children={`Clicked: ${state}`} onClick={() => setState((state += 1))} />
+          <AJContainedButton onClick={() => setState((state += 1))}>Clicked: ${state}</AJContainedButton>
         )}
       </Parent>
     );
   })
   .add('with ref', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [colored, setColored] = useState(false);
       return <div>{children(colored, setColored)}</div>;
     };
@@ -47,7 +47,9 @@ storiesOf('AJContainedButton', module)
           };
 
           return (
-            <AJContainedButton children={colored ? 'Remove Color' : 'Add Color'} onClick={onClick} ref={buttonRef} />
+            <AJContainedButton onClick={onClick} ref={buttonRef}>
+              {colored ? 'Remove Color' : 'Add Color'}
+            </AJContainedButton>
           );
         }}
       </Parent>

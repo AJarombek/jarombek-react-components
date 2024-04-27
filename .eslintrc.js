@@ -39,7 +39,7 @@ module.exports = {
   rules: {
     "comma-dangle": ["off"],
     "max-len": ["error", {"code" : 120}],
-    "quotes": ["error", "single"],
+    "quotes": "off",
     "react/prop-types": ["off"],
     "react/no-unescaped-entities": ["off"],
     "react-hooks/rules-of-hooks": "error",

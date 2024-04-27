@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import AJOutlinedButton from '../src/AJOutlinedButton/AJOutlinedButton';
 
 describe('unit tests', () => {

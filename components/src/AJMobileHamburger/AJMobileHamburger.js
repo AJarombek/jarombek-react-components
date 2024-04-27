@@ -21,6 +21,7 @@ const useStyles = createUseStyles(styles);
  * @param ref A ref forwarded through the component to the <div> DOM element.
  * @return {*} React elements that represent a hamburger icon.
  */
+// eslint-disable-next-line react/display-name
 const AJMobileHamburger = forwardRef(({ onClick, className }, ref) => {
   const classes = useStyles();
   const [active, setActive] = useState(false);

@@ -22,6 +22,7 @@ const useStyles = createUseStyles(styles);
  * @param className Custom class attribute(s) attached to the component.
  * @return {*} React elements representing a contained button.
  */
+// eslint-disable-next-line react/display-name
 const AJOutlinedButton = forwardRef(({ children, onClick, disabled = false, className }, ref) => {
   const classes = useStyles();
 

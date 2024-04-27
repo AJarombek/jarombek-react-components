@@ -27,7 +27,7 @@ const AJModal = ({ children, onClickBackground, backdrop = true, className }) =>
 
   const eventDefault = { stopPropagation: (f) => f };
 
-  let backdropClass = backdrop
+  const backdropClass = backdrop
     ? classnames(classes.ajModalBackdrop, classes.ajModalColorBackdrop, 'aj-modal-backdrop', className)
     : classnames(classes.ajModalBackdrop, 'aj-modal-backdrop', className);
 

@@ -10,7 +10,7 @@ import AJTextButton from '../src/AJTextButton/AJTextButton';
 
 describe('unit tests', () => {
   it('renders', () => {
-    const wrapper = shallow(<AJTextButton children="Text" />);
+    const wrapper = shallow(<AJTextButton>Text</AJTextButton>);
     expect(wrapper.exists()).toBe(true);
   });
 });
@@ -44,14 +44,18 @@ describe('integration tests', () => {
   });
 
   it('changes content when clicked using onClick', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
     };
 
     const wrapper = mount(
       <Parent>
-        {(state, setState) => <AJTextButton children={`Clicked: ${state}`} onClick={() => setState((state += 1))} />}
+        {(state, setState) => (
+          <AJTextButton onClick={() => setState((state += 1))}>
+            <>Clicked: ${state}</>
+          </AJTextButton>
+        )}
       </Parent>,
     );
 

@@ -11,44 +11,44 @@ import { AJButtonGroup, AJButton } from '../src';
 storiesOf('AJButtonGroup', module)
   .add('contained', () => (
     <AJButtonGroup>
-      <AJButton type="contained" children="Button #1" />
-      <AJButton type="contained" children="Button #2" />
-      <AJButton type="contained" children="Button #3" />
+      <AJButton type="contained">Button #1</AJButton>
+      <AJButton type="contained">Button #2</AJButton>
+      <AJButton type="contained">Button #3</AJButton>
     </AJButtonGroup>
   ))
   .add('outlined', () => (
     <AJButtonGroup>
-      <AJButton type="outlined" children="Button #1" />
-      <AJButton type="outlined" children="Button #2" />
-      <AJButton type="outlined" children="Button #3" />
+      <AJButton type="outlined">Button #1</AJButton>
+      <AJButton type="outlined">Button #2</AJButton>
+      <AJButton type="outlined">Button #3</AJButton>
     </AJButtonGroup>
   ))
   .add('text', () => (
     <AJButtonGroup>
-      <AJButton type="text" children="Button #1" />
-      <AJButton type="text" children="Button #2" />
-      <AJButton type="text" children="Button #3" />
+      <AJButton type="text">Button #1</AJButton>
+      <AJButton type="text">Button #2</AJButton>
+      <AJButton type="text">Button #3</AJButton>
     </AJButtonGroup>
   ))
   .add('two buttons', () => (
     <AJButtonGroup>
-      <AJButton type="contained" children="Button #1" />
-      <AJButton type="contained" children="Button #2" />
+      <AJButton type="contained">Button #1</AJButton>
+      <AJButton type="contained">Button #2</AJButton>
     </AJButtonGroup>
   ))
   .add('four buttons', () => (
     <AJButtonGroup>
-      <AJButton type="contained" children="Button #1" />
-      <AJButton type="contained" children="Button #2" />
-      <AJButton type="contained" children="Button #3" />
-      <AJButton type="contained" children="Button #4" />
+      <AJButton type="contained">Button #1</AJButton>
+      <AJButton type="contained">Button #2</AJButton>
+      <AJButton type="contained">Button #3</AJButton>
+      <AJButton type="contained">Button #4</AJButton>
     </AJButtonGroup>
   ))
   .add('multiple button types', () => (
     <AJButtonGroup>
-      <AJButton type="outlined" children="Button #1" />
-      <AJButton type="contained" children="Button #2" />
-      <AJButton type="outlined" children="Button #3" />
-      <AJButton type="contained" children="Button #4" />
+      <AJButton type="outlined">Button #1</AJButton>
+      <AJButton type="contained">Button #2</AJButton>
+      <AJButton type="outlined">Button #3</AJButton>
+      <AJButton type="contained">Button #4</AJButton>
     </AJButtonGroup>
   ));

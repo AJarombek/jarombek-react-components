@@ -6,7 +6,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import AJTextCard from '../AJTextCard/AJTextCard';
 import { createUseStyles } from 'react-jss';
 import styles from './styles';
 import classnames from 'classnames';

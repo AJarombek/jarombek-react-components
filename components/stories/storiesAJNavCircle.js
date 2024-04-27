@@ -14,12 +14,12 @@ storiesOf('AJNavCircle', module)
   .add('left', () => <AJNavCircle direction="left" height="50px" active={false} onClick={(f) => f} />)
   .add('right', () => <AJNavCircle direction="right" height="2em" active={true} onClick={(f) => f} />)
   .add('enabled and disabled', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [clicked, setClicked] = useState(0);
       const [enabled, setEnabled] = useState(true);
       return (
         <div>
-          <AJTextButton children={enabled ? 'Disable' : 'Enable'} onClick={() => setEnabled(!enabled)} />
+          <AJTextButton onClick={() => setEnabled(!enabled)}>{enabled ? 'Disable' : 'Enable'}</AJTextButton>
           <p>Clicked: {clicked}</p>
           {children({ clicked, enabled }, setClicked)}
         </div>

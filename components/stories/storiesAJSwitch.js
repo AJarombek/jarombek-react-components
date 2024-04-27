@@ -4,7 +4,7 @@
  * @since 12/31/2019
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { AJSwitch } from '../src';
 

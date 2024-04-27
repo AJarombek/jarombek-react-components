@@ -13,9 +13,13 @@ it('renders correctly', () => {
   const tree = renderer
     .create(
       <AJButtonGroup>
-        <AJButton type="contained" children={<div>Snapshot Button #1</div>} />
+        <AJButton type="contained">
+          <div>Snapshot Button #1</div>
+        </AJButton>
         <AJButton type="outlined">Snapshot Button #2</AJButton>
-        <AJButton type="outlined" children={<div>Snapshot Button #3</div>} onClick={(f) => f} disabled={true} />
+        <AJButton type="outlined" onClick={(f) => f} disabled={true}>
+          <div>Snapshot Button #3</div>
+        </AJButton>
       </AJButtonGroup>,
     )
     .toJSON();

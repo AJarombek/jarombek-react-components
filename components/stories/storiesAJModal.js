@@ -15,7 +15,7 @@ storiesOf('AJModal', module)
     </AJModal>
   ))
   .add('with onClick background action', () => {
-    const Parent = ({ children, ...props }) => {
+    const Parent = ({ children }) => {
       const [state, setState] = useState(false);
       return (
         <div>

@@ -41,7 +41,7 @@ const AJSelect = ({
     if (defaultOption && defaultOption !== selected) {
       setSelected(defaultOption);
     }
-  }, [defaultOption]);
+  }, [defaultOption, selected]);
 
   const disabledClassNames = disabled ? classnames('aj-select-disabled', classes.ajSelectDisabled) : null;
 

@@ -33,12 +33,12 @@ export default {
       left: '90%',
       float: 'right',
 
-      [`@media screen and (max-width: 700px)`]: {
+      ['@media screen and (max-width: 700px)']: {
         marginRight: '5px',
         left: '88%',
       },
 
-      [`@media screen and (max-width: 480px)`]: {
+      ['@media screen and (max-width: 480px)']: {
         marginRight: '10px',
         left: '85%',
       },
