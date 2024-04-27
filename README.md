@@ -24,19 +24,20 @@ yarn build
 
 ### Files
 
-| Filename                 | Description                                                                                |
-|--------------------------|--------------------------------------------------------------------------------------------|
-| `.storybook`             | Configuration for Storybook, which displays my reusable components in a UI.                |
-| `components`             | Source code for the reusable React components.                                             |
-| `dist`                   | Bundled and minified JavaScript code used when importing this repository as a dependency.  |
-| `.babelrc`               | Configuration for the Babel transpiler.                                                    |
-| `.eslintrc.js`           | Configuration for the ESLint JavaScript/React linter.                                      |
-| `.huskyrc`               | Pre-commit hooks for the repository.  Runs tests before allowing commits to be pushed.     |
-| `index.d.ts`             | Type definitions for components.  Used by TypeScript code and JavaScript IDEs.             |
-| `jest.config.js`         | Configuration for Jest unit testing.                                                       |
-| `package.json`           | Entry point for the npm application.  Contains dependency definitions.                     |
-| `webpack.config.js`      | Configuration for the Webpack bundler.                                                     |
-| `yarn.lock`              | Versions of each Yarn/npm dependency.                                                      |
+| Filename              | Description                                                                               |
+|-----------------------|-------------------------------------------------------------------------------------------|
+| `.github`             | GitHub configuration files and GitHub Actions CI/CD pipelines.                            |
+| `.storybook`          | Configuration for Storybook, which displays my reusable components in a UI.               |
+| `components`          | Source code for the reusable React components.                                            |
+| `dist`                | Bundled and minified JavaScript code used when importing this repository as a dependency. |
+| `.babelrc`            | Configuration for the Babel transpiler.                                                   |
+| `.eslintrc.js`        | Configuration for the ESLint JavaScript/React linter.                                     |
+| `.huskyrc`            | Pre-commit hooks for the repository.  Runs tests before allowing commits to be pushed.    |
+| `index.d.ts`          | Type definitions for components.  Used by TypeScript code and JavaScript IDEs.            |
+| `jest.config.js`      | Configuration for Jest unit testing.                                                      |
+| `package.json`        | Entry point for the npm application.  Contains dependency definitions.                    |
+| `webpack.config.js`   | Configuration for the Webpack bundler.                                                    |
+| `yarn.lock`           | Versions of each Yarn/npm dependency.                                                     |
 
 ### Resources
 
