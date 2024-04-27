@@ -21,7 +21,7 @@ jobs:
         run: yarn
 
       - name: Format JavaScript Code
-        run: yarn prettier:write
+        run: yarn format:write
 
       - name: Commit and Push Formatting Changes
         run: |
