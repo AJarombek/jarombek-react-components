@@ -16,7 +16,8 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'prettier'
+    'prettier',
+    // 'plugin:storybook/recommended'
   ],
   parserOptions: {
     ecmaVersion: 2020,

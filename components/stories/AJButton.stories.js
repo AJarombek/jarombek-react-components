@@ -4,27 +4,44 @@
  * @since 1/13/2020
  */
 
-import React, { useState, createRef } from 'react';
-import { storiesOf } from '@storybook/react';
+import React, { createRef, useState } from 'react';
 import { AJButton } from '../src';
 
-storiesOf('AJButton', module)
-  .add('contained', () => (
+export default {
+  title: 'AJ/Button',
+  component: AJButton,
+  decorators: [],
+  parameters: {},
+};
+
+export const Basic = {};
+
+export const Contained = {
+  render: () => (
     <AJButton type="contained" disabled={false}>
       Contained Button
     </AJButton>
-  ))
-  .add('outlined', () => (
+  ),
+};
+
+export const Outlined = {
+  render: () => (
     <AJButton type="outlined" disabled={true}>
       Outlined Button
     </AJButton>
-  ))
-  .add('text', () => (
+  ),
+};
+
+export const Text = {
+  render: () => (
     <AJButton type="text" disabled={false}>
       Text Button
     </AJButton>
-  ))
-  .add('with onClick', () => {
+  ),
+};
+
+export const WithOnClick = {
+  render: () => {
     const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
@@ -39,8 +56,11 @@ storiesOf('AJButton', module)
         )}
       </Parent>
     );
-  })
-  .add('with ref', () => {
+  },
+};
+
+export const WithRef = {
+  render: () => {
     const Parent = ({ children }) => {
       const [colored, setColored] = useState(false);
       return <div>{children(colored, setColored)}</div>;
@@ -69,4 +89,5 @@ storiesOf('AJButton', module)
         }}
       </Parent>
     );
-  });
+  },
+};

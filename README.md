@@ -12,6 +12,9 @@ websites, along with any prototypes I create.
 nvm use v20.11.0
 yarn
 
+# Initialize Storybook
+npx storybook@latest init
+
 # Start Storyboard
 yarn storybook
 
