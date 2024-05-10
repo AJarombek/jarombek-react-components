@@ -5,15 +5,33 @@
  */
 
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJNavCircle, AJTextButton } from '../src';
 
-storiesOf('AJNavCircle', module)
-  .add('default', () => <AJNavCircle direction="down" onClick={(f) => f} />)
-  .add('up', () => <AJNavCircle direction="up" height="40px" onClick={(f) => f} />)
-  .add('left', () => <AJNavCircle direction="left" height="50px" active={false} onClick={(f) => f} />)
-  .add('right', () => <AJNavCircle direction="right" height="2em" active={true} onClick={(f) => f} />)
-  .add('enabled and disabled', () => {
+export default {
+  title: 'AJ/NavCircle',
+  component: AJNavCircle,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => <AJNavCircle direction="down" onClick={(f) => f} />,
+};
+
+export const Up = {
+  render: () => <AJNavCircle direction="up" height="40px" onClick={(f) => f} />,
+};
+
+export const Left = {
+  render: () => <AJNavCircle direction="left" height="50px" active={false} onClick={(f) => f} />,
+};
+
+export const Right = {
+  render: () => <AJNavCircle direction="right" height="2em" active={true} onClick={(f) => f} />,
+};
+
+export const EnabledAndDisabled = {
+  render: () => {
     const Parent = ({ children }) => {
       const [clicked, setClicked] = useState(0);
       const [enabled, setEnabled] = useState(true);
@@ -33,4 +51,5 @@ storiesOf('AJNavCircle', module)
         )}
       </Parent>
     );
-  });
+  },
+};

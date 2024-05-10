@@ -5,50 +5,74 @@
  */
 
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJButtonGroup, AJButton } from '../src';
 
-storiesOf('AJButtonGroup', module)
-  .add('contained', () => (
+export default {
+  title: 'AJ/ButtonGroup',
+  component: AJButtonGroup,
+  decorators: [],
+  parameters: {},
+};
+
+export const Basic = {};
+
+export const Contained = {
+  render: () => (
     <AJButtonGroup>
       <AJButton type="contained">Button #1</AJButton>
       <AJButton type="contained">Button #2</AJButton>
       <AJButton type="contained">Button #3</AJButton>
     </AJButtonGroup>
-  ))
-  .add('outlined', () => (
+  ),
+};
+
+export const Outlined = {
+  render: () => (
     <AJButtonGroup>
       <AJButton type="outlined">Button #1</AJButton>
       <AJButton type="outlined">Button #2</AJButton>
       <AJButton type="outlined">Button #3</AJButton>
     </AJButtonGroup>
-  ))
-  .add('text', () => (
+  ),
+};
+
+export const Text = {
+  render: () => (
     <AJButtonGroup>
       <AJButton type="text">Button #1</AJButton>
       <AJButton type="text">Button #2</AJButton>
       <AJButton type="text">Button #3</AJButton>
     </AJButtonGroup>
-  ))
-  .add('two buttons', () => (
+  ),
+};
+
+export const TwoButtons = {
+  render: () => (
     <AJButtonGroup>
       <AJButton type="contained">Button #1</AJButton>
       <AJButton type="contained">Button #2</AJButton>
     </AJButtonGroup>
-  ))
-  .add('four buttons', () => (
+  ),
+};
+
+export const FourButtons = {
+  render: () => (
     <AJButtonGroup>
       <AJButton type="contained">Button #1</AJButton>
       <AJButton type="contained">Button #2</AJButton>
       <AJButton type="contained">Button #3</AJButton>
       <AJButton type="contained">Button #4</AJButton>
     </AJButtonGroup>
-  ))
-  .add('multiple button types', () => (
+  ),
+};
+
+export const MultipleButtonTypes = {
+  render: () => (
     <AJButtonGroup>
       <AJButton type="outlined">Button #1</AJButton>
       <AJButton type="contained">Button #2</AJButton>
       <AJButton type="outlined">Button #3</AJButton>
       <AJButton type="contained">Button #4</AJButton>
     </AJButtonGroup>
-  ));
+  ),
+};
