@@ -5,11 +5,17 @@
  */
 
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJTextCard } from '../src';
 
-storiesOf('AJCard', module)
-  .add('default', () => (
+export default {
+  title: 'AJ/TextCard',
+  component: AJTextCard,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => (
     <AJTextCard
       title="Tuesday, November 26th"
       subtitle={
@@ -22,8 +28,11 @@ storiesOf('AJCard', module)
       actionText="More Info"
       actionDisabled={false}
     />
-  ))
-  .add('with action', () => {
+  ),
+};
+
+export const WithAction = {
+  render: () => {
     const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return (
@@ -52,4 +61,5 @@ storiesOf('AJCard', module)
         )}
       </Parent>
     );
-  });
+  },
+};

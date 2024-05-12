@@ -5,12 +5,21 @@
  */
 
 import React, { useState, createRef } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJTextButton } from '../src';
 
-storiesOf('AJTextButton', module)
-  .add('default', () => <AJTextButton>Text Button</AJTextButton>)
-  .add('with onClick', () => {
+export default {
+  title: 'AJ/TextButton',
+  component: AJTextButton,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => <AJTextButton>Text Button</AJTextButton>,
+};
+
+export const WithOnClick = {
+  render: () => {
     const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
@@ -21,8 +30,11 @@ storiesOf('AJTextButton', module)
         {(state, setState) => <AJTextButton onClick={() => setState((state += 1))}>Clicked: ${state}</AJTextButton>}
       </Parent>
     );
-  })
-  .add('with ref', () => {
+  },
+};
+
+export const WithRef = {
+  render: () => {
     const Parent = ({ children }) => {
       const [colored, setColored] = useState(false);
       return <div>{children(colored, setColored)}</div>;
@@ -51,5 +63,9 @@ storiesOf('AJTextButton', module)
         }}
       </Parent>
     );
-  })
-  .add('disabled', () => <AJTextButton disabled={true}>Text Button</AJTextButton>);
+  },
+};
+
+export const Disabled = {
+  render: () => <AJTextButton disabled>Text Button</AJTextButton>,
+};

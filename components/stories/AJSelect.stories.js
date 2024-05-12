@@ -6,22 +6,34 @@
  */
 
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJSelect, AJSwitch } from '../src';
 
-storiesOf('AJSelect', module)
-  .add('default', () => (
+export default {
+  title: 'AJ/Select',
+  component: AJSelect,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => (
     <AJSelect
       options={[{ content: 'Bound 2', value: 'bound2' }]}
       placeholder="Select a song"
       disabled={false}
       onClickListOption={(option) => console.info(option)}
     />
-  ))
-  .add('disabled', () => (
+  ),
+};
+
+export const Disabled = {
+  render: () => (
     <AJSelect options={[{ content: 'Hidden', value: 'hidden' }]} placeholder="Disabled Select" disabled={true} />
-  ))
-  .add('toggle default option', () => {
+  ),
+};
+
+export const ToggleDefaultOption = {
+  render: () => {
     const Parent = ({ children }) => {
       const [state, setState] = useState(false);
       return (
@@ -53,4 +65,5 @@ storiesOf('AJSelect', module)
         )}
       </Parent>
     );
-  });
+  },
+};

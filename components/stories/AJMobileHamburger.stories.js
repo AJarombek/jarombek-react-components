@@ -5,12 +5,21 @@
  */
 
 import React, { createRef } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJMobileHamburger, AJTextButton } from '../src';
 
-storiesOf('AJMobileHamburger', module)
-  .add('default', () => <AJMobileHamburger />)
-  .add('with ref', () => {
+export default {
+  title: 'AJ/MobileHamburger',
+  component: AJMobileHamburger,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => <AJMobileHamburger />,
+};
+
+export const WithRef = {
+  render: () => {
     const hamburgerRef = createRef();
 
     return (
@@ -19,4 +28,5 @@ storiesOf('AJMobileHamburger', module)
         <AJMobileHamburger ref={hamburgerRef} />
       </>
     );
-  });
+  },
+};

@@ -5,13 +5,25 @@
  */
 
 import React, { useState, createRef } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJContainedButton } from '../src';
 
-storiesOf('AJContainedButton', module)
-  .add('default', () => <AJContainedButton>Contained Button</AJContainedButton>)
-  .add('disabled', () => <AJContainedButton disabled={true}>Contained Button</AJContainedButton>)
-  .add('with onClick', () => {
+export default {
+  title: 'AJ/ContainedButton',
+  component: AJContainedButton,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => <AJContainedButton>Contained Button</AJContainedButton>,
+};
+
+export const Disabled = {
+  render: () => <AJContainedButton disabled>Contained Button</AJContainedButton>,
+};
+
+export const WithOnClick = {
+  render: () => {
     const Parent = ({ children }) => {
       const [state, setState] = useState(0);
       return <div>{children(state, setState)}</div>;
@@ -24,8 +36,11 @@ storiesOf('AJContainedButton', module)
         )}
       </Parent>
     );
-  })
-  .add('with ref', () => {
+  },
+};
+
+export const WithRef = {
+  render: () => {
     const Parent = ({ children }) => {
       const [colored, setColored] = useState(false);
       return <div>{children(colored, setColored)}</div>;
@@ -54,4 +69,5 @@ storiesOf('AJContainedButton', module)
         }}
       </Parent>
     );
-  });
+  },
+};

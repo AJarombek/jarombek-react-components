@@ -5,19 +5,28 @@
  */
 
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJNavList } from '../src';
 
-storiesOf('AJNavList', module)
-  .add('default', () => (
+export default {
+  title: 'AJ/NavList',
+  component: AJNavList,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => (
     <AJNavList
       items={[
         { content: 'Home', onClick: () => console.info('/') },
         { content: 'Profile', onClick: () => console.info('/profile') },
       ]}
     />
-  ))
-  .add('node items', () => {
+  ),
+};
+
+export const NodeItems = {
+  render: () => {
     const Parent = ({ children }) => {
       const [clickedHome, setClickedHome] = useState(0);
       const [clickedProfile, setClickedProfile] = useState(0);
@@ -64,5 +73,9 @@ storiesOf('AJNavList', module)
         )}
       </Parent>
     );
-  })
-  .add('non-array items', () => <AJNavList items={true} />);
+  },
+};
+
+export const NonArrayItems = {
+  render: () => <AJNavList items={true} />,
+};

@@ -5,16 +5,25 @@
  */
 
 import React, { useState } from 'react';
-import { storiesOf } from '@storybook/react';
 import { AJModal, AJTextButton } from '../src';
 
-storiesOf('AJModal', module)
-  .add('default', () => (
+export default {
+  title: 'AJ/Modal',
+  component: AJModal,
+  decorators: [],
+  parameters: {},
+};
+
+export const Default = {
+  render: () => (
     <AJModal>
       <div>Modal Content</div>
     </AJModal>
-  ))
-  .add('with onClick background action', () => {
+  ),
+};
+
+export const WithOnClickBackgroundAction = {
+  render: () => {
     const Parent = ({ children }) => {
       const [state, setState] = useState(false);
       return (
@@ -30,4 +39,5 @@ storiesOf('AJModal', module)
         {(state, setState) => (state ? <AJModal onClickBackground={() => setState(false)}>Modal</AJModal> : null)}
       </Parent>
     );
-  });
+  },
+};
