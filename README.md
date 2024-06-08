@@ -42,6 +42,15 @@ yarn build
 | `webpack.config.js`   | Configuration for the Webpack bundler.                                                    |
 | `yarn.lock`           | Versions of each Yarn/npm dependency.                                                     |
 
+### Version History
+
+**[v0.4.0](https://github.com/AJarombek/jarombek-react-components/tree/v0.4.0) - Storybook Upgrade**
+
+> Release Date: May 11th, 2024
+
+* Upgrade npm dependencies
+* Update `*.stories.js` files to the [latest format](https://storybook.js.org/docs/api/csf/).
+
 ### Resources
 
 1) [React Component Library Seed Project](https://github.com/NGimhana/sample_react_component_library_boilerplate)
